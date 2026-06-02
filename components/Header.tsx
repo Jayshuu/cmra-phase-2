@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, Flag, Menu, X, ExternalLink } from 'lucide-react';
 
 interface HeaderProps {
-  onNavigate: (view: string) => void;
+  onNavigate: (view: string, section?: string) => void;
 }
 
 const NAV_ITEMS = [
@@ -12,61 +12,69 @@ const NAV_ITEMS = [
   },
   {
     label: 'Start Racing',
+    value: 'start-racing',
     subItems: [
-      { label: 'How It Works', value: 'start-racing' },
-      { label: 'Go to Race School', value: 'race-school' },
-      { label: 'Register for Races', value: 'register-races' },
+      { label: 'How It Works (The Path To The Grid)', value: 'start-racing' },
+      { label: 'Go To Race School (Earn Your Place)', value: 'race-school' },
+      { label: 'Membership & Registration (Commit To The Season)', value: 'membership' },
+      { label: 'Costs & Expectations (Know Before You Go)', value: 'costs' }
     ]
   },
   {
     label: 'Racing',
+    value: 'racing',
     subItems: [
-      { label: 'Classes & Categories', value: 'classes' },
-      { label: 'WCCS', value: 'wccs' },
-      { label: 'Bike & Gear', value: 'bike-gear' },
-      { label: 'Results', value: 'results' },
-      { label: 'Racers & Numbers', value: 'race-numbers' },
+      { label: 'Classes & Categories (Find Your Line)', value: 'classes' },
+      { label: 'Western Canadian Championship Series (Race For More)', value: 'wccs' },
+      { label: 'Bike & Gear Requirements (Built For The Track)', value: 'bike-gear' },
+      { label: 'Results (Where It All Lands)', value: 'results' },
+      { label: 'Racers & Numbers (Know The Grid)', value: 'race-numbers' },
+      { label: 'Advanced Rider Training (Level Up)', value: 'advanced-training' }
     ]
   },
   {
     label: 'Events',
+    value: 'events',
     subItems: [
-      { label: 'Event Calendar', value: 'calendar' },
-      { label: 'Registration', value: 'register-events', external: true, url: 'https://www.motorsportreg.com' },
+      { label: 'Event Calendar (Pick Your Moment)', value: 'calendar' },
+      { label: 'Upcoming Events (Next Up)', value: 'upcoming-events' },
+      { label: 'Event Details (Know Before You Roll In)', value: 'event-details' },
+      { label: 'Registration (Claim Your Spot)', value: 'register-races' }
     ]
   },
   {
     label: 'Membership',
-    value: 'membership'
+    value: 'membership',
+    subItems: [
+      { label: 'Become a CMRA Member (Your Season Starts Here)', value: 'become-member' },
+      { label: 'Forms & Documents (Everything You Need – In One Place)', value: 'forms-documents' }
+    ]
   },
   {
-    label: 'Rules',
+    label: 'Rules & Safety',
+    value: 'rules-safety',
     subItems: [
-      { label: 'Rulebook & Forms', value: 'rules-safety' },
-      { label: 'Technical Requirements', value: 'rules-safety' },
+      { label: '2026 CMRA Competition Rulebook', value: 'rules-safety', section: 'rulebooks' },
+      { label: 'Technical Requirements Checklist', value: 'rules-safety', section: 'technical' },
+      { label: 'Safety Gear', value: 'rules-safety', section: 'technical' }
     ]
   },
   {
     label: 'Community',
+    value: 'community',
     subItems: [
-      { label: 'News & Updates', value: 'news' },
-      { label: 'Volunteers / Marshals', value: 'volunteers' },
+      { label: 'News & Updates (Stay In The Loop)', value: 'news' },
+      { label: 'Sponsors & Partners (Powered By Passion)', value: 'sponsors' }
     ]
-  },
-  {
-    label: 'Sponsors',
-    value: 'sponsors'
   },
   {
     label: 'About',
+    value: 'about',
     subItems: [
-      { label: 'The CMRA', value: 'about' },
-      { label: 'RMM Circuit', value: 'rmm-circuit' },
+      { label: 'The CMRA (Our Story)', value: 'our-story' },
+      { label: 'Contact (Get In Touch)', value: 'contact' },
+      { label: 'Rocky Mountain Motorsports Circuit (Our Home Track)', value: 'rmm-circuit' }
     ]
-  },
-  {
-    label: 'Contact',
-    value: 'contact'
   }
 ];
 
@@ -108,68 +116,76 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
         </div>
 
         {/* Right Side: Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-4 h-full flex-wrap justify-end pl-4 overflow-hidden">
-          {NAV_ITEMS.map((item) => (
-            <div 
-              key={item.label}
-              className="relative h-full flex items-center"
-              onMouseEnter={() => item.subItems && setOpenDropdown(item.label)}
-              onMouseLeave={() => item.subItems && setOpenDropdown(null)}
-            >
-              {item.subItems ? (
-                <div className={`flex items-center gap-1 cursor-default group h-full ${openDropdown === item.label ? 'text-white' : 'text-neutral-300'}`}>
-                  <span className="font-teko text-[1.1rem] font-medium tracking-wide group-hover:text-white transition-colors uppercase whitespace-nowrap">
+        <nav className="hidden xl:flex items-center gap-4 h-full flex-wrap justify-end pl-4">
+          {NAV_ITEMS.map((item, index) => {
+            const isRightAligned = index >= NAV_ITEMS.length - 3;
+            return (
+              <div 
+                key={item.label}
+                className="relative h-full flex items-center"
+                onMouseEnter={() => item.subItems && setOpenDropdown(item.label)}
+                onMouseLeave={() => item.subItems && setOpenDropdown(null)}
+              >
+                {item.subItems ? (
+                  <button
+                    onClick={() => item.value && onNavigate(item.value)}
+                    className={`flex items-center gap-1 cursor-pointer group h-full ${openDropdown === item.label ? 'text-white' : 'text-neutral-300'}`}
+                  >
+                    <span className="font-teko text-[1.1rem] font-medium tracking-wide group-hover:text-white transition-colors uppercase whitespace-nowrap">
+                      {item.label}
+                    </span>
+                    <ChevronDown 
+                      size={14} 
+                      className={`text-neutral-500 group-hover:text-white transition-transform duration-200 mt-0.5 ${openDropdown === item.label ? 'rotate-180 text-white' : ''}`} 
+                    />
+                  </button>
+                ) : (
+                  <button 
+                    onClick={() => onNavigate(item.value!)}
+                    className={`font-teko text-[1.1rem] font-medium tracking-wide text-neutral-300 hover:text-white transition-colors uppercase whitespace-nowrap ${item.label === 'Watch LIVE' ? 'text-[#dc2626] font-bold' : ''}`}
+                  >
                     {item.label}
-                  </span>
-                  <ChevronDown 
-                    size={14} 
-                    className={`text-neutral-500 group-hover:text-white transition-transform duration-200 mt-0.5 ${openDropdown === item.label ? 'rotate-180 text-white' : ''}`} 
-                  />
-                </div>
-              ) : (
-                <button 
-                  onClick={() => onNavigate(item.value!)}
-                  className={`font-teko text-[1.1rem] font-medium tracking-wide text-neutral-300 hover:text-white transition-colors uppercase whitespace-nowrap ${item.label === 'Watch LIVE' ? 'text-[#dc2626] font-bold' : ''}`}
-                >
-                  {item.label}
-                </button>
-              )}
+                  </button>
+                )}
 
-              {/* Dropdown Menu */}
-              {item.subItems && (
-                <div 
-                  className={`absolute top-full left-0 min-w-[200px] bg-[#0C0A09] border border-white/10 rounded-b-xl shadow-2xl py-2 flex flex-col transition-all duration-200 origin-top z-50 ${openDropdown === item.label ? 'opacity-100 scale-y-100 translate-y-0' : 'opacity-0 scale-y-95 -translate-y-2 pointer-events-none'}`}
-                >
-                  {item.subItems.map((subItem) => (
-                    subItem.external ? (
-                      <a
-                        key={subItem.label}
-                        href={subItem.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-left px-6 py-3 font-teko text-lg font-medium tracking-wide text-neutral-400 hover:text-white hover:bg-white/5 transition-colors uppercase flex items-center justify-between"
-                      >
-                        {subItem.label}
-                        <ExternalLink size={14} />
-                      </a>
-                    ) : (
-                      <button
-                        key={subItem.label}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onNavigate(subItem.value);
-                          setOpenDropdown(null);
-                        }}
-                        className="text-left px-6 py-3 font-teko text-lg font-medium tracking-wide text-neutral-400 hover:text-white hover:bg-white/5 transition-colors uppercase first:rounded-t-none last:rounded-b-xl whitespace-nowrap"
-                      >
-                        {subItem.label}
-                      </button>
-                    )
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                {/* Dropdown Menu */}
+                {item.subItems && (
+                  <div 
+                    className={`absolute top-full ${isRightAligned ? 'right-0' : 'left-0'} min-w-[200px] bg-[#0C0A09] border border-white/10 rounded-b-xl shadow-2xl py-2 flex flex-col transition-all duration-200 origin-top z-50 ${openDropdown === item.label ? 'opacity-100 scale-y-100 translate-y-0' : 'opacity-0 scale-y-95 -translate-y-2 pointer-events-none'}`}
+                  >
+                    {item.subItems.map((subItem) => (
+                      subItem.external ? (
+                        <a
+                          key={subItem.label}
+                          href={subItem.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-left px-6 py-3 font-teko text-lg font-medium tracking-wide text-neutral-400 hover:text-white hover:bg-white/5 transition-colors uppercase flex items-center justify-between"
+                        >
+                          {subItem.label}
+                          <ExternalLink size={14} />
+                        </a>
+                      ) : (
+                        <button
+                          key={subItem.label}
+                          disabled={'phase2' in subItem && subItem.phase2}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if ('phase2' in subItem && subItem.phase2) return;
+                            onNavigate(subItem.value, 'section' in subItem ? subItem.section : undefined);
+                            setOpenDropdown(null);
+                          }}
+                          className={`text-left px-6 py-3 font-teko text-lg font-medium tracking-wide transition-colors uppercase first:rounded-t-none last:rounded-b-xl whitespace-nowrap ${'phase2' in subItem && subItem.phase2 ? 'text-neutral-600 cursor-not-allowed hover:bg-transparent' : 'text-neutral-400 hover:text-white hover:bg-white/5'}`}
+                        >
+                          {subItem.label}
+                        </button>
+                      )
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -214,8 +230,12 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
                           ) : (
                             <button
                               key={subItem.label}
-                              onClick={() => handleMobileLinkClick(() => onNavigate(subItem.value))}
-                              className="text-left px-6 py-4 font-teko text-xl text-neutral-300 hover:text-white hover:bg-white/5 transition-colors uppercase border-b border-white/5 last:border-0"
+                              disabled={'phase2' in subItem && subItem.phase2}
+                              onClick={() => {
+                                if ('phase2' in subItem && subItem.phase2) return;
+                                handleMobileLinkClick(() => onNavigate(subItem.value, 'section' in subItem ? subItem.section : undefined));
+                              }}
+                              className={`text-left px-6 py-4 font-teko text-xl transition-colors uppercase border-b border-white/5 last:border-0 ${'phase2' in subItem && subItem.phase2 ? 'text-neutral-600 cursor-not-allowed' : 'text-neutral-300 hover:text-white hover:bg-white/5'}`}
                             >
                               {subItem.label}
                             </button>
