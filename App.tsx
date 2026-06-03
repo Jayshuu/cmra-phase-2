@@ -14,7 +14,7 @@ const MEDIA_PATHS = {
 };
 
 // Define valid views
-type ViewType = 'home' | 'watch-live' | 'start-racing' | 'race-school' | 'register-races' | 'classes' | 'wccs' | 'bike-gear' | 'results' | 'race-numbers' | 'calendar' | 'upcoming-events' | 'event-details' | 'register-events' | 'membership' | 'become-member' | 'forms-documents' | 'rules-safety' | 'news' | 'volunteers' | 'sponsors' | 'about' | 'rmm-circuit' | 'contact' | 'racer-info' | 'new-racers' | 'documents' | 'costs' | 'racing' | 'events' | 'community' | 'our-story' | 'advanced-training';
+type ViewType = 'home' | 'watch-live' | 'start-racing' | 'how-it-works' | 'race-school' | 'register-races' | 'classes' | 'wccs' | 'bike-gear' | 'results' | 'race-numbers' | 'calendar' | 'upcoming-events' | 'event-details' | 'register-events' | 'membership' | 'become-member' | 'forms-documents' | 'rules-safety' | 'news' | 'volunteers' | 'sponsors' | 'about' | 'rmm-circuit' | 'contact' | 'racer-info' | 'new-racers' | 'documents' | 'costs' | 'racing' | 'events' | 'community' | 'our-story' | 'advanced-training';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewType>('home');
@@ -1343,7 +1343,7 @@ const App: React.FC = () => {
     </div>
   );
 
-  const renderHowItWorksContent = () => (
+  const renderStartRacingContent = () => (
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0">
@@ -1410,7 +1410,7 @@ const App: React.FC = () => {
             </div>
             <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto">
               <button 
-                onClick={() => navigateTo('race-school')}
+                onClick={() => navigateTo('how-it-works')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
                 See The Full Path <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
@@ -1580,6 +1580,171 @@ const App: React.FC = () => {
             </button>
           </div>
         </div>
+      </div>
+    </div>
+  );
+
+  const renderHowItWorksContent = () => (
+    <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
+      {/* HERO */}
+      <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
+        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">how it works</span>
+        <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+          From rider to racer – in three steps.
+        </h3>
+        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
+          No shortcuts. No confusion. This is the path to the starting line.
+        </p>
+      </div>
+
+      {/* THREE STEPS SECTION */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        {/* STEP 1: Get Licensed */}
+        <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+          <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">01</div>
+          
+          <div>
+            <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 1</span>
+            
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
+              <GraduationCap size={24} />
+            </div>
+            
+            <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Get Licensed</h4>
+            
+            <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-4">
+              Earn your CMRA Race License by completing an approved race school.
+            </p>
+            <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6">
+              The Calgary Motorcycle Roadracing Association makes this simple with its own, CMRA Race School.
+            </p>
+          </div>
+          
+          <div className="mt-auto pt-4 border-t border-white/5">
+            <button
+              onClick={() => navigateTo('race-school')}
+              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
+            >
+              Go To Race School & Get Licensed <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+            </button>
+            
+            <button
+              onClick={() => navigateTo('rules-safety', 'rulebooks')}
+              className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
+            >
+              <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
+              <span>See the full list of accepted schools in the 2026 CMRA Competition Rulebook (p.52).</span>
+            </button>
+          </div>
+        </div>
+
+        {/* STEP 2: Become a Member */}
+        <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+          <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">02</div>
+          
+          <div>
+            <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 2</span>
+            
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
+              <Users size={24} />
+            </div>
+            
+            <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Become a Member</h4>
+            
+            <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6">
+              Purchase your annual CMRA Membership to compete in events and earn championship points.
+            </p>
+          </div>
+          
+          <div className="mt-auto pt-4 border-t border-white/5">
+            <button
+              onClick={() => navigateTo('membership')}
+              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
+            >
+              View Membership Options <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+            </button>
+            
+            <button
+              onClick={() => navigateTo('rules-safety', 'rulebooks')}
+              className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
+            >
+              <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
+              <span>More details available in the Rulebook (p.51).</span>
+            </button>
+          </div>
+        </div>
+
+        {/* STEP 3: Register & Race */}
+        <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+          <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">03</div>
+          
+          <div>
+            <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 3</span>
+            
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
+              <Flag size={24} />
+            </div>
+            
+            <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Register & Race</h4>
+            
+            <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-3">
+              Once licensed and registered:
+            </p>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                <span>Choose your events</span>
+              </li>
+              <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                <span>Sign up through MotorsportReg</span>
+              </li>
+              <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                <span>Line up and race</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="mt-auto pt-4 border-t border-white/5">
+            <button
+              onClick={() => navigateTo('register-races')}
+              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
+            >
+              Register For Events <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+            </button>
+            
+            <button
+              onClick={() => navigateTo('rules-safety', 'rulebooks')}
+              className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
+            >
+              <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
+              <span>Registration policies: Rulebook (p.53).</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      {/* CTA */}
+      <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-8 rounded-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-6 shrink-0 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
+        <div>
+          <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Everything you need is here.</h4>
+          <p className="text-neutral-400 text-xs mt-1">Now it’s up to you.</p>
+        </div>
+        <button
+          onClick={() => navigateTo('race-school')}
+          className="bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-2 group shrink-0"
+        >
+          Start With Race School <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
     </div>
   );
@@ -2654,135 +2819,153 @@ const App: React.FC = () => {
           </button>
         </div>
       </div>
-
     </div>
   );
 
   const renderBecomeMemberContent = () => (
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
-      {/* HERO (Top Frame) */}
+      {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Membership</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
-          Make it official. Join the grid.
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
+        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">membership & registration</span>
+        <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+          Make it official. Take your place on the grid.
         </h3>
-        <p className="text-base text-white font-sans font-bold mb-3">There’s a difference between riding – and belonging.</p>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl mb-6">
-          With the Calgary Motorcycle Roadracing Association, membership isn’t just a requirement – it’s your connection to the races, the riders, and the season ahead.
-        </p>
-
-        <div className="flex flex-wrap gap-4 border-t border-white/5 pt-6">
-          <a
-            href="https://www.motorsportreg.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest shadow-md flex items-center justify-center gap-1.5"
-          >
-            👉 Become A Member
-          </a>
-          <button
-            onClick={() => navigateTo('forms-documents')}
-            className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest flex items-center justify-center gap-1.5"
-          >
-            👉 View Forms & Documents
-          </button>
-        </div>
       </div>
 
-      {/* BENTO GRID (2 Blocks) */}
+      {/* TWO-COLUMN CONTENT SECTION */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         
-        {/* Block 1: BECOME A CMRA MEMBER */}
-        <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
-          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
+        {/* MEMBERSHIP COLUMN */}
+        <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
           
           <div>
-            <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 01</span>
-            <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">BECOME A CMRA MEMBER</h4>
-            <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">Your Season Starts Here</p>
-            <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-4 font-bold">
-              Membership is your entry into everything CMRA.
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-red-600/10 flex items-center justify-center text-[#dc2626]">
+                <Trophy size={20} />
+              </div>
+              <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider">CMRA Membership</h4>
+            </div>
+            
+            <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6">
+              Your CMRA Membership lets you race in the CMRA for Championship points – and connects you with the racing community. Members get:
             </p>
             
-            <ul className="space-y-2.5 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626] mb-6">
-              <li>Required to compete in events</li>
-              <li>Unlocks championship eligibility</li>
-              <li>Connects you to the racing community</li>
+            <ul className="space-y-3.5 mb-8">
+              <li className="flex items-start gap-2.5 text-xs text-neutral-300 font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
+                <span>Priority registration for CMRA schools</span>
+              </li>
+              <li className="flex items-start gap-2.5 text-xs text-neutral-300 font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
+                <span>First updates on upcoming events</span>
+              </li>
+              <li className="flex items-start gap-2.5 text-xs text-neutral-300 font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
+                <span>Voting privileges</span>
+              </li>
             </ul>
-            
-            <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6 italic">
-              Memberships are annual, aligning with the racing season – so once you’re in, you’re part of it.
-            </p>
           </div>
-
-          <div className="border-t border-white/5 pt-4 mt-auto">
+          
+          <div className="mt-auto pt-6 border-t border-white/5 space-y-3">
             <a
               href="https://www.motorsportreg.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest text-center block"
+              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3.5 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn text-center"
             >
-              👉 Become A CMRA Member
+              Become A Member Via MotorsportReg <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
             </a>
+            
+            <button
+              onClick={() => navigateTo('advanced-training')}
+              className="w-full bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase py-3.5 px-4 rounded-xl transition-all tracking-wider flex items-center justify-center gap-1.5 group/btn text-center"
+            >
+              Already Fast? Get Advanced Training <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+            </button>
           </div>
         </div>
 
-        {/* Block 2: FORMS & DOCUMENTS */}
-        <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
-          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
+        {/* REGISTRATION & REFUNDS COLUMN */}
+        <div className="flex flex-col gap-6">
           
-          <div>
-            <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 02</span>
-            <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">FORMS & DOCUMENTS</h4>
-            <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">Everything You Need – In One Place</p>
-            <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-4 font-bold">
-              Racing comes with structure – and that means paperwork.
-            </p>
+          {/* EVENT REGISTRATION CARD */}
+          <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-red-500/10 transition-all duration-300 relative group overflow-hidden flex-1">
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
             
-            <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626] mb-6">
-              <li>From rulebooks to forms, everything you need to stay compliant and race-ready is here.</li>
-              <li>And if it feels like a lot at first – you’re not alone.</li>
-            </ul>
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-10 h-10 rounded-lg bg-red-600/10 flex items-center justify-center text-[#dc2626]">
+                  <ClipboardList size={20} />
+                </div>
+                <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider">Registering for Events</h4>
+              </div>
+              
+              <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-3">
+                Once licensed:
+              </p>
+              
+              <ul className="space-y-2.5 mb-6">
+                <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                  <span>Register online through MotorsportReg</span>
+                </li>
+                <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                  <span>Secure your grid position</span>
+                </li>
+                <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                  <span>Prepare for race day</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* IMPORTANT BOX */}
+            <div className="bg-red-950/20 border border-red-500/20 p-4 rounded-xl flex gap-3 items-start mt-auto">
+              <AlertTriangle size={18} className="text-[#dc2626] shrink-0 mt-0.5" />
+              <div>
+                <span className="text-xs font-bold text-white uppercase block mb-1">Important:</span>
+                <p className="text-[11px] text-neutral-300 font-sans leading-normal">
+                  Registration closes 24 hours before the event. Late registrations are subject to a <span className="text-[#dc2626] font-bold">$25 late fee</span>.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="border-t border-white/5 pt-4 mt-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <button
-              onClick={() => navigateTo('forms-documents')}
-              className="bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest text-center"
-            >
-              👉 View Forms & Documents
-            </button>
-            <button
-              onClick={() => navigateTo('contact')}
-              className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest text-center"
-            >
-              👉 Contact CMRA
-            </button>
+          {/* REFUNDS CARD */}
+          <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl hover:border-red-500/10 transition-all duration-300 relative group overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-lg bg-red-600/10 flex items-center justify-center text-[#dc2626] shrink-0">
+                <Clock size={20} />
+              </div>
+              <div>
+                <h4 className="text-xl font-teko font-bold uppercase text-white tracking-wider mb-1">Refund Policy</h4>
+                <p className="text-xs text-neutral-400 font-sans leading-normal">
+                  Refunds are available until <span className="text-white font-bold">8:30 AM on Race Day</span>.
+                </p>
+              </div>
+            </div>
           </div>
+
         </div>
 
       </div>
 
-      {/* FINAL CTA */}
-      <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
+      {/* BOTTOM CTA */}
+      <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-8 rounded-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">FINAL CTA</span>
-          <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">You don’t just show up to race – you join first.</h4>
+          <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Pick your race. Claim your spot.</h4>
         </div>
-        <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
-          <a
-            href="https://www.motorsportreg.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group/btn"
-          >
-            👉 Become A Member <ArrowRight size={14} className="group-hover/btn:translate-x-0.5 transition-transform" />
-          </a>
-        </div>
+        <button
+          onClick={() => navigateTo('register-races')}
+          className="bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-2 group shrink-0"
+        >
+          View Events & Register <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
     </div>
   );
@@ -4838,7 +5021,8 @@ const App: React.FC = () => {
           {currentView === 'race-numbers' && renderRaceNumbersContent()}
           
           {currentView === 'watch-live' && renderWatchLiveContent()}
-          {currentView === 'start-racing' && renderHowItWorksContent()}
+          {currentView === 'start-racing' && renderStartRacingContent()}
+          {currentView === 'how-it-works' && renderHowItWorksContent()}
           {currentView === 'race-school' && renderRaceSchoolContent()}
           {currentView === 'register-races' && renderRegisterRacesContent()}
           {currentView === 'racing' && renderRacingMainContent()}

@@ -14,7 +14,7 @@ const NAV_ITEMS = [
     label: 'Start Racing',
     value: 'start-racing',
     subItems: [
-      { label: 'How It Works (The Path To The Grid)', value: 'start-racing' },
+      { label: 'How It Works (The Path To The Grid)', value: 'how-it-works' },
       { label: 'Go To Race School (Earn Your Place)', value: 'race-school' },
       { label: 'Membership & Registration (Commit To The Season)', value: 'membership' },
       { label: 'Costs & Expectations (Know Before You Go)', value: 'costs' }
