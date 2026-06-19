@@ -4255,32 +4255,9 @@ const App: React.FC = () => {
       <div className="bg-[#090909] border border-white/10 p-6 rounded-2xl space-y-6">
         <div>
           <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-3">Partner Directory</h4>
-          <p className="text-xs text-neutral-300 font-sans leading-relaxed font-bold mb-1">
-            Below you’ll find the organizations that stand behind the CMRA.
-          </p>
           <p className="text-xs text-neutral-400 font-sans leading-relaxed">
-            Learn more about who they are – and support those who support the sport.
+            We're currently updating this section - keep an eye out.
           </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { name: 'Electric Avenue', role: 'Title Sponsor', link: '#' },
-            { name: 'Rocky Mountain Motorsports', role: 'Track Partner', link: 'https://rockymountainmotorsports.com' },
-            { name: 'MotorsportReg', role: 'Registration Partner', link: 'https://www.motorsportreg.com' },
-            { name: 'MyLaps Timing', role: 'Scoring Partner', link: '#' }
-          ].map((sp, idx) => (
-            <a
-              key={idx}
-              href={sp.link}
-              target="_blank"
-              rel="noreferrer"
-              className="bg-neutral-900 border border-white/5 p-6 rounded-xl hover:border-[#dc2626]/55 transition-colors flex flex-col justify-center items-center text-center min-h-[140px]"
-            >
-              <span className="font-teko text-2xl font-bold text-white uppercase mb-1">{sp.name}</span>
-              <span className="text-[10px] bg-red-950/20 text-[#dc2626] px-2 py-0.5 rounded font-sans uppercase font-semibold">{sp.role}</span>
-            </a>
-          ))}
         </div>
       </div>
 
