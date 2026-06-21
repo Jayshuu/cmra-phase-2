@@ -8,9 +8,9 @@ import { NewsItem } from './types';
 // --- MEDIA CONFIGURATION ---
 const MEDIA_PATHS = {
   video: '/videos/intro.mp4',
-  image: '/images/benz.jpg',
+  image: '/images/group_photo.jpg',
   aboutPageImage: '/images/about.jpg',
-  fallback: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&q=80&w=1600'
+  fallback: '/images/group_photo.jpg'
 };
 
 // Define valid views
@@ -18,7 +18,7 @@ type ViewType = 'home' | 'watch-live' | 'start-racing' | 'how-it-works' | 'race-
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<ViewType>('home');
-  const [mediaType, setMediaType] = useState<'video' | 'image' | 'fallback'>('video');
+  const [mediaType, setMediaType] = useState<'video' | 'image' | 'fallback'>('image');
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const [activeRulesSection, setActiveRulesSection] = useState<string>('rulebooks');
 
@@ -48,29 +48,41 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Community</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
-          Racing doesn’t stop at the track.
-        </h3>
-        <p className="text-base text-white font-sans font-bold mb-3">It lives in the community—at events, in the paddock, and anywhere riders come together.</p>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl mb-6">
-          The Calgary Motorcycle Roadracing Association is out there—building the sport, supporting riders, and pushing motorcycle roadracing forward across Western Canada.
-        </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6462.jpg" 
+            alt="Paddock and Pit Lane" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
 
-        <div className="flex flex-wrap gap-4 border-t border-white/5 pt-6">
-          <button
-            onClick={() => navigateTo('start-racing')}
-            className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest shadow-md flex items-center justify-center gap-1.5"
-          >
-            👉 Start Racing
-          </button>
-          <button
-            onClick={() => navigateTo('events')}
-            className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest flex items-center justify-center gap-1.5"
-          >
-            👉 View Events
-          </button>
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Community</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
+            Racing doesn’t stop at the track.
+          </h3>
+          <p className="text-base text-white font-sans font-bold mb-3">It lives in the community—at events, in the paddock, and anywhere riders come together.</p>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl mb-6">
+            The Calgary Motorcycle Roadracing Association is out there—building the sport, supporting riders, and pushing motorcycle roadracing forward across Western Canada.
+          </p>
+
+          <div className="flex flex-wrap gap-4 border-t border-white/5 pt-6">
+            <button
+              onClick={() => navigateTo('start-racing')}
+              className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest shadow-md flex items-center justify-center gap-1.5"
+            >
+              👉 Start Racing
+            </button>
+            <button
+              onClick={() => navigateTo('events')}
+              className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest flex items-center justify-center gap-1.5"
+            >
+              👉 View Events
+            </button>
+          </div>
         </div>
       </div>
 
@@ -483,20 +495,32 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Advanced Rider Training</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Good isn’t enough. Get faster.
-        </h3>
-        
-        <div className="mt-4 border-t border-white/5 pt-4">
-          <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
-          <p className="text-base text-white font-sans font-bold mb-2">
-            Advanced Rider Training (ART) is built for racers ready to push further.
-          </p>
-          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-            This is where you go beyond basics – and find precision.
-          </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6469.jpg" 
+            alt="Advanced Rider Training Paddock" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Advanced Rider Training</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Good isn’t enough. Get faster.
+          </h3>
+          
+          <div className="mt-4 border-t border-white/5 pt-4">
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <p className="text-base text-white font-sans font-bold mb-2">
+              Advanced Rider Training (ART) is built for racers ready to push further.
+            </p>
+            <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
+              This is where you go beyond basics – and find precision.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -603,41 +627,53 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">About the CMRA</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Built on passion. Proven on track.
-        </h3>
-        
-        <p className="text-base text-white font-sans font-bold mb-3">
-          Since 1987, the Calgary Motorcycle Roadracing Association has been at the center of motorcycle roadracing in Southern Alberta.
-        </p>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-4 max-w-3xl">
-          What started as a place to race has become something more:
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mb-6">
-          {['A proving ground.', 'A community.', 'A standard.'].map((text, i) => (
-            <div key={i} className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#dc2626]"></span>
-              <span className="text-sm md:text-base font-sans font-bold text-white uppercase tracking-wider">{text}</span>
-            </div>
-          ))}
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R5540.jpg" 
+            alt="About CMRA Action Backdrop" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
         </div>
 
-        <div className="flex flex-wrap gap-4 border-t border-white/5 pt-6">
-          <button
-            onClick={() => navigateTo('start-racing')}
-            className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest shadow-md flex items-center justify-center gap-1.5"
-          >
-            👉 Start Racing
-          </button>
-          <button
-            onClick={() => navigateTo('events')}
-            className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest flex items-center justify-center gap-1.5"
-          >
-            👉 View Events
-          </button>
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">About the CMRA</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Built on passion. Proven on track.
+          </h3>
+          
+          <p className="text-base text-white font-sans font-bold mb-3">
+            Since 1987, the Calgary Motorcycle Roadracing Association has been at the center of motorcycle roadracing in Southern Alberta.
+          </p>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-4 max-w-3xl">
+            What started as a place to race has become something more:
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mb-6">
+            {['A proving ground.', 'A community.', 'A standard.'].map((text, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#dc2626]"></span>
+                <span className="text-sm md:text-base font-sans font-bold text-white uppercase tracking-wider">{text}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-4 border-t border-white/5 pt-6">
+            <button
+              onClick={() => navigateTo('start-racing')}
+              className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest shadow-md flex items-center justify-center gap-1.5"
+            >
+              👉 Start Racing
+            </button>
+            <button
+              onClick={() => navigateTo('events')}
+              className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest flex items-center justify-center gap-1.5"
+            >
+              👉 View Events
+            </button>
+          </div>
         </div>
       </div>
 
@@ -645,18 +681,27 @@ const App: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* Block 1: THE CMRA (Our Story) */}
-        <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
-          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
+        <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R5803.jpg" 
+              alt="CMRA Story Backdrop" 
+              className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+          </div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
+          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
           
-          <div>
+          <div className="relative z-10">
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 01</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">THE CMRA</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">Our Story</p>
             <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-4 font-bold">
               From the early days at Race City Speedway to today’s competition at a world-class facility, the CMRA has always been about one thing:
             </p>
-            <div className="bg-black/40 p-3 rounded-xl border border-white/5 my-4">
+            <div className="bg-black/50 p-3 rounded-xl border border-white/5 my-4 backdrop-blur-sm">
               <p className="text-xs text-white leading-normal font-sans italic font-bold">
                 Giving riders a place to push their limits.
               </p>
@@ -666,7 +711,7 @@ const App: React.FC = () => {
             </p>
           </div>
 
-          <div className="border-t border-white/5 pt-4 mt-auto">
+          <div className="border-t border-white/5 pt-4 mt-auto relative z-10">
             <button
               onClick={() => navigateTo('our-story')}
               className="w-full bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest text-center"
@@ -677,11 +722,20 @@ const App: React.FC = () => {
         </div>
 
         {/* Block 2: CONTACT (Get In Touch) */}
-        <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
-          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
+        <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R5918.jpg" 
+              alt="Contact Background" 
+              className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+          </div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
+          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
           
-          <div>
+          <div className="relative z-10">
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 02</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">CONTACT</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">Get In Touch</p>
@@ -694,14 +748,14 @@ const App: React.FC = () => {
 
             <a
               href="mailto:cmra@roadracing.org"
-              className="block w-full bg-black/40 hover:bg-black/60 border border-white/5 hover:border-white/10 rounded-xl p-3 text-xs text-neutral-300 font-sans transition-all flex items-center justify-center gap-2 mb-4"
+              className="block w-full bg-black/60 hover:bg-black/80 border border-white/5 hover:border-white/10 rounded-xl p-3 text-xs text-neutral-300 font-sans transition-all flex items-center justify-center gap-2 mb-4 backdrop-blur-sm"
             >
               <Mail size={14} className="text-[#dc2626]" />
               <span>👉 Email: cmra@roadracing.org</span>
             </a>
           </div>
 
-          <div className="border-t border-white/5 pt-4 mt-auto">
+          <div className="border-t border-white/5 pt-4 mt-auto relative z-10">
             <button
               onClick={() => navigateTo('contact')}
               className="w-full bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest text-center"
@@ -712,11 +766,20 @@ const App: React.FC = () => {
         </div>
 
         {/* Block 3: ROCKY MOUNTAIN MOTORSPORTS CIRCUIT (Our Home Track) */}
-        <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
-          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
+        <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R6089.jpg" 
+              alt="Rocky Mountain Motorsports Circuit Backdrop" 
+              className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+          </div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
+          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
           
-          <div>
+          <div className="relative z-10">
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 03</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1 leading-tight">ROCKY MOUNTAIN MOTORSPORTS CIRCUIT</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">Our Home Track</p>
@@ -728,7 +791,7 @@ const App: React.FC = () => {
             </p>
           </div>
 
-          <div className="border-t border-white/5 pt-4 mt-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="border-t border-white/5 pt-4 mt-auto grid grid-cols-1 sm:grid-cols-2 gap-4 relative z-10">
             <button
               onClick={() => navigateTo('rmm-circuit')}
               className="bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-[10px] uppercase py-3 rounded-xl transition-all tracking-wider text-center"
@@ -987,17 +1050,29 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">season calendar</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          The season is taking shape.
-        </h3>
-        <p className="text-[#F59E0B] font-teko font-bold text-lg md:text-xl uppercase tracking-wide italic mb-4 leading-none">
-          Dates are dropping. More are coming. Be ready to move when they do.
-        </p>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-          The Calgary Motorcycle Roadracing Association calendar is built as the season comes together – giving riders early visibility while leaving room for additional race weekends and updates.
-        </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6247.jpg" 
+            alt="Calendar Season Backdrop" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">season calendar</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            The season is taking shape.
+          </h3>
+          <p className="text-[#F59E0B] font-teko font-bold text-lg md:text-xl uppercase tracking-wide italic mb-4 leading-none">
+            Dates are dropping. More are coming. Be ready to move when they do.
+          </p>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
+            The Calgary Motorcycle Roadracing Association calendar is built as the season comes together – giving riders early visibility while leaving room for additional race weekends and updates.
+          </p>
+        </div>
       </div>
 
       {/* OVERVIEW ACCENT BOX */}
@@ -1157,8 +1232,17 @@ const App: React.FC = () => {
 
   const renderNewRacersContent = () => (
     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:h-full animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="bg-[#dc2626]/10 border border-[#dc2626]/20 p-8 md:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden group">
-        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"><GraduationCap size={120} /></div>
+      <div className="bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden group">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6111.jpg" 
+            alt="Race School Backdrop" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity z-10"><GraduationCap size={120} /></div>
         <div className="relative z-10">
           <div className="bg-[#dc2626] w-12 h-12 rounded-full flex items-center justify-center mb-6 shadow-lg shadow-red-900/50"><GraduationCap size={24} /></div>
           <h4 className="text-4xl md:text-5xl font-bold uppercase mb-4 font-teko text-white">Race School</h4>
@@ -1178,7 +1262,16 @@ const App: React.FC = () => {
       </div>
 
       <div className="bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden group">
-        <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity"><Users size={120} /></div>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6238.jpg" 
+            alt="Mentorship Backdrop" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+        <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity z-10"><Users size={120} /></div>
         <div className="relative z-10">
           <div className="bg-neutral-800 w-12 h-12 rounded-full flex items-center justify-center mb-6"><Users size={24} /></div>
           <h4 className="text-4xl md:text-5xl font-bold uppercase mb-4 font-teko text-white">Mentorship</h4>
@@ -1188,7 +1281,7 @@ const App: React.FC = () => {
           {/* BUTTON: Mentorship Learn More */}
           <a
             href="mailto:info@roadracing.org" // <--- EDIT HYPERLINK HERE
-            className="inline-block text-center bg-white/5 border border-white/10 px-8 py-4 rounded-xl font-bold text-xs uppercase transition-all hover:bg-white/10 tracking-widest text-neutral-300 hover:text-white"
+            className="inline-block text-center bg-white/5 border border-white/10 px-8 py-4 rounded-xl font-bold text-xs uppercase transition-all hover:bg-white/10 tracking-widest text-neutral-300 hover:text-white relative z-10"
           >
             Learn More
           </a>
@@ -1199,8 +1292,19 @@ const App: React.FC = () => {
 
   const renderWatchLiveContent = () => (
     <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-12">
-      {/* Left Column: Full Copy and Experience Details */}
-      <div className="lg:col-span-8 bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl space-y-8 text-neutral-300">
+    {/* Left Column: Full Copy and Experience Details */}
+    <div className="lg:col-span-8 bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl space-y-8 text-neutral-300 relative overflow-hidden group">
+      {/* Background Image Overlay */}
+      <div className="absolute inset-0 z-0 select-none pointer-events-none">
+        <img 
+          src="/images/_A7R6221.jpg" 
+          alt="Watch LIVE Spectator" 
+          className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+      </div>
+
+      <div className="relative z-10 space-y-8">
         <div>
           <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">spectator guide</span>
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-[0.9] mb-4">
@@ -1297,6 +1401,7 @@ const App: React.FC = () => {
             </button>
           </div>
         </section>
+        </div>
       </div>
 
       {/* Right Column: Sticky CTA & Know Before You Go */}
@@ -1346,30 +1451,42 @@ const App: React.FC = () => {
   const renderStartRacingContent = () => (
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO (Top Frame) */}
-      <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0">
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">how to start</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          You’ve watched long enough. Now it’s your turn.
-        </h3>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-6">
-          Racing isn’t reserved for someone else – it’s built for riders like you.
-          With the Calgary Motorcycle Roadracing Association, the path from street rider to starting grid is clear, structured, and built around one thing above all:
-          <br />
-          <span className="text-[#dc2626] font-bold uppercase tracking-wide">Safety – through skill, community, and organized competition.</span>
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <button
-            onClick={() => navigateTo('race-school')}
-            className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-2 group"
-          >
-            Start Your Racing Journey <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button
-            onClick={() => navigateTo('calendar')}
-            className="bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest flex items-center gap-2 group"
-          >
-            View Upcoming Events <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform text-neutral-400 group-hover:text-white" />
-          </button>
+      <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R4440.jpg" 
+            alt="Start Racing Action Backdrop" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">how to start</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            You’ve watched long enough. Now it’s your turn.
+          </h3>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-6">
+            Racing isn’t reserved for someone else – it’s built for riders like you.
+            With the Calgary Motorcycle Roadracing Association, the path from street rider to starting grid is clear, structured, and built around one thing above all:
+            <br />
+            <span className="text-[#dc2626] font-bold uppercase tracking-wide">Safety – through skill, community, and organized competition.</span>
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={() => navigateTo('race-school')}
+              className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-2 group"
+            >
+              Start Your Racing Journey <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button
+              onClick={() => navigateTo('calendar')}
+              className="bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest flex items-center gap-2 group"
+            >
+              View Upcoming Events <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform text-neutral-400 group-hover:text-white" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1378,9 +1495,19 @@ const App: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           
           {/* Block 1: HOW IT WORKS */}
-          <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
-            <div>
+          <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
+            {/* Background Image Overlay */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
+              <img 
+                src="/images/_A7R4465.jpg" 
+                alt="How It Works Background" 
+                className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+            </div>
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
+            
+            <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">01</span>
                 <h4 className="text-xl font-teko font-bold uppercase text-white tracking-wider">HOW IT WORKS</h4>
@@ -1395,7 +1522,7 @@ const App: React.FC = () => {
                 If you’ve got the bike and the gear, you’re only a few steps away from lining up on race day.
               </p>
               
-              <div className="bg-black/30 p-3.5 rounded-xl border border-white/5 mb-4">
+              <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <p className="text-[11px] font-bold uppercase tracking-wider text-neutral-300 mb-2">Here’s how it works:</p>
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Earn your race license through Race School</li>
@@ -1408,7 +1535,7 @@ const App: React.FC = () => {
                 That’s it – a clear path forward to racing.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto">
+            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
               <button 
                 onClick={() => navigateTo('how-it-works')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
@@ -1425,9 +1552,19 @@ const App: React.FC = () => {
           </div>
 
           {/* Block 2: RACE SCHOOL & LICENSE */}
-          <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
-            <div>
+          <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
+            {/* Background Image Overlay */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
+              <img 
+                src="/images/_A7R4620.jpg" 
+                alt="Race School Background" 
+                className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+            </div>
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
+            
+            <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">02</span>
                 <h4 className="text-xl font-teko font-bold uppercase text-white tracking-wider">RACE SCHOOL & LICENSE</h4>
@@ -1442,7 +1579,7 @@ const App: React.FC = () => {
                 Race School is your gateway – where riders become racers. Learn the fundamentals, build confidence, and prove you’re ready to compete.
               </p>
               
-              <div className="bg-black/30 p-3.5 rounded-xl border border-white/5 mb-4">
+              <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Classroom + on-track training</li>
                   <li>Structured, safety-first environment</li>
@@ -1454,7 +1591,7 @@ const App: React.FC = () => {
                 Pass, and you’ll earn your CMRA Race License – your key to the grid.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto">
+            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
               <button 
                 onClick={() => navigateTo('race-school')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
@@ -1471,9 +1608,19 @@ const App: React.FC = () => {
           </div>
 
           {/* Block 3: MEMBERSHIP & REGISTRATION */}
-          <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
-            <div>
+          <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
+            {/* Background Image Overlay */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
+              <img 
+                src="/images/_A7R4700.jpg" 
+                alt="Membership & Registration Background" 
+                className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+            </div>
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
+            
+            <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">03</span>
                 <h4 className="text-xl font-teko font-bold uppercase text-white tracking-wider">MEMBERSHIP & REGISTRATION</h4>
@@ -1488,7 +1635,7 @@ const App: React.FC = () => {
                 Membership makes it official. It connects you to the championship, the community, and every race on the calendar.
               </p>
               
-              <div className="bg-black/30 p-3.5 rounded-xl border border-white/5 mb-4">
+              <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <p className="text-[11px] font-bold uppercase tracking-wider text-neutral-300 mb-2">Once licensed:</p>
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Register for events</li>
@@ -1497,7 +1644,7 @@ const App: React.FC = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto">
+            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
               <button 
                 onClick={() => navigateTo('membership')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
@@ -1514,9 +1661,19 @@ const App: React.FC = () => {
           </div>
 
           {/* Block 4: COSTS & EXPECTATIONS */}
-          <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
-            <div>
+          <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
+            {/* Background Image Overlay */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
+              <img 
+                src="/images/_A7R5396.jpg" 
+                alt="Costs & Expectations Background" 
+                className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+            </div>
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
+            
+            <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">04</span>
                 <h4 className="text-xl font-teko font-bold uppercase text-white tracking-wider">COSTS & EXPECTATIONS</h4>
@@ -1531,7 +1688,7 @@ const App: React.FC = () => {
                 The CMRA is built to keep racing accessible, without compromising the experience.
               </p>
               
-              <div className="bg-black/30 p-3.5 rounded-xl border border-white/5 mb-4">
+              <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Transparent pricing</li>
                   <li>More racing = more value</li>
@@ -1546,7 +1703,7 @@ const App: React.FC = () => {
                 A community that pushes you to improve – safely, competitively, and together.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto">
+            <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
               <button 
                 onClick={() => navigateTo('costs')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
@@ -1587,41 +1744,64 @@ const App: React.FC = () => {
   const renderHowItWorksContent = () => (
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
-      <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">how it works</span>
-        <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          From rider to racer – in three steps.
-        </h3>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
-          No shortcuts. No confusion. This is the path to the starting line.
-        </p>
-      </div>
+        <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R5271.jpg" 
+              alt="Pre-grid lining up" 
+              className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+          </div>
+
+          <div className="relative z-10">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
+            <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">how it works</span>
+            <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+              From rider to racer – in three steps.
+            </h3>
+            <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
+              No shortcuts. No confusion. This is the path to the starting line.
+            </p>
+          </div>
+        </div>
 
       {/* THREE STEPS SECTION */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
         {/* STEP 1: Get Licensed */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
-          <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">01</div>
-          
-          <div>
-            <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 1</span>
-            
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
-              <GraduationCap size={24} />
-            </div>
-            
-            <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Get Licensed</h4>
-            
-            <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-4">
-              Earn your CMRA Race License by completing an approved race school.
-            </p>
-            <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6">
-              The Calgary Motorcycle Roadracing Association makes this simple with its own, CMRA Race School.
-            </p>
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R4625.jpg" 
+              alt="Prepped bike under canopy" 
+              className="w-full h-full object-cover opacity-20 group-hover:opacity-35 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
           </div>
+
+          <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">01</div>
+            
+            <div>
+              <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 1</span>
+              
+               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
+                <GraduationCap size={24} />
+              </div>
+              
+              <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Get Licensed</h4>
+              
+              <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-4">
+                Earn your CMRA Race License by completing an approved race school.
+              </p>
+              <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6">
+                The Calgary Motorcycle Roadracing Association makes this simple with its own, CMRA Race School.
+              </p>
+            </div>
           
           <div className="mt-auto pt-4 border-t border-white/5">
             <button
@@ -1643,22 +1823,33 @@ const App: React.FC = () => {
 
         {/* STEP 2: Become a Member */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
-          <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">02</div>
-          
-          <div>
-            <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 2</span>
-            
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
-              <Users size={24} />
-            </div>
-            
-            <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Become a Member</h4>
-            
-            <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6">
-              Purchase your annual CMRA Membership to compete in events and earn championship points.
-            </p>
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R6248.jpg" 
+              alt="Paddock membership high five" 
+              className="w-full h-full object-cover opacity-20 group-hover:opacity-35 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
           </div>
+
+          <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">02</div>
+            
+            <div>
+              <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 2</span>
+              
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
+                <Users size={24} />
+              </div>
+              
+              <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Become a Member</h4>
+              
+              <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6">
+                Purchase your annual CMRA Membership to compete in events and earn championship points.
+              </p>
+            </div>
           
           <div className="mt-auto pt-4 border-t border-white/5">
             <button
@@ -1680,37 +1871,48 @@ const App: React.FC = () => {
 
         {/* STEP 3: Register & Race */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
-          <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">03</div>
-          
-          <div>
-            <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 3</span>
-            
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
-              <Flag size={24} />
-            </div>
-            
-            <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Register & Race</h4>
-            
-            <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-3">
-              Once licensed and registered:
-            </p>
-            
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
-                <span>Choose your events</span>
-              </li>
-              <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
-                <span>Sign up through MotorsportReg</span>
-              </li>
-              <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
-                <span>Line up and race</span>
-              </li>
-            </ul>
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R6081.jpg" 
+              alt="Pre-grid line of riders" 
+              className="w-full h-full object-cover opacity-20 group-hover:opacity-35 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
           </div>
+
+          <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
+            <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">03</div>
+            
+            <div>
+              <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 3</span>
+              
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
+                <Flag size={24} />
+              </div>
+              
+              <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Register & Race</h4>
+              
+              <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-3">
+                Once licensed and registered:
+              </p>
+              
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                  <span>Choose your events</span>
+                </li>
+                <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                  <span>Sign up through MotorsportReg</span>
+                </li>
+                <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+                  <span>Line up and race</span>
+                </li>
+              </ul>
+            </div>
           
           <div className="mt-auto pt-4 border-t border-white/5">
             <button
@@ -1755,14 +1957,26 @@ const App: React.FC = () => {
       <div className="lg:col-span-8 flex flex-col gap-6">
         {/* HERO Banner */}
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">race school & license</span>
-          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
-            Earn it. Learn it. Race it.
-          </h3>
-          <p className="text-neutral-400 text-xs md:text-sm font-sans italic">
-            This is where riders become racers.
-          </p>
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R6456.jpg" 
+              alt="Rider Briefing" 
+              className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+          </div>
+
+          <div className="relative z-10">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+            <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">race school & license</span>
+            <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
+              Earn it. Learn it. Race it.
+            </h3>
+            <p className="text-neutral-400 text-xs md:text-sm font-sans italic">
+              This is where riders become racers.
+            </p>
+          </div>
         </div>
 
         {/* WHAT YOU’RE WORKING TOWARD */}
@@ -2149,18 +2363,30 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">class grids</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Where you line up matters.
-        </h3>
-        <p className="text-white font-sans text-xs md:text-sm leading-relaxed mb-4 font-bold">
-          Not just for fairness – but for the kind of racing you want.
-        </p>
-        <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed mb-6 max-w-3xl">
-          From 1000cc Superbikes to middleweight twins – whether you’re chasing outright speed, racing in senior categories, or lining up in women’s classes – there’s a place for you on the grid.
-          <span className="text-white font-bold block mt-3">Bring your machine. Find your class. Take your shot.</span>
-        </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6753.jpg" 
+            alt="Racing Classes" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">class grids</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Where you line up matters.
+          </h3>
+          <p className="text-white font-sans text-xs md:text-sm leading-relaxed mb-4 font-bold">
+            Not just for fairness – but for the kind of racing you want.
+          </p>
+          <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed mb-6 max-w-3xl">
+            From 1000cc Superbikes to middleweight twins – whether you’re chasing outright speed, racing in senior categories, or lining up in women’s classes – there’s a place for you on the grid.
+            <span className="text-white font-bold block mt-3">Bring your machine. Find your class. Take your shot.</span>
+          </p>
+        </div>
       </div>
 
       {/* OVERVIEW & HOW CLASSES WORK */}
@@ -2246,8 +2472,18 @@ const App: React.FC = () => {
         </div>
 
         {/* Specialty Classes */}
-        <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
-          <div>
+        <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R7506.jpg" 
+              alt="Specialty Classes Supermoto" 
+              className="w-full h-full object-cover opacity-40 group-hover:opacity-65 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
+          </div>
+
+          <div className="relative z-10">
             <h4 className="text-lg font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-4 flex items-center gap-2">
               <Trophy size={18} className="text-[#F59E0B]" /> Specialty Classes
             </h4>
@@ -2331,14 +2567,26 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">regional competition</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Every race counts. Every point matters.
-        </h3>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-          CMRA riders compete within the Western Canadian Championship Series (WCCS) – a regional championship that brings together top riders across Western Canada.
-        </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R7271.jpg" 
+            alt="WCCS Pack Racing" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">regional competition</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Every race counts. Every point matters.
+          </h3>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
+            CMRA riders compete within the Western Canadian Championship Series (WCCS) – a regional championship that brings together top riders across Western Canada.
+          </p>
+        </div>
       </div>
 
       {/* OVERVIEW */}
@@ -2494,14 +2742,26 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">pre-race preparation</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Preparation is performance.
-        </h3>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-          Before the green flag, before the grid – this is where racing starts.
-        </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6483.jpg" 
+            alt="Yamaha R6 Preparation" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">pre-race preparation</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Preparation is performance.
+          </h3>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
+            Before the green flag, before the grid – this is where racing starts.
+          </p>
+        </div>
       </div>
 
       {/* THE FOUNDATION */}
@@ -2669,26 +2929,38 @@ const App: React.FC = () => {
         </div>
 
         {/* CTA Card */}
-        <div className="lg:col-span-5 bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-24 h-24 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
-          <div>
-            <h4 className="text-2xl font-teko font-bold uppercase italic text-white leading-none mb-1">
-              Get your machine ready.
-            </h4>
-            <h4 className="text-2xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-              Get yourself ready.
-            </h4>
-            <p className="text-[11px] text-neutral-400 font-sans leading-relaxed mb-6">
-              Take the first step towards racing. Build confidence, refine your skills, and earn your official CMRA Race License.
-            </p>
+        <div className="lg:col-span-5 bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R6465.jpg" 
+              alt="Prepped race bike" 
+              className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
           </div>
-          
-          <button
-            onClick={() => navigateTo('race-school')}
-            className="w-full bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center justify-center gap-2 group text-left mt-auto"
-          >
-            Start with Race School <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+
+          <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
+            <div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
+              <h4 className="text-2xl font-teko font-bold uppercase italic text-white leading-none mb-1">
+                Get your machine ready.
+              </h4>
+              <h4 className="text-2xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+                Get yourself ready.
+              </h4>
+              <p className="text-[11px] text-neutral-400 font-sans leading-relaxed mb-6">
+                Take the first step towards racing. Build confidence, refine your skills, and earn your official CMRA Race License.
+              </p>
+            </div>
+            
+            <button
+              onClick={() => navigateTo('race-school')}
+              className="w-full bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center justify-center gap-2 group text-left mt-auto"
+            >
+              Start with Race School <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
         </div>
 
       </div>
@@ -2700,14 +2972,26 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">timing & results</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Proof is in the finish.
-        </h3>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-          Where It All Lands – capturing margins, battles, and breakthroughs on the grid.
-        </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R7513.jpg" 
+            alt="Timing & Results Knee Drag" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">timing & results</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Proof is in the finish.
+          </h3>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
+            Where It All Lands – capturing margins, battles, and breakthroughs on the grid.
+          </p>
+        </div>
       </div>
 
       {/* SUPPORTING COPY & DYNAMIC GRAPHIC PLACEHOLDER */}
@@ -2826,11 +3110,23 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">membership & registration</span>
-        <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Make it official. Take your place on the grid.
-        </h3>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6461.jpg" 
+            alt="Paddock life Revolver Racing" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">membership & registration</span>
+          <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Make it official. Take your place on the grid.
+          </h3>
+        </div>
       </div>
 
       {/* TWO-COLUMN CONTENT SECTION */}
@@ -2974,22 +3270,34 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO & OVERVIEW */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Become A Member</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Join the riders who line up.
-        </h3>
-        <div className="mt-4 border-t border-white/5 pt-4">
-          <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
-          <p className="text-base text-white font-sans font-bold mb-2">Becoming a member of the Calgary Motorcycle Roadracing Association is your first official step into competition.</p>
-          <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed mb-4">
-            It connects you to:
-          </p>
-          <ul className="space-y-2 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
-            <li>The full race calendar</li>
-            <li>Championship standings</li>
-            <li>A community built around skill, safety, and progression</li>
-          </ul>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6378.jpg" 
+            alt="Become Member Details Backdrop" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Become A Member</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Join the riders who line up.
+          </h3>
+          <div className="mt-4 border-t border-white/5 pt-4">
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <p className="text-base text-white font-sans font-bold mb-2">Becoming a member of the Calgary Motorcycle Roadracing Association is your first official step into competition.</p>
+            <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed mb-4">
+              It connects you to:
+            </p>
+            <ul className="space-y-2 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
+              <li>The full race calendar</li>
+              <li>Championship standings</li>
+              <li>A community built around skill, safety, and progression</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -2997,14 +3305,24 @@ const App: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
         {/* WHAT MEMBERSHIP UNLOCKS */}
-        <div className="lg:col-span-7 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
-          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          <div>
+        <div className="lg:col-span-7 bg-neutral-900 border border-white/10 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between group">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R6386.jpg" 
+              alt="Membership Unlocks Backdrop" 
+              className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+          </div>
+          <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
+          
+          <div className="relative z-10">
             <h4 className="text-lg font-teko font-bold uppercase text-white tracking-wider flex items-center gap-2 mb-3">
               <Trophy size={18} className="text-[#dc2626]" /> What Membership Unlocks
             </h4>
             
-            <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
+            <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626] font-bold">
               <li>Eligibility to register for CMRA race events</li>
               <li>Ability to earn championship points</li>
               <li>Access to official race communications and updates</li>
@@ -3112,14 +3430,26 @@ const App: React.FC = () => {
       <div className="lg:col-span-8 flex flex-col gap-6">
         {/* HERO Banner */}
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">costs & expectations</span>
-          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
-            Real people. Pure racing. No surprises.
-          </h3>
-          <p className="text-neutral-400 text-xs md:text-sm font-sans">
-            Transparent pricing and competitive track day expectations for the CMRA grid.
-          </p>
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 z-0 select-none pointer-events-none">
+            <img 
+              src="/images/_A7R6232.jpg" 
+              alt="Paddock expectations spec" 
+              className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+          </div>
+
+          <div className="relative z-10">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+            <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">costs & expectations</span>
+            <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
+              Real people. Pure racing. No surprises.
+            </h3>
+            <p className="text-neutral-400 text-xs md:text-sm font-sans">
+              Transparent pricing and competitive track day expectations for the CMRA grid.
+            </p>
+          </div>
         </div>
 
         {/* COST BREAKDOWN */}
@@ -3485,29 +3815,41 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">championship racing</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          You don’t watch this. You feel it.
-        </h3>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-6 max-w-3xl">
-          There’s a moment – right before the lights, right before the throttle – where everything sharpens. 
-          <span className="text-white font-bold block mt-1">This is that moment.</span>
-          With the Calgary Motorcycle Roadracing Association, racing isn’t something you follow. It’s something you step into.
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <button
-            onClick={() => navigateTo('calendar')}
-            className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-2 group"
-          >
-            View Events <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button
-            onClick={() => navigateTo('start-racing')}
-            className="bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest flex items-center gap-2 group"
-          >
-            Start Racing <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform text-neutral-400 group-hover:text-white" />
-          </button>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6520.jpg" 
+            alt="Championship Racing Corners" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">championship racing</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            You don’t watch this. You feel it.
+          </h3>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-6 max-w-3xl">
+            There’s a moment – right before the lights, right before the throttle – where everything sharpens. 
+            <span className="text-white font-bold block mt-1">This is that moment.</span>
+            With the Calgary Motorcycle Roadracing Association, racing isn’t something you follow. It’s something you step into.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <button
+              onClick={() => navigateTo('calendar')}
+              className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-2 group"
+            >
+              View Events <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button
+              onClick={() => navigateTo('start-racing')}
+              className="bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest flex items-center gap-2 group"
+            >
+              Start Racing <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform text-neutral-400 group-hover:text-white" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -4014,28 +4356,40 @@ const App: React.FC = () => {
 
   const renderVolunteersContent = () => (
     <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:h-full animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="lg:col-span-8 bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-2xl flex flex-col justify-between">
-        <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-6">JOIN THE PADDOCK</span>
-          <h3 className="text-5xl md:text-7xl font-teko font-bold uppercase italic text-white leading-[0.85] mb-6">VOLUNTEERS & MARSHALS</h3>
-          
-          <div className="space-y-6 text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-8">
-            <p className="italic text-neutral-200">
-              "Corner marshals and volunteer staff are the unsung heroes of motorcycle roadracing. They provide vital flag communications, track sweep operations, and safety watch."
-            </p>
-            <p>
-              No experience is required to volunteer—we provide full track orientation, radio training, safety gear, and daily lunch. Get closest to the high-speed action and join our tight-knit paddock.
-            </p>
-          </div>
+      <div className="lg:col-span-8 bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6503.jpg" 
+            alt="Volunteers and Marshalls" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
         </div>
 
-        <div className="border-t border-white/10 pt-6">
-          <button 
-            onClick={() => navigateTo('rules-safety', 'forms')}
-            className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md"
-          >
-            FILL OUT CMRA VOLUNTEER FORM
-          </button>
+        <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
+          <div>
+            <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-6">JOIN THE PADDOCK</span>
+            <h3 className="text-5xl md:text-7xl font-teko font-bold uppercase italic text-white leading-[0.85] mb-6">VOLUNTEERS & MARSHALS</h3>
+            
+            <div className="space-y-6 text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-8">
+              <p className="italic text-neutral-200">
+                "Corner marshals and volunteer staff are the unsung heroes of motorcycle roadracing. They provide vital flag communications, track sweep operations, and safety watch."
+              </p>
+              <p>
+                No experience is required to volunteer—we provide full track orientation, radio training, safety gear, and daily lunch. Get closest to the high-speed action and join our tight-knit paddock.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-white/10 pt-6">
+            <button 
+              onClick={() => navigateTo('rules-safety', 'forms')}
+              className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md"
+            >
+              FILL OUT CMRA VOLUNTEER FORM
+            </button>
+          </div>
         </div>
       </div>
       <div className="lg:col-span-4 bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between">
@@ -4060,22 +4414,34 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Our Home Track</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Alberta’s finest. Built for riders.
-        </h3>
-        
-        <div className="mt-4 border-t border-white/5 pt-4">
-          <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
-          <p className="text-base text-white font-sans font-bold mb-2">
-            All CMRA events take place at Rocky Mountain Motorsports Circuit – a modern, purpose-built facility designed to deliver a world-class racing experience.
-          </p>
-          <div className="flex items-center gap-2 mt-3 bg-black/40 px-4 py-2.5 rounded-xl border border-white/5 w-max">
-            <span className="w-2 h-2 rounded-full bg-[#dc2626] animate-pulse"></span>
-            <p className="text-xs text-neutral-300 font-sans leading-relaxed">
-              This isn’t just a track. <span className="text-white font-bold">It’s a rider’s track.</span>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6252.jpg" 
+            alt="Rocky Mountain Motorsports Circuit Backdrop" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Our Home Track</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Alberta’s finest. Built for riders.
+          </h3>
+          
+          <div className="mt-4 border-t border-white/5 pt-4">
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <p className="text-base text-white font-sans font-bold mb-2">
+              All CMRA events take place at Rocky Mountain Motorsports Circuit – a modern, purpose-built facility designed to deliver a world-class racing experience.
             </p>
+            <div className="flex items-center gap-2 mt-3 bg-black/40 px-4 py-2.5 rounded-xl border border-white/5 w-max backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-[#dc2626] animate-pulse"></span>
+              <p className="text-xs text-neutral-300 font-sans leading-relaxed">
+                This isn’t just a track. <span className="text-white font-bold">It’s a rider’s track.</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -4138,21 +4504,30 @@ const App: React.FC = () => {
         <div className="lg:col-span-5 flex flex-col gap-6">
           
           {/* The Experience */}
-          <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 rounded-2xl relative overflow-hidden group flex-1 flex flex-col justify-between">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
-            <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
+          <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl relative overflow-hidden group flex-1 flex flex-col justify-between">
+            {/* Background Image Overlay */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
+              <img 
+                src="/images/_A7R6377.jpg" 
+                alt="Track Experience Backdrop" 
+                className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
+            </div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
+            <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
             
-            <div>
+            <div className="relative z-10">
               <h4 className="text-xl font-teko font-bold uppercase text-white mb-4 flex items-center gap-2">
                 <Trophy size={18} className="text-[#dc2626]" /> The Experience
               </h4>
               
-              <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-6">
+              <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-6 font-bold">
                 From your first laps in CMRA Race School to full race weekends, this circuit pushes you to improve – corner by corner, lap by lap.
               </p>
             </div>
             
-            <div className="space-y-2.5 border-t border-white/5 pt-4 mt-auto">
+            <div className="space-y-2.5 border-t border-white/5 pt-4 mt-auto relative z-10">
               {[
                 'It’s where confidence is built.',
                 'Where speed is earned.',
@@ -4284,17 +4659,29 @@ const App: React.FC = () => {
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO & OVERVIEW */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Upcoming Events</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Your next race is waiting.
-        </h3>
-        <div className="mt-4 border-t border-white/5 pt-4">
-          <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
-          <p className="text-base text-white font-sans font-bold mb-2">This is what’s coming up next.</p>
-          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-            Whether it’s your first race or your next podium run, these are the events you should be focused on now.
-          </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R6381.jpg" 
+            alt="Racer 88 active cornering" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Upcoming Events</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Your next race is waiting.
+          </h3>
+          <div className="mt-4 border-t border-white/5 pt-4">
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <p className="text-base text-white font-sans font-bold mb-2">This is what’s coming up next.</p>
+            <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
+              Whether it’s your first race or your next podium run, these are the events you should be focused on now.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -4729,16 +5116,27 @@ const App: React.FC = () => {
 
   const renderRaceNumbersContent = () => (
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
-      {/* HERO */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">the starting grid</span>
-        <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          Every number has a meaning. Every rider has their purpose.
-        </h3>
-        <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-          Each number represents a rider, a machine – and a story unfolding this season.
-        </p>
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img 
+            src="/images/_A7R7030.jpg" 
+            alt="Race Numbers Starting Grid" 
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">the starting grid</span>
+          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            Every number has a meaning. Every rider has their purpose.
+          </h3>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
+            Each number represents a rider, a machine – and a story unfolding this season.
+          </p>
+        </div>
       </div>
 
       {/* SUPPORTING COPY & THE GRID */}
@@ -4862,10 +5260,10 @@ const App: React.FC = () => {
       <Header onNavigate={navigateTo} />
 
       {/* Main Content Area */}
-      <main className={`flex-1 min-h-0 relative flex flex-col p-4 md:p-6 lg:p-8 ${currentView === 'home' ? 'lg:overflow-hidden' : 'lg:overflow-y-auto custom-scroll pb-16'}`}>
+      <main className={`flex-1 min-h-0 relative flex flex-col px-4 pb-4 pt-10 md:px-6 md:pb-6 md:pt-14 lg:px-8 lg:pb-8 lg:pt-20 ${currentView === 'home' ? 'lg:overflow-hidden' : 'lg:overflow-y-auto custom-scroll pb-16'}`}>
 
         {currentView !== 'home' && (
-          <div className="shrink-0 mb-4 lg:mb-6">
+          <div className="shrink-0 mb-4 lg:mb-6 pl-28 md:pl-40 lg:pl-40">
             <button
               onClick={() => navigateTo('home')}
               className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors font-teko text-lg uppercase tracking-wide group"
@@ -4917,10 +5315,8 @@ const App: React.FC = () => {
                       <div className="flex flex-col sm:flex-row gap-4 pt-2">
                         {/* HERO BUTTON 1: BECOME A RACER */}
                         <a
-                          href="#" // <--- EDIT HYPERLINK HERE (e.g. https://www.motorsportreg.com)
+                          href="#"
                           onClick={(e) => {
-                            // IF ADDING EXTERNAL LINK: Remove this onClick handler entirely.
-                            // CURRENTLY: Navigates internally to 'new-racers' view.
                             e.preventDefault();
                             navigateTo('new-racers');
                           }}
@@ -4931,10 +5327,8 @@ const App: React.FC = () => {
 
                         {/* HERO BUTTON 2: UPCOMING EVENTS */}
                         <a
-                          href="#" // <--- EDIT HYPERLINK HERE
+                          href="#"
                           onClick={(e) => {
-                            // IF ADDING EXTERNAL LINK: Remove this onClick handler entirely.
-                            // CURRENTLY: Navigates internally to 'calendar' view.
                             e.preventDefault();
                             navigateTo('calendar');
                           }}

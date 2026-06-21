@@ -94,26 +94,21 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
       {/* Red Line */}
       <div className="h-[3px] w-full bg-[#DC2626] shadow-[0_0_10px_rgba(220,38,38,0.5)] relative z-50"></div>
       
-      <header className="px-4 md:px-6 h-16 md:h-20 flex items-center justify-between max-w-[1920px] mx-auto w-full border-b border-white/10 bg-[#050505]">
-        {/* Left Side: Logo Area */}
-        <div className="flex items-center gap-3 select-none cursor-pointer group shrink-0" onClick={() => onNavigate('home')}>
-          {/* Flag Icon */}
-          <div className="bg-[#E53E3E] rounded-md w-8 h-8 md:w-10 md:h-10 flex items-center justify-center shadow-[0_0_10px_rgba(229,62,62,0.3)] group-hover:bg-red-500 transition-colors">
-            <Flag size={18} strokeWidth={2} className="text-white md:w-5 md:h-5" />
-          </div>
-          
-          {/* Logo Text */}
-          <div className="flex flex-col justify-center -space-y-1">
-             <div className="flex items-baseline gap-1.5">
-                <h1 className="font-teko text-3xl md:text-[2.75rem] font-bold italic tracking-tighter text-white leading-none group-hover:text-neutral-200 transition-colors">
-                  CMRA
-                </h1>
-             </div>
-             <span className="font-sans text-[0.4rem] md:text-[0.55rem] font-bold text-neutral-500 uppercase tracking-[0.35em] leading-none ml-0.5 hidden sm:block">
-               EST. 1987
-             </span>
+      <header className="relative px-4 md:px-6 h-20 md:h-28 flex items-center justify-between max-w-[1920px] mx-auto w-full border-b border-white/10 bg-[#050505]">
+        {/* Left Side: Logo Area (Absolute Positioned for Overflow/Enlargement) */}
+        <div className="absolute left-4 md:left-6 top-1 md:top-2 select-none cursor-pointer group z-[80]" onClick={() => onNavigate('home')}>
+          {/* Logo Image directly on dark background (Huge Overflowing Crest) */}
+          <div className="w-24 h-24 md:w-36 md:h-36 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+            <img 
+              src="/images/logo.png" 
+              alt="CMRA Logo" 
+              className="max-w-full max-h-full object-contain filter drop-shadow-[0_4px_12px_rgba(220,38,38,0.45)]" 
+            />
           </div>
         </div>
+
+        {/* Spacer to reserve space for absolute positioned logo in flex layout */}
+        <div className="w-24 md:w-36 shrink-0 h-1"></div>
 
         {/* Right Side: Desktop Navigation */}
         <nav className="hidden xl:flex items-center gap-4 h-full flex-wrap justify-end pl-4">
@@ -199,8 +194,8 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="xl:hidden absolute top-16 md:top-20 left-0 w-full bg-[#0C0A09]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl animate-in slide-in-from-top-2 duration-200 flex flex-col h-[calc(100vh-64px)] overflow-y-auto z-[60]">
-          <nav className="flex flex-col p-6 gap-2 pb-24">
+        <div className="xl:hidden absolute top-20 md:top-28 left-0 w-full bg-[#0C0A09]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl animate-in slide-in-from-top-2 duration-200 flex flex-col h-[calc(100vh-80px)] md:h-[calc(100vh-112px)] overflow-y-auto z-[60]">
+          <nav className="flex flex-col px-6 pb-24 pt-8 md:pt-14 gap-2">
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="border-b border-white/5 py-2 last:border-0">
                 {item.subItems ? (
