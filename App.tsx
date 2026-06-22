@@ -2947,8 +2947,8 @@ const App: React.FC = () => {
               </div>
               <div className="bg-black/30 p-4 rounded-xl border border-white/5">
                 <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-wider block mb-1">Timing / Tracking</span>
-                <p className="text-xs font-bold text-white font-mono mb-1">GPS Transponder</p>
-                <p className="text-[10px] text-neutral-400 leading-snug">Required for tracking lap times and safety. Provided to you at entry.</p>
+                <p className="text-xs font-bold text-white font-mono mb-1">GPS & Timing Transponders</p>
+                <p className="text-[10px] text-neutral-400 leading-snug">Required for tracking lap times and safety. Available for rent.</p>
               </div>
             </div>
           </div>
