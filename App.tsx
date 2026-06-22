@@ -4707,12 +4707,12 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Upcoming Events</span>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">UPCOMING RACE EVENTS</span>
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Your next race is waiting.
           </h3>
           <div className="mt-4 border-t border-white/5 pt-4">
-            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">ATTENTION: RACERS</h4>
             <p className="text-base text-white font-sans font-bold mb-2">This is what’s coming up next.</p>
             <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
               Whether it’s your first race or your next podium run, these are the events you should be focused on now.
