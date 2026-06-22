@@ -5284,7 +5284,7 @@ const App: React.FC = () => {
 
           {/* Novice Plate */}
           <div className="bg-black/40 p-5 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center gap-6">
-            <div className="w-36 h-24 bg-[#FFD700] rounded-lg flex items-center justify-center border-4 border-black shrink-0 shadow-lg">
+            <div className="w-36 h-24 bg-white rounded-lg flex items-center justify-center border-4 border-black shrink-0 shadow-lg">
               <span className="font-teko font-bold text-5xl text-[#dc2626]">42</span>
             </div>
             <div>
