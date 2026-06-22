@@ -1386,7 +1386,7 @@ const App: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://www.motorsportreg.com"
+              href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
               target="_blank"
               rel="noreferrer"
               className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest text-center shadow-lg shadow-red-900/20 flex items-center justify-center gap-1.5"
@@ -1411,7 +1411,7 @@ const App: React.FC = () => {
           <h4 className="text-2xl font-teko font-bold uppercase text-white leading-none">Feel it. Hear it. Be part of it.</h4>
           <div className="h-[1px] w-12 bg-[#dc2626] mx-auto"></div>
           <a
-            href="https://www.motorsportreg.com"
+            href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
             target="_blank"
             rel="noreferrer"
             className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest block shadow-lg shadow-red-950/40"
