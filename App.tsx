@@ -2606,7 +2606,7 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">regional competition</span>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">WCCS REGIONAL COMPETITION</span>
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Every race counts. Every point matters.
           </h3>
@@ -2621,7 +2621,8 @@ const App: React.FC = () => {
         <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
         <h4 className="text-lg font-teko font-bold uppercase text-white tracking-wider mb-2">WCCS Overview</h4>
         <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed">
-          While the CMRA operates independently, its events contribute to the broader championship landscape, establishing a unified stage for regional motorsport supremacy.
+          While the CMRA operates independently, it contributes to the broader roadracing landscape through the WCCS: a multi-club championship run by participating organizations.
+
         </p>
       </div>
 
@@ -2640,7 +2641,7 @@ const App: React.FC = () => {
             </div>
 
             <p className="text-[11px] text-neutral-400 font-sans mb-4 italic">
-              Points are tracked meticulously over the entire season calendar.
+              Points are tracked over the entire season calendar.
             </p>
 
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
@@ -2663,7 +2664,7 @@ const App: React.FC = () => {
             </div>
 
             <p className="text-[11px] text-neutral-400 font-sans mb-4 italic">
-              Compete against the very best on the prairies for ultimate glory.
+              Compete against the very best – and take a shot at glory.
             </p>
 
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#F59E0B]">
@@ -2714,7 +2715,7 @@ const App: React.FC = () => {
               <AlertTriangle size={18} className="text-[#dc2626]" /> SCORING & RULES
             </h4>
             <p className="text-xs text-neutral-300 font-sans mb-4 leading-relaxed">
-              WCCS operates under strict scoring metrics to maintain competitiveness and safety across all regional events. Full scoring and structure details are permanently logged in our rulebook.
+              WCCS operates under the hosting club’s rulebook. No exceptions, substitutions, or deviations are permitted.
             </p>
 
             <div className="bg-black/40 border border-white/5 p-4 rounded-xl border-l-4 border-l-[#dc2626] flex items-start gap-3">
@@ -2722,7 +2723,8 @@ const App: React.FC = () => {
               <div>
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block mb-0.5">Reference Document</span>
                 <span className="text-xs text-white font-bold block mb-1">2026 CMRA Competition Rulebook (Appendix E)</span>
-                <p className="text-[10px] text-neutral-400 leading-snug">Includes scoring structures, tier levels, point tables, and championship validation processes.</p>
+                <p className="text-[10px] text-neutral-400 leading-snug">Includes rulebook authority, class structure and equivalencies, and point tables.
+                </p>
               </div>
             </div>
           </div>
@@ -2748,7 +2750,7 @@ const App: React.FC = () => {
               the moment.
             </h4>
             <p className="text-[11px] text-neutral-400 font-sans leading-relaxed mb-6">
-              Step onto the starting grid, lock in your points campaign, and test your skills against the finest riders in Western Canada.
+              Take the grid and test your skills against the fastest riders.
             </p>
           </div>
 
