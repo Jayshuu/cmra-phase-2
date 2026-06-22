@@ -4871,7 +4871,7 @@ const App: React.FC = () => {
           Show up ready. Ride with confidence.
         </h3>
         <div className="mt-4 border-t border-white/5 pt-4">
-          <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+
           <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
             Every event has its own character – but preparation is what separates a good weekend from a great one.
           </p>
@@ -4898,6 +4898,14 @@ const App: React.FC = () => {
               <li>Technical and safety notes</li>
               <li>Track-specific updates</li>
             </ul>
+          </div>
+          <div className="border-t border-white/5 pt-4 mt-6">
+            <button
+              onClick={() => navigateTo('calendar')}
+              className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
+            >
+              See The Calendar <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
+            </button>
           </div>
         </div>
 
