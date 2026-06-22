@@ -5193,7 +5193,7 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">the starting grid</span>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Racers & Numbers</span>
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Every number has a meaning. Every rider has their purpose.
           </h3>
@@ -5214,7 +5214,8 @@ const App: React.FC = () => {
               <Flag size={18} className="text-[#dc2626]" /> This Is The Grid
             </h4>
             <p className="text-[11px] text-neutral-400 font-sans mb-4">
-              A dynamic mix of skill, speed, and dedication coming together on every race day. WCCS and local grids feature:
+              A dynamic mix of skill, speed, and dedication coming together every race weekend.
+
             </p>
 
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
@@ -5224,11 +5225,7 @@ const App: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
-            <p className="text-[10px] text-neutral-400 leading-normal font-sans italic">
-              "Each number represents a rider, a machine – and a story unfolding this season."
-            </p>
-          </div>
+
         </div>
 
         {/* Placeholder / Empty Grid Slots */}
@@ -5279,8 +5276,9 @@ const App: React.FC = () => {
             </div>
             <div>
               <span className="bg-neutral-800 text-white font-mono font-bold text-[9px] px-2 py-0.5 rounded tracking-widest block w-max mb-1.5">EXPERT</span>
-              <p className="text-white font-bold text-xs mb-1">White Plate Background</p>
-              <p className="text-[10px] text-neutral-400 leading-snug">Black solid block font numbers, minimum 6" high. Must be centered on front fairing and side tails.</p>
+              <p className="text-white font-bold text-xs mb-1">Black Numbers</p>
+              <p className="text-[10px] text-neutral-400 leading-snug">Black solid block font on white plate background; displayed on center and sides.
+              </p>
             </div>
           </div>
 
@@ -5291,8 +5289,8 @@ const App: React.FC = () => {
             </div>
             <div>
               <span className="bg-[#dc2626] text-white font-mono font-bold text-[9px] px-2 py-0.5 rounded tracking-widest block w-max mb-1.5">NOVICE / AMATEUR</span>
-              <p className="text-white font-bold text-xs mb-1">Yellow Plate Background</p>
-              <p className="text-[10px] text-neutral-400 leading-snug">Red solid block font numbers, minimum 6" high. Must be centered on front fairing and side tails.</p>
+              <p className="text-white font-bold text-xs mb-1">Red Numbers</p>
+              <p className="text-[10px] text-neutral-400 leading-snug">Red solid block font on white plate background; displayed on center and sides.</p>
             </div>
           </div>
         </div>
