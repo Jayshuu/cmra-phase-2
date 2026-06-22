@@ -3018,7 +3018,7 @@ const App: React.FC = () => {
             Proof is in the finish.
           </h3>
           <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
-            Where It All Lands – capturing margins, battles, and breakthroughs on the grid.
+            The numbers that capture margins, battles, and breakthroughs on the grid.
           </p>
         </div>
       </div>
@@ -3037,7 +3037,7 @@ const App: React.FC = () => {
               Results aren’t just numbers.
             </p>
             <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed italic">
-              "They’re late braking moves, photo finishes, and personal bests."
+              They’re late braking moves, photo finishes, and personal bests.
             </p>
             <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed">
               Every position earned. Every second fought for.
@@ -3059,7 +3059,7 @@ const App: React.FC = () => {
             </h4>
 
             <p className="text-[11px] text-neutral-400 font-sans mb-4">
-              Full race results, lap times, and standings are updated after each event.
+              Current CMRA championship leaders.
             </p>
 
             {/* Visual CSS Chart Placeholder */}
@@ -3121,7 +3121,7 @@ const App: React.FC = () => {
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">See how the grid stacks up.</h4>
-          <p className="text-neutral-400 text-xs mt-1">Review dates, round structures, and upcoming championship sessions.</p>
+          <p className="text-neutral-400 text-xs mt-1">The numbers that capture margins, battles, and breakthroughs on the grid.</p>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <button
