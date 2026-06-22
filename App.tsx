@@ -3682,7 +3682,7 @@ const App: React.FC = () => {
                 <div className="text-[#dc2626] opacity-60 group-hover:opacity-100 transition-opacity"><Calendar size={18} /></div>
               </div>
               <p className="text-[#F59E0B] font-teko font-bold text-base uppercase tracking-wide leading-none mb-1">
-                “Pick Your Moment”
+                Pick Your Moment
               </p>
               <p className="text-white font-bold text-xs mb-2 leading-snug">
                 The schedule is building.
@@ -3713,7 +3713,7 @@ const App: React.FC = () => {
                 <div className="text-[#dc2626] opacity-60 group-hover:opacity-100 transition-opacity"><Timer size={18} /></div>
               </div>
               <p className="text-[#F59E0B] font-teko font-bold text-base uppercase tracking-wide leading-none mb-1">
-                “Next Up”
+                Next Up
               </p>
               <p className="text-white font-bold text-xs mb-2 leading-snug">
                 The next race is closer than you think.
@@ -3744,7 +3744,7 @@ const App: React.FC = () => {
                 <div className="text-[#dc2626] opacity-60 group-hover:opacity-100 transition-opacity"><Info size={18} /></div>
               </div>
               <p className="text-[#F59E0B] font-teko font-bold text-base uppercase tracking-wide leading-none mb-1">
-                “Know Before You Roll In”
+                Know Before You Roll In
               </p>
               <p className="text-white font-bold text-xs mb-2 leading-snug">
                 Roadracing has its own pace.
@@ -3775,7 +3775,7 @@ const App: React.FC = () => {
                 <div className="text-[#dc2626] opacity-60 group-hover:opacity-100 transition-opacity"><Ticket size={18} /></div>
               </div>
               <p className="text-[#F59E0B] font-teko font-bold text-base uppercase tracking-wide leading-none mb-1">
-                “Claim Your Spot”
+                Claim Your Spot
               </p>
               <p className="text-white font-bold text-xs mb-2 leading-snug">
                 The grid fills fast.
@@ -3794,23 +3794,6 @@ const App: React.FC = () => {
             </div>
           </div>
 
-        </div>
-      </div>
-
-      {/* OPTIONAL MICROCOPY (HIGH-IMPACT) TICKER */}
-      <div className="bg-neutral-900/40 border border-white/5 p-4 rounded-xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { label: 'CALENDAR PROGRESS', t: '“The calendar is live. The grid is forming.”' },
-            { label: 'TRACK RESET', t: '“Every race weekend is a reset – and another chance.”' },
-            { label: 'PREPARATION CYCLE', t: '“Preparation starts long before race day.”' },
-            { label: 'EARLY ADVANTAGE', t: '“Take the holeshot with early registration.”' }
-          ].map((hi, i) => (
-            <div key={i} className="bg-black/30 p-3 rounded-lg border border-white/5 flex flex-col justify-between">
-              <span className="text-[8px] font-bold text-[#dc2626] uppercase tracking-[0.2em] block mb-1">{hi.label}</span>
-              <p className="text-[11px] text-neutral-300 font-sans italic leading-snug">{hi.t}</p>
-            </div>
-          ))}
         </div>
       </div>
 
