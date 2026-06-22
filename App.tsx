@@ -4114,7 +4114,7 @@ const App: React.FC = () => {
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
               <button
-                onClick={() => navigateTo('race-school')}
+                onClick={() => navigateTo('advanced-training')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
                 Push harder with ART <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
