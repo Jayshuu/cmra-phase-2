@@ -2231,7 +2231,7 @@ const App: React.FC = () => {
             This is where you commit.
           </h3>
           <div className="mt-4 border-t border-white/5 pt-4">
-            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+
             <p className="text-base text-white font-sans font-bold mb-2">Registration is how you move from planning to racing.</p>
             <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
               Secure your place on the grid through MotorsportReg.
@@ -2368,7 +2368,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Lock in your spot before someone else does.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
