@@ -1324,7 +1324,7 @@ const App: React.FC = () => {
             <MapPin size={22} /> Experience It Live
           </h4>
           <p className="text-sm font-sans leading-relaxed">
-            Set against the backdrop of rolling prairie and big Alberta sky, races take place at the world-class Rocky Mountain Motorsports Circuit – just north of the city.
+            Set against the backdrop of rolling prairie and big Alberta sky, races take place at the world-class <strong className="font-bold text-white">Rocky Mountain Motorsports Circuit</strong> – just north of the city.
           </p>
           <div className="bg-[#050505] p-5 rounded-xl border border-white/5 space-y-3">
             <p className="text-xs uppercase font-bold tracking-wider text-white">This is professional-grade road racing, up close:</p>
