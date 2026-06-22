@@ -2096,7 +2096,7 @@ const App: React.FC = () => {
             <div className="bg-black/40 p-3.5 rounded-xl border border-white/5 flex justify-between items-center">
               <div>
                 <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block">CMRA Race School</span>
-                <span className="text-white font-bold text-sm">2-Day ART Program</span>
+                <span className="text-white font-bold text-sm">2-Day Program</span>
               </div>
               <span className="text-[#F59E0B] font-teko text-2xl font-bold">$400 <span className="text-[10px] font-sans text-neutral-400 font-normal">(+ GST)</span></span>
             </div>
@@ -2159,7 +2159,7 @@ const App: React.FC = () => {
           </h4>
           
           <div className="bg-black/20 p-3.5 rounded-xl border border-white/5 space-y-3">
-            <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block">Before attending:</span>
+            <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block">BEFORE SHOWING UP:</span>
             <ul className="space-y-2 text-xs text-neutral-300 font-sans">
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
@@ -2171,7 +2171,7 @@ const App: React.FC = () => {
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                Monitor event calendar
+                Monitor event calendar for updates
               </li>
             </ul>
           </div>
