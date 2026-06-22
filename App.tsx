@@ -3487,10 +3487,10 @@ const App: React.FC = () => {
             {/* Practice Card */}
             <div className="bg-black/30 p-5 rounded-xl border border-white/5 flex flex-col justify-between">
               <div>
-                <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block mb-1">Track Practice</span>
-                <h5 className="text-xl font-teko font-bold uppercase text-white mb-3">PRACTICE</h5>
+                <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block mb-1">QUALIFYING</span>
+                <h5 className="text-xl font-teko font-bold uppercase text-white mb-3">PRACTICE DAY</h5>
                 <p className="text-neutral-400 text-xs font-sans mb-4">
-                  Full access to timed track sessions and safety marshals.
+                  Practice sessions to determine starting grid positions.
                 </p>
               </div>
               <span className="text-[#F59E0B] font-teko text-3xl font-bold mt-auto border-t border-white/5 pt-3">$310</span>
