@@ -2401,7 +2401,7 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">class grids</span>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">CLASSES & CATEGORIES</span>
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Where you line up matters.
           </h3>
@@ -2514,7 +2514,7 @@ const App: React.FC = () => {
               <Trophy size={18} className="text-[#F59E0B]" /> Specialty Classes
             </h4>
             <p className="text-xs text-neutral-300 font-sans mb-4">
-              Certain classes are designed specifically to enhance other racing vectors:
+              Certain classes are designed to expand interest in road racing.
             </p>
 
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#F59E0B]">
@@ -2538,7 +2538,7 @@ const App: React.FC = () => {
               <AlertTriangle size={18} className="text-[#dc2626]" /> OFFICIAL SPECIFICATIONS
             </h4>
             <p className="text-xs text-neutral-300 font-sans mb-4 leading-relaxed">
-              This page represents a simplified overview. Technical specifications, bike legality, class groupings, and fuel limitations are governed strictly by Chapter 5 of the CMRA rulebook.
+              This page represents a simplified overview. For full class structures, eligibility rules, and technical specifications, refer to the 2026 CMRA Competition Rulebook (Chapter 5).
             </p>
 
             <div className="bg-black/40 border border-white/5 p-4 rounded-xl border-l-4 border-l-[#dc2626] flex items-start gap-3">
@@ -2546,7 +2546,8 @@ const App: React.FC = () => {
               <div>
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest block mb-0.5">Reference Document</span>
                 <span className="text-xs text-white font-bold block mb-1">2026 CMRA Competition Rulebook (Chapter 5)</span>
-                <p className="text-[10px] text-neutral-400 leading-snug">Includes full class structures, eligibility rules, and technical displacement tables.</p>
+                <p className="text-[10px] text-neutral-400 leading-snug"> Includes all class groupings and machine requirements.
+                </p>
               </div>
             </div>
           </div>
