@@ -4955,7 +4955,7 @@ const App: React.FC = () => {
               <Zap size={20} className="text-[#dc2626]" />
             </div>
             <div>
-              <span className="text-xs text-white font-bold block">GPS Transponder Required</span>
+              <span className="text-xs text-white font-bold block">GPS & Timing Transponders Required</span>
               <span className="text-[10px] text-neutral-400 font-sans uppercase font-bold">Required For All Riders</span>
             </div>
           </div>
@@ -4966,7 +4966,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Know the details. Own the track.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
