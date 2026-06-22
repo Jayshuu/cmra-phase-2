@@ -50,9 +50,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R5027.jpg" 
-            alt="CMRA Community Racers Grid Group Photo" 
+          <img
+            src="/images/_A7R5027.jpg"
+            alt="CMRA Community Racers Grid Group Photo"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -88,12 +88,12 @@ const App: React.FC = () => {
 
       {/* BENTO GRID (2 Blocks) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        
+
         {/* Block 1: NEWS & UPDATES */}
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 01</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">NEWS & UPDATES</h4>
@@ -128,7 +128,7 @@ const App: React.FC = () => {
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 02</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">SPONSORS & PARTNERS</h4>
@@ -184,7 +184,7 @@ const App: React.FC = () => {
     if (selectedNews) {
       return (
         <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
-          <button 
+          <button
             onClick={() => setSelectedNews(null)}
             className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors font-teko text-lg uppercase tracking-wide group w-max"
           >
@@ -227,8 +227,8 @@ const App: React.FC = () => {
             </div>
 
             <div className="mt-12 pt-8 border-t border-white/10">
-              <button 
-                onClick={() => setSelectedNews(null)} 
+              <button
+                onClick={() => setSelectedNews(null)}
                 className="text-neutral-500 hover:text-white transition-colors font-bold uppercase tracking-widest text-xs flex items-center gap-2"
               >
                 <ArrowLeft size={16} /> Back to News List
@@ -263,7 +263,7 @@ const App: React.FC = () => {
 
         {/* WHAT YOU'LL FIND & STAY CONNECTED */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          
+
           {/* WHAT YOU'LL FIND */}
           <div className="lg:col-span-6 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
@@ -271,7 +271,7 @@ const App: React.FC = () => {
               <h4 className="text-lg font-teko font-bold uppercase text-white tracking-wider flex items-center gap-2 mb-3">
                 <ClipboardList size={18} className="text-[#dc2626]" /> What You'll Find
               </h4>
-              
+
               <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
                 <li>Event announcements and updates</li>
                 <li>Race weekend highlights</li>
@@ -295,7 +295,7 @@ const App: React.FC = () => {
                 For real-time news, reminders, and announcements:
               </p>
             </div>
-            
+
             <div className="border-t border-white/5 pt-4 mt-auto">
               <a
                 href="https://www.facebook.com"
@@ -315,8 +315,8 @@ const App: React.FC = () => {
           <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-6">Stay In The Loop</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {MOCK_NEWS.map(news => (
-              <div 
-                key={news.id} 
+              <div
+                key={news.id}
                 onClick={() => setSelectedNews(news)}
                 className="bg-[#050505] border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-[#dc2626]/30 transition-colors cursor-pointer group animate-in fade-in duration-300"
               >
@@ -373,7 +373,7 @@ const App: React.FC = () => {
         <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
           The CMRA: Southern Alberta’s Home for Motorcycle Racing
         </h3>
-        
+
         <div className="mt-4 border-t border-white/5 pt-4">
           <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Our Mission</h4>
           <p className="text-base md:text-lg text-white font-sans font-bold leading-relaxed mb-3">
@@ -382,7 +382,7 @@ const App: React.FC = () => {
           <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl mb-6">
             Since 1987, the Calgary Motorcycle Roadracing Association has given riders a place to test their limits and pursue their racing potential.
           </p>
-          
+
           <div className="flex flex-wrap gap-4 border-t border-white/5 pt-6">
             <button
               onClick={() => navigateTo('start-racing')}
@@ -402,27 +402,27 @@ const App: React.FC = () => {
 
       {/* Grid: Legacy & Paddock Blocks */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
+
         {/* Block 1: THE LEGACY */}
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Legacy</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">THE CMRA LEGACY</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">Our History & Spirit</p>
-            
+
             <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-4">
               Built by volunteers and driven by racers, the CMRA has been at the core of Canadian motorsports since the days of Race City Speedway, in Calgary.
             </p>
-            
+
             <div className="bg-black/40 p-3 rounded-xl border border-white/5 my-4">
               <p className="text-xs text-white leading-normal font-sans italic font-bold">
                 Race City may be gone, but our spirit isn’t.
               </p>
             </div>
-            
+
             <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6">
               It lives on as we write the next chapter at Rocky Mountain Motorsports Circuit – Alberta’s premier racetrack.
             </p>
@@ -448,16 +448,16 @@ const App: React.FC = () => {
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Paddock</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">THE CMRA COMMUNITY</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">More Than Race Weekends</p>
-            
+
             <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-4 font-bold">
               The CMRA is more than race weekends.
             </p>
-            
+
             <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6">
               It’s a paddock built on speed, commitment, and community. Whether you’re on the throttle, over the wall, or in the pits – if you live for motorcycles, you belong here.
             </p>
@@ -497,9 +497,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6469.jpg" 
-            alt="Advanced Rider Training Paddock" 
+          <img
+            src="/images/_A7R6469.jpg"
+            alt="Advanced Rider Training Paddock"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -511,7 +511,7 @@ const App: React.FC = () => {
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Good isn’t enough. Get faster.
           </h3>
-          
+
           <div className="mt-4 border-t border-white/5 pt-4">
             <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
             <p className="text-base text-white font-sans font-bold mb-2">
@@ -526,17 +526,17 @@ const App: React.FC = () => {
 
       {/* Bento Grid (3 Blocks) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
+
         {/* Block 1: WHAT YOU'LL WORK ON */}
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Focus Areas</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">CLINIC CURRICULUM</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-4">What You’ll Work On</p>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
               <li>Passing techniques</li>
               <li>Racecraft under pressure</li>
@@ -544,7 +544,7 @@ const App: React.FC = () => {
               <li>Consistency at speed</li>
             </ul>
           </div>
-          
+
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-[10px] text-neutral-400 leading-normal font-sans italic font-bold">
               Targeted skill building to safely drops your lap times.
@@ -556,19 +556,19 @@ const App: React.FC = () => {
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Format</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">COURSE FORMAT</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-4">Structure</p>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
               <li>Small groups (max 3:1 ratio)</li>
               <li>Personalized coaching</li>
               <li>Same-day integration with CMRA Race School sessions</li>
             </ul>
           </div>
-          
+
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-[10px] text-neutral-400 leading-normal font-sans italic font-bold">
               High coach-to-rider ratio guarantees immediate, targeted feedback.
@@ -580,19 +580,19 @@ const App: React.FC = () => {
         <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-colors flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Target Audience</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">ELIGIBILITY</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-4">Who It’s For</p>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
               <li>Licensed racers</li>
               <li>Riders looking to improve lap times</li>
               <li>Anyone serious about competing at a higher level</li>
             </ul>
           </div>
-          
+
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-[10px] text-neutral-400 leading-normal font-sans italic font-bold">
               Push your racing credentials and unlock advanced racecraft capabilities.
@@ -629,9 +629,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R5540.jpg" 
-            alt="About CMRA Action Backdrop" 
+          <img
+            src="/images/_A7R5540.jpg"
+            alt="About CMRA Action Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -643,7 +643,7 @@ const App: React.FC = () => {
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Built on passion. Proven on track.
           </h3>
-          
+
           <p className="text-base text-white font-sans font-bold mb-3">
             Since 1987, the Calgary Motorcycle Roadracing Association has been at the center of motorcycle roadracing in Southern Alberta.
           </p>
@@ -679,21 +679,21 @@ const App: React.FC = () => {
 
       {/* BENTO GRID (3 Blocks) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
+
         {/* Block 1: THE CMRA (Our Story) */}
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R5803.jpg" 
-              alt="CMRA Story Backdrop" 
+            <img
+              src="/images/_A7R5803.jpg"
+              alt="CMRA Story Backdrop"
               className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
           </div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
-          
+
           <div className="relative z-10">
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 01</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">THE CMRA</h4>
@@ -725,16 +725,16 @@ const App: React.FC = () => {
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R5918.jpg" 
-              alt="Contact Background" 
+            <img
+              src="/images/_A7R5918.jpg"
+              alt="Contact Background"
               className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
           </div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
-          
+
           <div className="relative z-10">
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 02</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">CONTACT</h4>
@@ -769,16 +769,16 @@ const App: React.FC = () => {
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl hover:border-white/20 transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6089.jpg" 
-              alt="Rocky Mountain Motorsports Circuit Backdrop" 
+            <img
+              src="/images/_A7R6089.jpg"
+              alt="Rocky Mountain Motorsports Circuit Backdrop"
               className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
           </div>
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
-          
+
           <div className="relative z-10">
             <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Block 03</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1 leading-tight">ROCKY MOUNTAIN MOTORSPORTS CIRCUIT</h4>
@@ -843,7 +843,7 @@ const App: React.FC = () => {
         <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
           Ask the question. Take the next step.
         </h3>
-        
+
         <div className="mt-4 border-t border-white/5 pt-4">
           <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
           <p className="text-base text-white font-sans font-bold mb-2">Every racer starts with a question.</p>
@@ -855,19 +855,19 @@ const App: React.FC = () => {
 
       {/* Grid: Details & Form */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Left Column: Details & Info (Bento Blocks) */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          
+
           {/* Contact Details Block */}
           <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 rounded-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
             <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-            
+
             <h4 className="text-xl font-teko font-bold uppercase text-white mb-4 flex items-center gap-2">
               <Mail size={18} className="text-[#dc2626]" /> Contact Details
             </h4>
-            
+
             <div className="space-y-4">
               <div>
                 <span className="text-[10px] text-[#F59E0B] uppercase tracking-widest font-mono font-bold block mb-1">General Inquiries:</span>
@@ -875,7 +875,7 @@ const App: React.FC = () => {
                   cmra@roadracing.org
                 </a>
               </div>
-              
+
               <p className="text-xs text-neutral-300 font-sans leading-relaxed border-t border-white/5 pt-3">
                 The CMRA team strives to respond as quickly as possible to all inquiries.
               </p>
@@ -886,11 +886,11 @@ const App: React.FC = () => {
           <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 rounded-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
             <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-            
+
             <h4 className="text-xl font-teko font-bold uppercase text-white mb-4 flex items-center gap-2">
               <Info size={18} className="text-[#dc2626]" /> Stay Informed
             </h4>
-            
+
             <div className="space-y-4 text-xs font-sans">
               <div>
                 <p className="text-neutral-300 font-bold mb-2">For the latest updates on:</p>
@@ -900,7 +900,7 @@ const App: React.FC = () => {
                   <li>Announcements</li>
                 </ul>
               </div>
-              
+
               <div className="border-t border-white/5 pt-3">
                 <p className="text-neutral-300 font-bold mb-2">Be sure to check:</p>
                 <ul className="space-y-1.5 text-neutral-400 pl-4 list-disc marker:text-[#dc2626]">
@@ -1052,9 +1052,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6247.jpg" 
-            alt="Calendar Season Backdrop" 
+          <img
+            src="/images/_A7R6247.jpg"
+            alt="Calendar Season Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -1087,7 +1087,7 @@ const App: React.FC = () => {
 
       {/* THREE-COLUMN BENTO GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
+
         {/* Box 1: WHAT TO EXPECT */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
@@ -1098,7 +1098,7 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-neutral-800 text-neutral-400 font-bold px-2 py-0.5 rounded">RACE WEEKEND</span>
             </div>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
               <li>Practice + race sessions at every round</li>
               <li>Championship points on the line</li>
@@ -1118,14 +1118,14 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-[#dc2626] text-white font-bold px-2 py-0.5 rounded">ADVANTAGE</span>
             </div>
-            
+
             <p className="text-white font-bold text-xs mb-3 leading-snug">
               This isn’t a static schedule.
             </p>
             <p className="text-[11px] text-neutral-400 font-sans mb-3 leading-normal">
               New dates can drop. Existing rounds can evolve. Riders who stay ready win the early advantage:
             </p>
-            
+
             <ul className="space-y-2 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#F59E0B]">
               <li>Monitor announcements</li>
               <li>Check back regularly</li>
@@ -1144,12 +1144,12 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-neutral-800 text-neutral-400 font-bold px-2 py-0.5 rounded">REGISTRATION</span>
             </div>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
               <li>Registration opens as events are confirmed</li>
               <li>Availability may be limited per event</li>
             </ul>
-            
+
             <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-4">
               <p className="text-[10px] text-neutral-400 leading-normal font-sans italic">
                 Grids are configured on MotorsportReg. Book early to secure your grid position.
@@ -1183,16 +1183,16 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               {round.status === 'OPEN' ? (
-                <button 
+                <button
                   onClick={() => navigateTo('register-races')}
                   className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider shrink-0"
                 >
                   Register
                 </button>
               ) : (
-                <button 
+                <button
                   onClick={() => navigateTo('event-details')}
                   className="text-neutral-500 font-bold text-[10px] uppercase px-3 py-2 border border-white/5 rounded hover:text-white hover:border-white/10 transition-all tracking-wider shrink-0"
                 >
@@ -1235,9 +1235,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6111.jpg" 
-            alt="Race School Backdrop" 
+          <img
+            src="/images/_A7R6111.jpg"
+            alt="Race School Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -1264,9 +1264,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-3xl flex flex-col justify-center relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6238.jpg" 
-            alt="Mentorship Backdrop" 
+          <img
+            src="/images/_A7R6238.jpg"
+            alt="Mentorship Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -1292,115 +1292,115 @@ const App: React.FC = () => {
 
   const renderWatchLiveContent = () => (
     <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500 pb-12">
-    {/* Left Column: Full Copy and Experience Details */}
-    <div className="lg:col-span-8 bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl space-y-8 text-neutral-300 relative overflow-hidden group">
-      {/* Background Image Overlay */}
-      <div className="absolute inset-0 z-0 select-none pointer-events-none">
-        <img 
-          src="/images/_A7R6221.jpg" 
-          alt="Watch LIVE Spectator" 
-          className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
-      </div>
-
-      <div className="relative z-10 space-y-8">
-        <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">spectator guide</span>
-          <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-[0.9] mb-4">
-            ALBERTA’S BEST-KEPT MOTORSPORTS SECRET – RIGHT IN YOUR BACKYARD.
-          </h3>
-          
-          <div className="bg-black/40 border border-white/5 p-5 rounded-xl border-l-4 border-l-[#dc2626] mb-6">
-            <p className="font-sans text-sm md:text-base leading-relaxed italic text-white">
-              The wide-open beauty of Alberta meets the raw intensity of high-speed competition. This is where first-time spectators become lifelong fans – where the sound, speed, and atmosphere hit differently in person. Welcome to CMRA race day.
-            </p>
-          </div>
+      {/* Left Column: Full Copy and Experience Details */}
+      <div className="lg:col-span-8 bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl space-y-8 text-neutral-300 relative overflow-hidden group">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img
+            src="/images/_A7R6221.jpg"
+            alt="Watch LIVE Spectator"
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
         </div>
 
-        {/* Section 1: Experience It Live */}
-        <section className="space-y-4">
-          <h4 className="text-2xl font-teko font-bold uppercase text-[#dc2626] flex items-center gap-2">
-            <MapPin size={22} /> Experience It Live
-          </h4>
-          <p className="text-sm font-sans leading-relaxed">
-            Set against the backdrop of rolling prairie and big Alberta sky, races take place at the world-class <strong className="font-bold text-white">Rocky Mountain Motorsports Circuit</strong> – just north of the city.
-          </p>
-          <div className="bg-[#050505] p-5 rounded-xl border border-white/5 space-y-3">
-            <p className="text-xs uppercase font-bold tracking-wider text-white">This is professional-grade road racing, up close:</p>
-            <ul className="space-y-2 text-xs text-neutral-300 font-sans list-disc pl-4 marker:text-[#dc2626]">
-              <li>Bar-to-bar competition at full throttle</li>
-              <li>Multiple race classes across the day</li>
-              <li>Open paddock access – get closer to the bikes, teams, and riders</li>
-            </ul>
-            <div className="pt-2">
-              <button 
-                onClick={() => navigateTo('rmm-circuit')}
-                className="text-[10px] font-bold uppercase tracking-widest text-[#dc2626] hover:text-white transition-colors border-b border-[#dc2626] hover:border-white"
-              >
-                Plan your visit: Rocky Mountain Motorsports Circuit &rarr;
-              </button>
+        <div className="relative z-10 space-y-8">
+          <div>
+            <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">spectator guide</span>
+            <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-[0.9] mb-4">
+              ALBERTA’S BEST-KEPT MOTORSPORTS SECRET – RIGHT IN YOUR BACKYARD.
+            </h3>
+
+            <div className="bg-black/40 border border-white/5 p-5 rounded-xl border-l-4 border-l-[#dc2626] mb-6">
+              <p className="font-sans text-sm md:text-base leading-relaxed italic text-white">
+                The wide-open beauty of Alberta meets the raw intensity of high-speed competition. This is where first-time spectators become lifelong fans – where the sound, speed, and atmosphere hit differently in person. Welcome to CMRA race day.
+              </p>
             </div>
           </div>
-        </section>
 
-        {/* Section 2: Built for Everyone */}
-        <section className="space-y-4">
-          <h4 className="text-2xl font-teko font-bold uppercase text-[#dc2626] flex items-center gap-2">
-            <Users size={22} /> Built for Everyone
-          </h4>
-          <p className="text-sm font-sans leading-relaxed">
-            Motorsports has always been about more than racing – it’s about people. Whether you’re a lifelong fan or just curious, you’ll find race day is welcoming, accessible – and meant for everyone.
-          </p>
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              { t: 'Family Atmosphere', d: 'Welcoming environments for all ages.' },
-              { t: 'Flexible Viewing', d: 'Vantage spots positioned around the circuit.' },
-              { t: 'Community & Action', d: 'Food, community pits, and a full day of action.' }
-            ].map((it, idx) => (
-              <li key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl text-center">
-                <span className="text-white font-teko text-lg uppercase font-bold block mb-1">{it.t}</span>
-                <span className="text-[10px] text-neutral-400 font-sans block leading-normal">{it.d}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
+          {/* Section 1: Experience It Live */}
+          <section className="space-y-4">
+            <h4 className="text-2xl font-teko font-bold uppercase text-[#dc2626] flex items-center gap-2">
+              <MapPin size={22} /> Experience It Live
+            </h4>
+            <p className="text-sm font-sans leading-relaxed">
+              Set against the backdrop of rolling prairie and big Alberta sky, races take place at the world-class <strong className="font-bold text-white">Rocky Mountain Motorsports Circuit</strong> – just north of the city.
+            </p>
+            <div className="bg-[#050505] p-5 rounded-xl border border-white/5 space-y-3">
+              <p className="text-xs uppercase font-bold tracking-wider text-white">This is professional-grade road racing, up close:</p>
+              <ul className="space-y-2 text-xs text-neutral-300 font-sans list-disc pl-4 marker:text-[#dc2626]">
+                <li>Bar-to-bar competition at full throttle</li>
+                <li>Multiple race classes across the day</li>
+                <li>Open paddock access – get closer to the bikes, teams, and riders</li>
+              </ul>
+              <div className="pt-2">
+                <button
+                  onClick={() => navigateTo('rmm-circuit')}
+                  className="text-[10px] font-bold uppercase tracking-widest text-[#dc2626] hover:text-white transition-colors border-b border-[#dc2626] hover:border-white"
+                >
+                  Plan your visit: Rocky Mountain Motorsports Circuit &rarr;
+                </button>
+              </div>
+            </div>
+          </section>
 
-        {/* Section 3: Pure Racing */}
-        <section className="space-y-3 bg-[#050505]/40 border border-white/5 p-5 rounded-xl">
-          <h4 className="text-2xl font-teko font-bold uppercase text-white">Pure Racing</h4>
-          <p className="text-sm font-sans leading-relaxed italic text-neutral-300">
-            This isn’t a stadium event with barriers and big-ticket pricing. It’s something better.
-            <br /><br />
-            It’s real racing – up close. Where you can walk the paddock, hear every gear change, and watch riders push the edge of skill and nerve – fueled by the kind of passion you can feel in your chest.
-            <br /><br />
-            No distance. No pretense. No inflated price. Just authentic motorsports – made for the people who love it.
-          </p>
-        </section>
+          {/* Section 2: Built for Everyone */}
+          <section className="space-y-4">
+            <h4 className="text-2xl font-teko font-bold uppercase text-[#dc2626] flex items-center gap-2">
+              <Users size={22} /> Built for Everyone
+            </h4>
+            <p className="text-sm font-sans leading-relaxed">
+              Motorsports has always been about more than racing – it’s about people. Whether you’re a lifelong fan or just curious, you’ll find race day is welcoming, accessible – and meant for everyone.
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {[
+                { t: 'Family Atmosphere', d: 'Welcoming environments for all ages.' },
+                { t: 'Flexible Viewing', d: 'Vantage spots positioned around the circuit.' },
+                { t: 'Community & Action', d: 'Food, community pits, and a full day of action.' }
+              ].map((it, idx) => (
+                <li key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl text-center">
+                  <span className="text-white font-teko text-lg uppercase font-bold block mb-1">{it.t}</span>
+                  <span className="text-[10px] text-neutral-400 font-sans block leading-normal">{it.d}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-        {/* Action: Get Your Tickets */}
-        <section className="border-t border-[#dc2626]/20 pt-6 space-y-4">
-          <h4 className="text-xl font-teko font-bold uppercase text-white">Get Your Tickets</h4>
-          <p className="text-xs text-neutral-400 font-sans">
-            Tickets are available through our trusted partner, MotorsportReg.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest text-center shadow-lg shadow-red-900/20 flex items-center justify-center gap-1.5"
-            >
-              Buy Tickets on MotorsportReg <ExternalLink size={14} />
-            </a>
-            <button
-              onClick={() => navigateTo('calendar')}
-              className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest text-center"
-            >
-              View Upcoming Race Dates
-            </button>
-          </div>
-        </section>
+          {/* Section 3: Pure Racing */}
+          <section className="space-y-3 bg-[#050505]/40 border border-white/5 p-5 rounded-xl">
+            <h4 className="text-2xl font-teko font-bold uppercase text-white">Pure Racing</h4>
+            <p className="text-sm font-sans leading-relaxed italic text-neutral-300">
+              This isn’t a stadium event with barriers and big-ticket pricing. It’s something better.
+              <br /><br />
+              It’s real racing – up close. Where you can walk the paddock, hear every gear change, and watch riders push the edge of skill and nerve – fueled by the kind of passion you can feel in your chest.
+              <br /><br />
+              No distance. No pretense. No inflated price. Just authentic motorsports – made for the people who love it.
+            </p>
+          </section>
+
+          {/* Action: Get Your Tickets */}
+          <section className="border-t border-[#dc2626]/20 pt-6 space-y-4">
+            <h4 className="text-xl font-teko font-bold uppercase text-white">Get Your Tickets</h4>
+            <p className="text-xs text-neutral-400 font-sans">
+              Tickets are available through our trusted partner, MotorsportReg.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest text-center shadow-lg shadow-red-900/20 flex items-center justify-center gap-1.5"
+              >
+                Buy Tickets on MotorsportReg <ExternalLink size={14} />
+              </a>
+              <button
+                onClick={() => navigateTo('calendar')}
+                className="bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase px-6 py-4 rounded-xl transition-all tracking-widest text-center"
+              >
+                View Upcoming Race Dates
+              </button>
+            </div>
+          </section>
         </div>
       </div>
 
@@ -1454,9 +1454,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R4440.jpg" 
-            alt="Start Racing Action Backdrop" 
+          <img
+            src="/images/_A7R4440.jpg"
+            alt="Start Racing Action Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -1493,20 +1493,20 @@ const App: React.FC = () => {
       {/* BENTO SECTION (4 Sequential Blocks) */}
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          
+
           {/* Block 1: HOW IT WORKS */}
           <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
             {/* Background Image Overlay */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
-              <img 
-                src="/images/_A7R4465.jpg" 
-                alt="How It Works Background" 
+              <img
+                src="/images/_A7R4465.jpg"
+                alt="How It Works Background"
                 className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
             </div>
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">01</span>
@@ -1521,7 +1521,7 @@ const App: React.FC = () => {
               <p className="text-xs text-neutral-400 mb-4 leading-relaxed font-sans">
                 If you’ve got the bike and the gear, you’re only a few steps away from lining up on race day.
               </p>
-              
+
               <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <p className="text-[11px] font-bold uppercase tracking-wider text-neutral-300 mb-2">Here’s how it works:</p>
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
@@ -1530,19 +1530,19 @@ const App: React.FC = () => {
                   <li>Register and race</li>
                 </ul>
               </div>
-              
+
               <p className="text-xs font-sans text-neutral-300 italic mb-4">
                 That’s it – a clear path forward to racing.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
-              <button 
+              <button
                 onClick={() => navigateTo('how-it-works')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
                 See The Full Path <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </button>
-              <button 
+              <button
                 onClick={() => navigateTo('bike-gear')}
                 className="text-xs font-bold uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -1555,15 +1555,15 @@ const App: React.FC = () => {
           <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
             {/* Background Image Overlay */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
-              <img 
-                src="/images/_A7R4620.jpg" 
-                alt="Race School Background" 
+              <img
+                src="/images/_A7R4620.jpg"
+                alt="Race School Background"
                 className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
             </div>
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">02</span>
@@ -1578,7 +1578,7 @@ const App: React.FC = () => {
               <p className="text-xs text-neutral-400 mb-4 leading-relaxed font-sans">
                 Race School is your gateway – where riders become racers. Learn the fundamentals, build confidence, and prove you’re ready to compete.
               </p>
-              
+
               <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Classroom + on-track training</li>
@@ -1586,19 +1586,19 @@ const App: React.FC = () => {
                   <li>Pathway to championship eligibility</li>
                 </ul>
               </div>
-              
+
               <p className="text-xs font-sans text-neutral-300 italic mb-4">
                 Pass, and you’ll earn your CMRA Race License – your key to the grid.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
-              <button 
+              <button
                 onClick={() => navigateTo('race-school')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
                 Register For Race School <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </button>
-              <button 
+              <button
                 onClick={() => navigateTo('race-school')}
                 className="text-xs font-bold uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -1611,15 +1611,15 @@ const App: React.FC = () => {
           <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
             {/* Background Image Overlay */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
-              <img 
-                src="/images/_A7R4700.jpg" 
-                alt="Membership & Registration Background" 
+              <img
+                src="/images/_A7R4700.jpg"
+                alt="Membership & Registration Background"
                 className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
             </div>
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">03</span>
@@ -1634,7 +1634,7 @@ const App: React.FC = () => {
               <p className="text-xs text-neutral-400 mb-4 leading-relaxed font-sans">
                 Membership makes it official. It connects you to the championship, the community, and every race on the calendar.
               </p>
-              
+
               <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <p className="text-[11px] font-bold uppercase tracking-wider text-neutral-300 mb-2">Once licensed:</p>
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
@@ -1645,13 +1645,13 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
-              <button 
+              <button
                 onClick={() => navigateTo('membership')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
                 Become A Member <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </button>
-              <button 
+              <button
                 onClick={() => navigateTo('register-races')}
                 className="text-xs font-bold uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -1664,15 +1664,15 @@ const App: React.FC = () => {
           <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between hover:border-white/20 transition-all duration-300 group relative overflow-hidden">
             {/* Background Image Overlay */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
-              <img 
-                src="/images/_A7R5396.jpg" 
-                alt="Costs & Expectations Background" 
+              <img
+                src="/images/_A7R5396.jpg"
+                alt="Costs & Expectations Background"
                 className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
             </div>
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent z-10"></div>
-            
+
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">04</span>
@@ -1687,7 +1687,7 @@ const App: React.FC = () => {
               <p className="text-xs text-neutral-400 mb-4 leading-relaxed font-sans">
                 The CMRA is built to keep racing accessible, without compromising the experience.
               </p>
-              
+
               <div className="bg-black/50 p-3.5 rounded-xl border border-white/5 mb-4 backdrop-blur-sm">
                 <ul className="space-y-1.5 text-xs text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Transparent pricing</li>
@@ -1695,7 +1695,7 @@ const App: React.FC = () => {
                   <li>A full day (or weekend) of track time</li>
                 </ul>
               </div>
-              
+
               <p className="text-xs font-sans text-neutral-300 italic mb-1">
                 And beyond the numbers?
               </p>
@@ -1704,7 +1704,7 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 border-t border-white/5 pt-4 mt-auto relative z-10">
-              <button 
+              <button
                 onClick={() => navigateTo('costs')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -1744,39 +1744,39 @@ const App: React.FC = () => {
   const renderHowItWorksContent = () => (
     <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 pb-12">
       {/* HERO */}
-        <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
-          {/* Background Image Overlay */}
-          <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R5271.jpg" 
-              alt="Pre-grid lining up" 
-              className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
-          </div>
-
-          <div className="relative z-10">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
-            <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">how it works</span>
-            <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-              From rider to racer – in three steps.
-            </h3>
-            <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
-              No shortcuts. No confusion. This is the path to the starting line.
-            </p>
-          </div>
+      <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img
+            src="/images/_A7R5271.jpg"
+            alt="Pre-grid lining up"
+            className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
         </div>
+
+        <div className="relative z-10">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">how it works</span>
+          <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
+            From rider to racer – in three steps.
+          </h3>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-2xl">
+            No shortcuts. No confusion. This is the path to the starting line.
+          </p>
+        </div>
+      </div>
 
       {/* THREE STEPS SECTION */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
+
         {/* STEP 1: Get Licensed */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R4625.jpg" 
-              alt="Prepped bike under canopy" 
+            <img
+              src="/images/_A7R4625.jpg"
+              alt="Prepped bike under canopy"
               className="w-full h-full object-cover opacity-20 group-hover:opacity-35 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
@@ -1785,16 +1785,16 @@ const App: React.FC = () => {
           <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
             <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">01</div>
-            
+
             <div>
               <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 1</span>
-              
-               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
+
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
                 <GraduationCap size={24} />
               </div>
-              
+
               <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Get Licensed</h4>
-              
+
               <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-4">
                 Earn your CMRA Race License by completing an approved race school.
               </p>
@@ -1802,33 +1802,33 @@ const App: React.FC = () => {
                 The Calgary Motorcycle Roadracing Association makes this simple with its own, CMRA Race School.
               </p>
             </div>
-          
-          <div className="mt-auto pt-4 border-t border-white/5">
-            <button
-              onClick={() => navigateTo('race-school')}
-              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
-            >
-              Go To Race School & Get Licensed <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-            </button>
-            
-            <button
-              onClick={() => navigateTo('rules-safety', 'rulebooks')}
-              className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
-            >
-              <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
-              <span>See the full list of accepted schools in the 2026 CMRA Competition Rulebook (p.52).</span>
-            </button>
+
+            <div className="mt-auto pt-4 border-t border-white/5">
+              <button
+                onClick={() => navigateTo('race-school')}
+                className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
+              >
+                Go To Race School & Get Licensed <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+              </button>
+
+              <button
+                onClick={() => navigateTo('rules-safety', 'rulebooks')}
+                className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
+              >
+                <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
+                <span>See the full list of accepted schools in the 2026 CMRA Competition Rulebook (p.52).</span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
         {/* STEP 2: Become a Member */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6248.jpg" 
-              alt="Paddock membership high five" 
+            <img
+              src="/images/_A7R6248.jpg"
+              alt="Paddock membership high five"
               className="w-full h-full object-cover opacity-20 group-hover:opacity-35 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
@@ -1837,47 +1837,47 @@ const App: React.FC = () => {
           <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
             <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">02</div>
-            
+
             <div>
               <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 2</span>
-              
+
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
                 <Users size={24} />
               </div>
-              
+
               <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Become a Member</h4>
-              
+
               <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6">
                 Purchase your annual CMRA Membership to compete in events and earn championship points.
               </p>
             </div>
-          
-          <div className="mt-auto pt-4 border-t border-white/5">
-            <button
-              onClick={() => navigateTo('membership')}
-              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
-            >
-              View Membership Options <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-            </button>
-            
-            <button
-              onClick={() => navigateTo('rules-safety', 'rulebooks')}
-              className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
-            >
-              <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
-              <span>More details available in the Rulebook (p.51).</span>
-            </button>
+
+            <div className="mt-auto pt-4 border-t border-white/5">
+              <button
+                onClick={() => navigateTo('membership')}
+                className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
+              >
+                View Membership Options <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+              </button>
+
+              <button
+                onClick={() => navigateTo('rules-safety', 'rulebooks')}
+                className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
+              >
+                <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
+                <span>More details available in the Rulebook (p.51).</span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
         {/* STEP 3: Register & Race */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6081.jpg" 
-              alt="Pre-grid line of riders" 
+            <img
+              src="/images/_A7R6081.jpg"
+              alt="Pre-grid line of riders"
               className="w-full h-full object-cover opacity-20 group-hover:opacity-35 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
@@ -1886,20 +1886,20 @@ const App: React.FC = () => {
           <div className="relative z-10 flex flex-col justify-between h-full flex-grow">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
             <div className="absolute -top-4 -right-2 text-8xl font-teko font-bold text-white/5 group-hover:text-red-500/5 transition-all select-none">03</div>
-            
+
             <div>
               <span className="text-[10px] bg-red-600/15 text-[#dc2626] border border-red-500/20 font-bold px-2 py-0.5 rounded uppercase tracking-wider w-max mb-4 block">Step 3</span>
-              
+
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#dc2626] to-red-500/10 flex items-center justify-center text-white mb-4 shadow-md shadow-red-950/20">
                 <Flag size={24} />
               </div>
-              
+
               <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider mb-2">Register & Race</h4>
-              
+
               <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-3">
                 Once licensed and registered:
               </p>
-              
+
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
@@ -1915,27 +1915,27 @@ const App: React.FC = () => {
                 </li>
               </ul>
             </div>
-          
-          <div className="mt-auto pt-4 border-t border-white/5">
-            <button
-              onClick={() => navigateTo('register-races')}
-              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
-            >
-              Register For Events <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-            </button>
-            
-            <button
-              onClick={() => navigateTo('rules-safety', 'rulebooks')}
-              className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
-            >
-              <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
-              <span>Registration policies: Rulebook (p.53).</span>
-            </button>
-          </div>
-        </div>
 
+            <div className="mt-auto pt-4 border-t border-white/5">
+              <button
+                onClick={() => navigateTo('register-races')}
+                className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn mb-4"
+              >
+                Register For Events <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+              </button>
+
+              <button
+                onClick={() => navigateTo('rules-safety', 'rulebooks')}
+                className="text-[11px] text-neutral-400 hover:text-white font-sans transition-colors flex items-start gap-1.5 text-left leading-normal"
+              >
+                <FileText size={12} className="text-[#dc2626] shrink-0 mt-0.5" />
+                <span>Registration policies: Rulebook (p.53).</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
 
       {/* CTA */}
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-8 rounded-2xl flex flex-col md:flex-row md:items-center md:justify-between gap-6 shrink-0 relative overflow-hidden">
@@ -1962,9 +1962,9 @@ const App: React.FC = () => {
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6456.jpg" 
-              alt="Rider Briefing" 
+            <img
+              src="/images/_A7R6456.jpg"
+              alt="Rider Briefing"
               className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -1987,7 +1987,7 @@ const App: React.FC = () => {
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
           <h4 className="text-2xl font-teko font-bold uppercase text-white mb-1">WHAT YOU’RE WORKING TOWARD</h4>
           <p className="text-neutral-300 text-xs uppercase font-bold tracking-wider mb-3">A CMRA Race License gives you:</p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
               { title: 'YOUR RACE NUMBER', desc: 'Your official CMRA race number' },
@@ -2011,7 +2011,7 @@ const App: React.FC = () => {
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl hover:border-white/10 transition-colors space-y-6 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
           <h4 className="text-2xl font-teko font-bold uppercase text-white mb-2">HOW TO GET IT</h4>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Option 1 */}
             <div className="bg-black/30 p-5 rounded-xl border border-white/5 flex flex-col justify-between">
@@ -2019,7 +2019,7 @@ const App: React.FC = () => {
                 <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[9px] px-2 py-0.5 rounded mb-3 inline-block">Option 1: Recommended</span>
                 <h5 className="text-xl font-teko font-bold uppercase text-white mb-1">CMRA Race School</h5>
                 <p className="text-[11px] text-neutral-400 font-sans mb-3 flex items-center gap-1.5"><MapPin size={12} className="text-[#dc2626]" /> Held at Rocky Mountain Motorsports Circuit</p>
-                
+
                 <div className="border-t border-b border-white/5 py-3 my-3">
                   <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block mb-2">2-Day Format:</span>
                   <div className="grid grid-cols-2 gap-2 text-xs font-sans text-neutral-300">
@@ -2027,12 +2027,12 @@ const App: React.FC = () => {
                     <div className="bg-white/5 p-2 rounded"><strong className="text-white block font-teko uppercase text-sm leading-none mb-0.5">Day 2</strong> On-track practicum</div>
                   </div>
                 </div>
-                
+
                 <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-4">
                   Train in controlled groups based on skill and bike class – designed to build confidence safely.
                 </p>
               </div>
-              
+
               <div className="flex flex-wrap gap-3 border-t border-white/5 pt-4 mt-auto">
                 <button
                   onClick={() => navigateTo('rmm-circuit')}
@@ -2059,7 +2059,7 @@ const App: React.FC = () => {
                 <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-4">
                   We accept certifications from accredited external motorcycle racing schools.
                 </p>
-                
+
                 <div className="bg-white/5 p-4 rounded-xl border border-white/5 space-y-3">
                   <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block">Recognized Schools Include:</span>
                   <div className="flex flex-wrap gap-2">
@@ -2069,7 +2069,7 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="border-t border-white/5 pt-4 mt-auto">
                 <button
                   onClick={() => navigateTo('rules-safety', 'rulebooks')}
@@ -2091,7 +2091,7 @@ const App: React.FC = () => {
           <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2 border-b border-white/5 pb-2">
             <Timer size={18} className="text-[#F59E0B]" /> Costs & Details
           </h4>
-          
+
           <div className="space-y-3 text-xs font-sans">
             <div className="bg-black/40 p-3.5 rounded-xl border border-white/5 flex justify-between items-center">
               <div>
@@ -2100,7 +2100,7 @@ const App: React.FC = () => {
               </div>
               <span className="text-[#F59E0B] font-teko text-2xl font-bold">$400 <span className="text-[10px] font-sans text-neutral-400 font-normal">(+ GST)</span></span>
             </div>
-            
+
             <div className="bg-black/40 p-3.5 rounded-xl border border-white/5 flex justify-between items-center">
               <div>
                 <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block">CMRA Race License</span>
@@ -2109,7 +2109,7 @@ const App: React.FC = () => {
               <span className="text-[#F59E0B] font-teko text-2xl font-bold">$50 <span className="text-[10px] font-sans text-neutral-400 font-normal">tax in</span></span>
             </div>
           </div>
-          
+
           <a
             href="https://www.motorsportreg.com/events/2026-cmra-race-school-advanced-racer-training-rocky-mountain-motorsports-654468"
             target="_blank"
@@ -2126,7 +2126,7 @@ const App: React.FC = () => {
           <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2 border-b border-white/5 pb-2">
             <AlertTriangle size={18} className="text-[#dc2626]" /> Important Notes
           </h4>
-          
+
           <ul className="space-y-3 font-sans text-xs text-neutral-300">
             <li className="flex items-start gap-2">
               <span className="text-[#dc2626] font-bold">•</span>
@@ -2141,7 +2141,7 @@ const App: React.FC = () => {
               <span>Full refunds available if you do not pass.</span>
             </li>
           </ul>
-          
+
           <div className="bg-black/20 p-3 rounded-xl border border-white/5 mt-2">
             <button
               onClick={() => navigateTo('rules-safety', 'rulebooks')}
@@ -2157,7 +2157,7 @@ const App: React.FC = () => {
           <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2 border-b border-white/5 pb-2">
             <ShieldCheck size={18} className="text-green-500" /> Prep Checklist
           </h4>
-          
+
           <div className="bg-black/20 p-3.5 rounded-xl border border-white/5 space-y-3">
             <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block">BEFORE SHOWING UP:</span>
             <ul className="space-y-2 text-xs text-neutral-300 font-sans">
@@ -2175,7 +2175,7 @@ const App: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
           <div className="flex gap-2 pt-1.5">
             <button
               onClick={() => navigateTo('bike-gear')}
@@ -2216,9 +2216,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6432.jpg" 
-            alt="Racers Walking in Paddock" 
+          <img
+            src="/images/_A7R6432.jpg"
+            alt="Racers Walking in Paddock"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -2246,7 +2246,7 @@ const App: React.FC = () => {
         <h4 className="text-2xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-6 flex items-center gap-2">
           <ClipboardList size={22} className="text-[#dc2626]" /> How It Works
         </h4>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Prerequisites */}
           <div className="space-y-4">
@@ -2275,7 +2275,7 @@ const App: React.FC = () => {
 
       {/* TIMELINES, DEADLINES & GRID POSITION */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Deadlines & Refunds */}
         <div className="lg:col-span-6 bg-[#090909] border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden">
           <div>
@@ -2286,7 +2286,7 @@ const App: React.FC = () => {
               <li>Registration closes 24 hours before the event</li>
               <li>Late registrations incur a $25 fee</li>
             </ul>
-            
+
             <div className="border-t border-white/5 pt-4">
               <h5 className="text-sm font-teko font-bold uppercase text-white mb-2 flex items-center gap-1.5">
                 <Clock size={16} className="text-[#dc2626]" /> Refunds
@@ -2302,16 +2302,16 @@ const App: React.FC = () => {
         <div className="lg:col-span-6 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R5027.jpg" 
-              alt="Grid Group Photo" 
+            <img
+              src="/images/_A7R5027.jpg"
+              alt="Grid Group Photo"
               className="w-full h-full object-cover opacity-25 group-hover:opacity-40 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black/85 to-transparent"></div>
           </div>
-          
+
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
-          
+
           <div className="relative z-10">
             <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-4 flex items-center gap-2">
               <Flag size={18} className="text-[#dc2626]" /> Grid Position (First Race)
@@ -2340,7 +2340,7 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 leading-relaxed font-sans">
               For complete details, refer to:
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="bg-black/40 border border-white/5 p-3 rounded-lg flex items-center gap-3">
                 <span className="bg-[#dc2626]/20 text-[#dc2626] font-mono font-bold text-xs px-2 py-1 rounded">Page 53</span>
@@ -2352,7 +2352,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-4 flex flex-col justify-end mt-4 lg:mt-0">
             <button
               onClick={() => navigateTo('rules-safety', 'rulebooks')}
@@ -2391,9 +2391,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6753.jpg" 
-            alt="Racing Classes" 
+          <img
+            src="/images/_A7R6753.jpg"
+            alt="Racing Classes"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -2417,7 +2417,7 @@ const App: React.FC = () => {
 
       {/* OVERVIEW & HOW CLASSES WORK */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Overview */}
         <div className="lg:col-span-5 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
@@ -2428,14 +2428,14 @@ const App: React.FC = () => {
             <p className="text-[11px] text-neutral-400 font-sans mb-4">
               The CMRA structures its classes to balance three core aspects:
             </p>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
               <li>Machine capability</li>
               <li>Rider experience</li>
               <li>Competitive integrity</li>
             </ul>
           </div>
-          
+
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-[10px] text-neutral-400 leading-normal font-sans italic">
               "This creates grids where battles are real – and earned."
@@ -2450,7 +2450,7 @@ const App: React.FC = () => {
             <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-4 flex items-center gap-2">
               <Wrench size={18} className="text-[#dc2626]" /> Class Classifications & Principles
             </h4>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-black/30 p-4 rounded-xl border border-white/5">
                 <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-wider block mb-1">Built Around</span>
@@ -2476,7 +2476,7 @@ const App: React.FC = () => {
 
       {/* NOVICE AND BEYOND & SPECIALTY CLASSES */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        
+
         {/* Novice and Beyond */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl">
           <h4 className="text-lg font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-4 flex items-center gap-2">
@@ -2501,9 +2501,9 @@ const App: React.FC = () => {
         <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R7506.jpg" 
-              alt="Specialty Classes Supermoto" 
+            <img
+              src="/images/_A7R7506.jpg"
+              alt="Specialty Classes Supermoto"
               className="w-full h-full object-cover opacity-40 group-hover:opacity-65 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-transparent"></div>
@@ -2516,7 +2516,7 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 font-sans mb-4">
               Certain classes are designed specifically to enhance other racing vectors:
             </p>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#F59E0B]">
               <li>Encourage accessibility for street riders and newcomers</li>
               <li>Support specific bike types and configurations</li>
@@ -2529,7 +2529,7 @@ const App: React.FC = () => {
 
       {/* IMPORTANT SECTION & CTA */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Important Rulebook Link */}
         <div className="lg:col-span-7 bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
@@ -2540,7 +2540,7 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 font-sans mb-4 leading-relaxed">
               This page represents a simplified overview. Technical specifications, bike legality, class groupings, and fuel limitations are governed strictly by Chapter 5 of the CMRA rulebook.
             </p>
-            
+
             <div className="bg-black/40 border border-white/5 p-4 rounded-xl border-l-4 border-l-[#dc2626] flex items-start gap-3">
               <div className="text-[#dc2626] mt-0.5"><FileText size={18} /></div>
               <div>
@@ -2550,9 +2550,9 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-white/5 pt-4 mt-6">
-            <button 
+            <button
               onClick={() => navigateTo('rules-safety', 'rulebooks')}
               className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left leading-tight"
             >
@@ -2575,7 +2575,7 @@ const App: React.FC = () => {
               Take your first step toward racing. Train with advanced coaches, prep your machine, and secure your place on the starting grid.
             </p>
           </div>
-          
+
           <button
             onClick={() => navigateTo('start-racing')}
             className="w-full bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center justify-center gap-2 group text-left mt-auto"
@@ -2595,9 +2595,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R7271.jpg" 
-            alt="WCCS Pack Racing" 
+          <img
+            src="/images/_A7R7271.jpg"
+            alt="WCCS Pack Racing"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -2626,7 +2626,7 @@ const App: React.FC = () => {
 
       {/* THREE-COLUMN BENTO GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
+
         {/* Card 1: HOW IT WORKS */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
@@ -2637,11 +2637,11 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-neutral-800 text-neutral-400 font-bold px-2 py-0.5 rounded">STRUCTURE</span>
             </div>
-            
+
             <p className="text-[11px] text-neutral-400 font-sans mb-4 italic">
               Points are tracked meticulously over the entire season calendar.
             </p>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
               <li>Points are awarded based on race finishes</li>
               <li>Results accumulate across the season</li>
@@ -2660,11 +2660,11 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-[#dc2626] text-white font-bold px-2 py-0.5 rounded">GRID GLORY</span>
             </div>
-            
+
             <p className="text-[11px] text-neutral-400 font-sans mb-4 italic">
               Compete against the very best on the prairies for ultimate glory.
             </p>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#F59E0B]">
               <li>Class championships</li>
               <li>Regional recognition</li>
@@ -2683,15 +2683,15 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-neutral-800 text-neutral-400 font-bold px-2 py-0.5 rounded">RACE MINDSET</span>
             </div>
-            
+
             <p className="text-white font-bold text-xs mb-3 leading-snug">
               It’s not just about winning one race.
             </p>
-            
+
             <p className="text-[11px] text-neutral-400 font-sans mb-4 italic">
               A championship campaign is a test of attrition and dedication. It's about:
             </p>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
               <li>Showing up</li>
               <li>Finishing strong</li>
@@ -2704,7 +2704,7 @@ const App: React.FC = () => {
 
       {/* IMPORTANT SECTION & CTA */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Important Details */}
         <div className="lg:col-span-7 bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
@@ -2715,7 +2715,7 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 font-sans mb-4 leading-relaxed">
               WCCS operates under strict scoring metrics to maintain competitiveness and safety across all regional events. Full scoring and structure details are permanently logged in our rulebook.
             </p>
-            
+
             <div className="bg-black/40 border border-white/5 p-4 rounded-xl border-l-4 border-l-[#dc2626] flex items-start gap-3">
               <div className="text-[#dc2626] mt-0.5"><FileText size={18} /></div>
               <div>
@@ -2725,9 +2725,9 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-white/5 pt-4 mt-6">
-            <button 
+            <button
               onClick={() => navigateTo('rules-safety', 'rulebooks')}
               className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left leading-tight"
             >
@@ -2750,7 +2750,7 @@ const App: React.FC = () => {
               Step onto the starting grid, lock in your points campaign, and test your skills against the finest riders in Western Canada.
             </p>
           </div>
-          
+
           <button
             onClick={() => navigateTo('calendar')}
             className="w-full bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center justify-center gap-2 group text-left mt-auto"
@@ -2770,9 +2770,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6483.jpg" 
-            alt="Yamaha R6 Preparation" 
+          <img
+            src="/images/_A7R6483.jpg"
+            alt="Yamaha R6 Preparation"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -2795,14 +2795,14 @@ const App: React.FC = () => {
         <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
         <h4 className="text-lg font-teko font-bold uppercase text-white tracking-wider mb-2">The Foundation</h4>
         <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed">
-          Whether you’re riding on the street or racing on track, your machine matters. 
+          Whether you’re riding on the street or racing on track, your machine matters.
           For the CMRA, it’s not just about speed – <span className="text-white font-bold">it’s about safety, control, and readiness.</span>
         </p>
       </div>
 
       {/* THREE-COLUMN BENTO GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
+
         {/* Box 1: FOR CMRA RACE SCHOOL */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
@@ -2813,11 +2813,11 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-neutral-800 text-neutral-400 font-bold px-2 py-0.5 rounded">SCHOOL</span>
             </div>
-            
+
             <p className="text-white font-bold text-xs mb-3 leading-snug">
               You don’t need a full race bike – just a properly prepared machine.
             </p>
-            
+
             <div className="space-y-4">
               <div>
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block mb-1">Bike Requirements</span>
@@ -2827,7 +2827,7 @@ const App: React.FC = () => {
                   <li>Kickstands allowed</li>
                 </ul>
               </div>
-              
+
               <div>
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block mb-1">Tape / Remove</span>
                 <ul className="space-y-1.5 text-[11px] text-neutral-300 font-sans list-disc pl-4 marker:text-[#dc2626]">
@@ -2850,11 +2850,11 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-[#dc2626] text-white font-bold px-2 py-0.5 rounded">RACING</span>
             </div>
-            
+
             <p className="text-white font-bold text-xs mb-3 leading-snug">
               When you move to competition, requirements increase.
             </p>
-            
+
             <div>
               <span className="text-[10px] font-bold text-[#F59E0B] uppercase tracking-wider block mb-1">Additional Requirements</span>
               <ul className="space-y-2 text-[11px] text-neutral-300 font-sans list-disc pl-4 marker:text-[#F59E0B]">
@@ -2863,16 +2863,16 @@ const App: React.FC = () => {
                 <li>Race-ready configuration</li>
               </ul>
             </div>
-            
+
             <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-4">
               <p className="text-[10px] text-neutral-400 leading-normal font-sans italic">
                 Safety wiring is critical to prevent parts loosening on track. It is mandatory for racing grids.
               </p>
             </div>
           </div>
-          
+
           <div className="border-t border-white/5 pt-4 mt-6">
-            <button 
+            <button
               onClick={() => navigateTo('rules-safety', 'rulebooks')}
               className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left leading-tight"
             >
@@ -2891,7 +2891,7 @@ const App: React.FC = () => {
               </h4>
               <span className="text-[10px] bg-neutral-800 text-neutral-400 font-bold px-2 py-0.5 rounded">SAFETY</span>
             </div>
-            
+
             <div className="space-y-4">
               <div>
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block mb-1">CMRA Race School</span>
@@ -2901,7 +2901,7 @@ const App: React.FC = () => {
                   <li>Gloves, boots, back protector</li>
                 </ul>
               </div>
-              
+
               <div>
                 <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-wider block mb-1">CMRA Racing</span>
                 <ul className="space-y-1.5 text-[11px] text-neutral-300 font-sans list-disc pl-4 marker:text-[#dc2626]">
@@ -2912,9 +2912,9 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-white/5 pt-4 mt-6">
-            <button 
+            <button
               onClick={() => navigateTo('rules-safety', 'rulebooks')}
               className="text-xs font-bold uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
             >
@@ -2927,7 +2927,7 @@ const App: React.FC = () => {
 
       {/* TRACK REQUIREMENTS & CTA */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Track Requirements */}
         <div className="lg:col-span-7 bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
@@ -2938,7 +2938,7 @@ const App: React.FC = () => {
             <p className="text-[11px] text-neutral-400 font-sans mb-4">
               At the world-class <span className="text-white font-medium">Rocky Mountain Motorsports Circuit (RMM)</span>, strict track-wide controls are in effect:
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="bg-black/30 p-4 rounded-xl border border-white/5">
                 <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-wider block mb-1">Sound Limit</span>
@@ -2958,9 +2958,9 @@ const App: React.FC = () => {
         <div className="lg:col-span-5 bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6465.jpg" 
-              alt="Prepped race bike" 
+            <img
+              src="/images/_A7R6465.jpg"
+              alt="Prepped race bike"
               className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -2979,7 +2979,7 @@ const App: React.FC = () => {
                 Take the first step towards racing. Build confidence, refine your skills, and earn your official CMRA Race License.
               </p>
             </div>
-            
+
             <button
               onClick={() => navigateTo('race-school')}
               className="w-full bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center justify-center gap-2 group text-left mt-auto"
@@ -3000,9 +3000,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R7513.jpg" 
-            alt="Timing & Results Knee Drag" 
+          <img
+            src="/images/_A7R7513.jpg"
+            alt="Timing & Results Knee Drag"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -3022,7 +3022,7 @@ const App: React.FC = () => {
 
       {/* SUPPORTING COPY & DYNAMIC GRAPHIC PLACEHOLDER */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Supporting Copy */}
         <div className="lg:col-span-5 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
@@ -3031,16 +3031,16 @@ const App: React.FC = () => {
               <Timer size={18} className="text-[#dc2626]" /> Beyond The Numbers
             </h4>
             <p className="text-white font-bold text-xs leading-snug">
-              Results aren’t just numbers. 
+              Results aren’t just numbers.
             </p>
             <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed italic">
               "They’re late braking moves, photo finishes, and personal bests."
             </p>
             <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed">
-              Every position earned. Every second fought for. 
+              Every position earned. Every second fought for.
             </p>
           </div>
-          
+
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <span className="text-[9px] font-bold text-[#dc2626] uppercase tracking-widest block mb-1">Grid Standard</span>
             <span className="text-[10px] text-neutral-400">All session times are validated by official transponders.</span>
@@ -3054,11 +3054,11 @@ const App: React.FC = () => {
             <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-4 flex items-center gap-2">
               <TrendingUp size={18} className="text-[#dc2626]" /> Season Leaderboard Visualizer
             </h4>
-            
+
             <p className="text-[11px] text-neutral-400 font-sans mb-4">
               Full race results, lap times, and standings are updated after each event.
             </p>
-            
+
             {/* Visual CSS Chart Placeholder */}
             <div className="bg-black/40 border border-white/5 p-4 rounded-xl space-y-3">
               {[
@@ -3078,7 +3078,7 @@ const App: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="bg-red-950/20 border border-red-500/10 p-3 rounded-xl mt-4 flex items-start gap-2.5">
             <div className="text-[#dc2626] shrink-0 mt-0.5"><Info size={14} /></div>
             <p className="text-[10px] text-neutral-400 font-sans leading-snug">
@@ -3138,9 +3138,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6461.jpg" 
-            alt="Paddock life Revolver Racing" 
+          <img
+            src="/images/_A7R6461.jpg"
+            alt="Paddock life Revolver Racing"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -3157,11 +3157,11 @@ const App: React.FC = () => {
 
       {/* TWO-COLUMN CONTENT SECTION */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        
+
         {/* MEMBERSHIP COLUMN */}
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl flex flex-col justify-between hover:border-red-500/20 transition-all duration-300 relative group overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
-          
+
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-red-600/10 flex items-center justify-center text-[#dc2626]">
@@ -3169,11 +3169,11 @@ const App: React.FC = () => {
               </div>
               <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider">CMRA Membership</h4>
             </div>
-            
+
             <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6">
               Your CMRA Membership lets you race in the CMRA for Championship points – and connects you with the racing community. Members get:
             </p>
-            
+
             <ul className="space-y-3.5 mb-8">
               <li className="flex items-start gap-2.5 text-xs text-neutral-300 font-sans">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
@@ -3189,7 +3189,7 @@ const App: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
           <div className="mt-auto pt-6 border-t border-white/5 space-y-3">
             <a
               href="https://www.motorsportreg.com"
@@ -3199,7 +3199,7 @@ const App: React.FC = () => {
             >
               Become A Member Via MotorsportReg <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
             </a>
-            
+
             <button
               onClick={() => navigateTo('advanced-training')}
               className="w-full bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase py-3.5 px-4 rounded-xl transition-all tracking-wider flex items-center justify-center gap-1.5 group/btn text-center"
@@ -3211,11 +3211,11 @@ const App: React.FC = () => {
 
         {/* REGISTRATION & REFUNDS COLUMN */}
         <div className="flex flex-col gap-6">
-          
+
           {/* EVENT REGISTRATION CARD */}
           <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-red-500/10 transition-all duration-300 relative group overflow-hidden flex-1">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
-            
+
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-red-600/10 flex items-center justify-center text-[#dc2626]">
@@ -3223,11 +3223,11 @@ const App: React.FC = () => {
                 </div>
                 <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider">Registering for Events</h4>
               </div>
-              
+
               <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-3">
                 Once licensed:
               </p>
-              
+
               <ul className="space-y-2.5 mb-6">
                 <li className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
@@ -3243,7 +3243,7 @@ const App: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
+
             {/* IMPORTANT BOX */}
             <div className="bg-red-950/20 border border-red-500/20 p-4 rounded-xl flex gap-3 items-start mt-auto">
               <AlertTriangle size={18} className="text-[#dc2626] shrink-0 mt-0.5" />
@@ -3298,9 +3298,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6378.jpg" 
-            alt="Become Member Details Backdrop" 
+          <img
+            src="/images/_A7R6378.jpg"
+            alt="Become Member Details Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -3329,25 +3329,25 @@ const App: React.FC = () => {
 
       {/* WHAT MEMBERSHIP UNLOCKS & ANNUAL MEMBERSHIP */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* WHAT MEMBERSHIP UNLOCKS */}
         <div className="lg:col-span-7 bg-neutral-900 border border-white/10 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6386.jpg" 
-              alt="Membership Unlocks Backdrop" 
+            <img
+              src="/images/_A7R6386.jpg"
+              alt="Membership Unlocks Backdrop"
               className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
           </div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
-          
+
           <div className="relative z-10">
             <h4 className="text-lg font-teko font-bold uppercase text-white tracking-wider flex items-center gap-2 mb-3">
               <Trophy size={18} className="text-[#dc2626]" /> What Membership Unlocks
             </h4>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626] font-bold">
               <li>Eligibility to register for CMRA race events</li>
               <li>Ability to earn championship points</li>
@@ -3379,12 +3379,12 @@ const App: React.FC = () => {
 
       {/* HOW TO BECOME A MEMBER & FULL DETAILS */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        
+
         {/* HOW TO BECOME A MEMBER */}
         <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <h4 className="text-xl font-teko font-bold text-white uppercase mb-2">How To Become A Member</h4>
             <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-6">
@@ -3407,7 +3407,7 @@ const App: React.FC = () => {
         <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-          
+
           <div>
             <h4 className="text-xl font-teko font-bold text-white uppercase mb-2">Full Details</h4>
             <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-4">
@@ -3458,9 +3458,9 @@ const App: React.FC = () => {
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6232.jpg" 
-              alt="Paddock expectations spec" 
+            <img
+              src="/images/_A7R6232.jpg"
+              alt="Paddock expectations spec"
               className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -3482,7 +3482,7 @@ const App: React.FC = () => {
         <div className="bg-neutral-900/50 border border-white/5 p-6 md:p-8 rounded-2xl hover:border-white/10 transition-colors space-y-6 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
           <h4 className="text-2xl font-teko font-bold uppercase text-white mb-2">COST BREAKDOWN</h4>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Practice Card */}
             <div className="bg-black/30 p-5 rounded-xl border border-white/5 flex flex-col justify-between">
@@ -3501,7 +3501,7 @@ const App: React.FC = () => {
               <div>
                 <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block mb-1">Grid Entries</span>
                 <h5 className="text-xl font-teko font-bold uppercase text-white mb-3">AMATEUR & PRO CLASS RACES</h5>
-                
+
                 <div className="grid grid-cols-2 gap-3 text-xs font-sans text-neutral-300">
                   <div className="bg-white/5 p-2.5 rounded flex justify-between items-center">
                     <span>First Race:</span>
@@ -3556,9 +3556,9 @@ const App: React.FC = () => {
           <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2 border-b border-white/5 pb-2">
             <ShieldCheck size={18} className="text-[#dc2626]" /> What You’re Really Getting
           </h4>
-          
-          <p className="text-xs text-neutral-400 font-sans italic font-medium">"This isn’t just track time. It’s:"</p>
-          
+
+          <p className="text-xs text-neutral-400 font-sans italic font-medium">This isn’t just track time. It’s:</p>
+
           <ul className="space-y-3 font-sans text-xs text-neutral-300">
             <li className="flex items-start gap-2">
               <span className="text-[#dc2626] font-bold">•</span>
@@ -3573,7 +3573,7 @@ const App: React.FC = () => {
               <span>Real competition, not chaos</span>
             </li>
           </ul>
-          
+
           <div className="bg-black/20 p-3 rounded-xl border border-white/5 text-neutral-400 text-xs italic font-sans leading-relaxed">
             "You’ll be surrounded by people who want you to improve—and finish the day faster than you started."
           </div>
@@ -3585,11 +3585,11 @@ const App: React.FC = () => {
           <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2 border-b border-white/5 pb-2">
             <Trophy size={18} className="text-[#F59E0B]" /> The CMRA Difference
           </h4>
-          
+
           <p className="text-xs text-neutral-400 font-sans italic font-medium leading-normal">
             The Calgary Motorcycle Roadracing Association doesn’t just organize racing. It organizes:
           </p>
-          
+
           <ul className="space-y-3 font-sans text-xs text-neutral-300">
             <li className="flex items-start gap-2">
               <span className="text-[#F59E0B] font-bold">•</span>
@@ -3604,7 +3604,7 @@ const App: React.FC = () => {
               <span>Fair, competitive racing</span>
             </li>
           </ul>
-          
+
           <div className="bg-black/20 p-3 rounded-xl border border-white/5 text-neutral-400 text-xs italic font-sans leading-relaxed">
             "Because the goal isn’t just to race. It’s to race well – and come back stronger every time."
           </div>
@@ -3667,7 +3667,7 @@ const App: React.FC = () => {
       {/* BENTO GRID (4 Blocks) */}
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          
+
           {/* Block 1: EVENT CALENDAR */}
           <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
@@ -3690,7 +3690,7 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('calendar')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -3721,7 +3721,7 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('upcoming-events')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -3752,7 +3752,7 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('event-details')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -3783,7 +3783,7 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('register-races')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -3843,9 +3843,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6520.jpg" 
-            alt="Championship Racing Corners" 
+          <img
+            src="/images/_A7R6520.jpg"
+            alt="Championship Racing Corners"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -3858,7 +3858,7 @@ const App: React.FC = () => {
             You don’t watch this. You feel it.
           </h3>
           <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-6 max-w-3xl">
-            There’s a moment – right before the lights, right before the throttle – where everything sharpens. 
+            There’s a moment – right before the lights, right before the throttle – where everything sharpens.
             <span className="text-white font-bold block mt-1">This is that moment.</span>
             With the Calgary Motorcycle Roadracing Association, racing isn’t something you follow. It’s something you step into.
           </p>
@@ -3882,7 +3882,7 @@ const App: React.FC = () => {
       {/* BENTO SECTION (6 Blocks) */}
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-          
+
           {/* Block 1: CLASSES & CATEGORIES */}
           <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl flex flex-col justify-between hover:border-white/10 transition-colors group relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent"></div>
@@ -3903,7 +3903,7 @@ const App: React.FC = () => {
               <p className="text-[11px] text-neutral-400 mb-3 leading-normal font-sans">
                 From novice grids to expert-level competition, CMRA classes are structured to keep racing:
               </p>
-              
+
               <div className="bg-black/30 p-3 rounded-xl border border-white/5 mb-3">
                 <ul className="space-y-1 text-[11px] text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Competitive</li>
@@ -3911,19 +3911,19 @@ const App: React.FC = () => {
                   <li>Built around skill progression</li>
                 </ul>
               </div>
-              
+
               <p className="text-[11px] font-sans text-neutral-300 italic mb-4">
                 Whether you’re learning racecraft or chasing podiums, there’s a place for you on the grid.
               </p>
             </div>
             <div className="flex flex-col gap-2 border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('classes')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
                 Explore Classes & Categories <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
               </button>
-              <button 
+              <button
                 onClick={() => navigateTo('rules-safety', 'rulebooks')}
                 className="text-xs font-bold uppercase tracking-wider text-neutral-400 hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -3952,7 +3952,7 @@ const App: React.FC = () => {
               <p className="text-[11px] text-neutral-400 mb-3 leading-normal font-sans">
                 CMRA riders compete within the Western Canadian Championship Series – where every result, every finish, every overtake counts.
               </p>
-              
+
               <div className="bg-black/30 p-3 rounded-xl border border-white/5 mb-4">
                 <ul className="space-y-1 text-[11px] text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Season-long points</li>
@@ -3962,7 +3962,7 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('wccs')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -3991,7 +3991,7 @@ const App: React.FC = () => {
               <p className="text-[11px] text-neutral-400 mb-3 leading-normal font-sans">
                 From CMRA Race School to full competition, your machine and gear evolve with you.
               </p>
-              
+
               <div className="bg-black/30 p-3 rounded-xl border border-white/5 mb-4">
                 <ul className="space-y-1 text-[11px] text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Clear standards</li>
@@ -4001,7 +4001,7 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('bike-gear')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -4034,7 +4034,7 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('results')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -4067,7 +4067,7 @@ const App: React.FC = () => {
               </p>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('race-numbers')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -4096,7 +4096,7 @@ const App: React.FC = () => {
               <p className="text-[11px] text-neutral-400 mb-3 leading-normal font-sans">
                 Advanced Rider Training is built for racers who want more:
               </p>
-              
+
               <div className="bg-black/30 p-3 rounded-xl border border-white/5 mb-3">
                 <ul className="space-y-1 text-[11px] text-neutral-400 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Passing drills</li>
@@ -4104,13 +4104,13 @@ const App: React.FC = () => {
                   <li>Small-group coaching (3:1 ratio)</li>
                 </ul>
               </div>
-              
+
               <p className="text-[11px] font-sans text-neutral-300 italic mb-4">
                 Learn from some of the best in Western Canada – and take seconds off your lap time.
               </p>
             </div>
             <div className="border-t border-white/5 pt-4 mt-auto">
-              <button 
+              <button
                 onClick={() => navigateTo('race-school')}
                 className="text-xs font-bold uppercase tracking-wider text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn text-left"
               >
@@ -4153,9 +4153,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6428.jpg" 
-            alt="Racers Leaning in Curve Side-by-Side" 
+          <img
+            src="/images/_A7R6428.jpg"
+            alt="Racers Leaning in Curve Side-by-Side"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -4181,7 +4181,7 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           <div className="lg:col-span-8 space-y-3">
             <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2">
@@ -4397,9 +4397,9 @@ const App: React.FC = () => {
       <div className="lg:col-span-8 bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6503.jpg" 
-            alt="Volunteers and Marshalls" 
+          <img
+            src="/images/_A7R6503.jpg"
+            alt="Volunteers and Marshalls"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -4409,7 +4409,7 @@ const App: React.FC = () => {
           <div>
             <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-6">JOIN THE PADDOCK</span>
             <h3 className="text-5xl md:text-7xl font-teko font-bold uppercase italic text-white leading-[0.85] mb-6">VOLUNTEERS & MARSHALS</h3>
-            
+
             <div className="space-y-6 text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-8">
               <p className="italic text-neutral-200">
                 "Corner marshals and volunteer staff are the unsung heroes of motorcycle roadracing. They provide vital flag communications, track sweep operations, and safety watch."
@@ -4421,7 +4421,7 @@ const App: React.FC = () => {
           </div>
 
           <div className="border-t border-white/10 pt-6">
-            <button 
+            <button
               onClick={() => navigateTo('rules-safety', 'forms')}
               className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md"
             >
@@ -4454,9 +4454,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6252.jpg" 
-            alt="Rocky Mountain Motorsports Circuit Backdrop" 
+          <img
+            src="/images/_A7R6252.jpg"
+            alt="Rocky Mountain Motorsports Circuit Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -4468,7 +4468,7 @@ const App: React.FC = () => {
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Alberta’s finest. Built for riders.
           </h3>
-          
+
           <div className="mt-4 border-t border-white/5 pt-4">
             <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
             <p className="text-base text-white font-sans font-bold mb-2">
@@ -4486,19 +4486,19 @@ const App: React.FC = () => {
 
       {/* Details Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Left Column: Specs & Features (Col Span 7) */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          
+
           {/* What Sets It Apart */}
           <div className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 p-6 rounded-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
             <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-            
+
             <h4 className="text-xl font-teko font-bold uppercase text-white mb-4 flex items-center gap-2">
               <Zap size={18} className="text-[#dc2626]" /> What Sets It Apart
             </h4>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
               <li>Recently built with modern design standards</li>
               <li>Technical layout that rewards precision and skill</li>
@@ -4512,7 +4512,7 @@ const App: React.FC = () => {
             <h4 className="text-xl font-teko font-bold uppercase text-white mb-4 flex items-center gap-2">
               <Map size={18} className="text-[#dc2626]" /> Circuit Specs
             </h4>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-neutral-300 font-sans">
               <div className="flex justify-between border-b border-white/5 pb-2">
                 <span>Total Length:</span>
@@ -4540,31 +4540,31 @@ const App: React.FC = () => {
 
         {/* Right Column: Experience & External Link (Col Span 5) */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          
+
           {/* The Experience */}
           <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl relative overflow-hidden group flex-1 flex flex-col justify-between">
             {/* Background Image Overlay */}
             <div className="absolute inset-0 z-0 select-none pointer-events-none">
-              <img 
-                src="/images/_A7R6377.jpg" 
-                alt="Track Experience Backdrop" 
+              <img
+                src="/images/_A7R6377.jpg"
+                alt="Track Experience Backdrop"
                 className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
             </div>
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none z-10"></div>
             <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626] z-10"></div>
-            
+
             <div className="relative z-10">
               <h4 className="text-xl font-teko font-bold uppercase text-white mb-4 flex items-center gap-2">
                 <Trophy size={18} className="text-[#dc2626]" /> The Experience
               </h4>
-              
+
               <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-6 font-bold">
                 From your first laps in CMRA Race School to full race weekends, this circuit pushes you to improve – corner by corner, lap by lap.
               </p>
             </div>
-            
+
             <div className="space-y-2.5 border-t border-white/5 pt-4 mt-auto relative z-10">
               {[
                 'It’s where confidence is built.',
@@ -4627,9 +4627,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6435.jpg" 
-            alt="FC Moto Paddock Sponsors Backdrop" 
+          <img
+            src="/images/_A7R6435.jpg"
+            alt="FC Moto Paddock Sponsors Backdrop"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -4655,7 +4655,7 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           <div className="lg:col-span-8 space-y-3">
             <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2">
@@ -4711,9 +4711,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R6381.jpg" 
-            alt="Racer 88 active cornering" 
+          <img
+            src="/images/_A7R6381.jpg"
+            alt="Racer 88 active cornering"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -4737,7 +4737,7 @@ const App: React.FC = () => {
 
       {/* EVENT LIST & WHY ACT EARLY */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* EVENT LIST (Intro Copy) */}
         <div className="lg:col-span-5 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
@@ -4748,14 +4748,14 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 font-sans mb-4 font-bold">
               Each event includes:
             </p>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
               <li>Date and schedule</li>
               <li>Classes running</li>
               <li>Registration status</li>
             </ul>
           </div>
-          
+
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-xs text-[#F59E0B] leading-normal font-sans italic font-bold">
               Spots are limited – and grids fill quickly.
@@ -4770,7 +4770,7 @@ const App: React.FC = () => {
             <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-4 flex items-center gap-2">
               <Timer size={18} className="text-[#dc2626]" /> Why Act Early
             </h4>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
               <li>Secure your preferred races</li>
               <li>Avoid late registration fees</li>
@@ -4796,7 +4796,7 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 leading-relaxed font-sans">
               For complete details – including registration procedures, deadlines, and CMRA Race School policies – refer to:
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="bg-black/40 border border-white/5 p-3 rounded-lg flex items-center gap-3">
                 <span className="bg-[#dc2626]/20 text-[#dc2626] font-mono font-bold text-xs px-2 py-1 rounded">Page 53</span>
@@ -4808,7 +4808,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="lg:col-span-4 flex flex-col justify-end mt-4 lg:mt-0">
             <button
               onClick={() => navigateTo('rules-safety', 'rulebooks')}
@@ -4836,10 +4836,10 @@ const App: React.FC = () => {
                   {round.status}
                 </span>
                 {round.status === 'OPEN' ? (
-                  <a 
-                    href="https://www.motorsportreg.com" 
-                    target="_blank" 
-                    rel="noreferrer" 
+                  <a
+                    href="https://www.motorsportreg.com"
+                    target="_blank"
+                    rel="noreferrer"
                     className="text-xs font-bold uppercase text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn"
                   >
                     REGISTER <ExternalLink size={12} className="group-hover/btn:translate-x-0.5 transition-transform" />
@@ -4894,7 +4894,7 @@ const App: React.FC = () => {
 
       {/* WHAT YOU'LL FIND & WHY IT MATTERS */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* WHAT YOU'LL FIND */}
         <div className="lg:col-span-6 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
@@ -4905,7 +4905,7 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 font-sans mb-4 font-bold">
               Each event page includes:
             </p>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
               <li>Full schedule (practice + races)</li>
               <li>Class breakdowns</li>
@@ -4925,7 +4925,7 @@ const App: React.FC = () => {
             <p className="text-xs text-neutral-300 font-sans mb-4 font-bold">
               Knowing the schedule and setup ahead of time lets you:
             </p>
-            
+
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
               <li>Plan your race strategy</li>
               <li>Prepare your machine for the day</li>
@@ -4945,7 +4945,7 @@ const App: React.FC = () => {
         <p className="text-xs text-neutral-300 font-sans mb-4">
           All events take place at Rocky Mountain Motorsports Circuit, with:
         </p>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-black/40 border border-white/5 p-4 rounded-xl flex items-center gap-3">
             <div className="bg-[#dc2626]/10 p-2 rounded-lg">
@@ -5090,9 +5090,9 @@ const App: React.FC = () => {
         <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group mb-6">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 z-0 select-none pointer-events-none">
-            <img 
-              src="/images/_A7R6426.jpg" 
-              alt="Rules and Safety Backdrop" 
+            <img
+              src="/images/_A7R6426.jpg"
+              alt="Rules and Safety Backdrop"
               className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -5182,9 +5182,9 @@ const App: React.FC = () => {
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
-          <img 
-            src="/images/_A7R7030.jpg" 
-            alt="Race Numbers Starting Grid" 
+          <img
+            src="/images/_A7R7030.jpg"
+            alt="Race Numbers Starting Grid"
             className="w-full h-full object-cover opacity-60 group-hover:opacity-85 group-hover:scale-[1.03] transition-all duration-700 ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
@@ -5204,7 +5204,7 @@ const App: React.FC = () => {
 
       {/* SUPPORTING COPY & THE GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         {/* Supporting Copy */}
         <div className="lg:col-span-5 bg-gradient-to-r from-neutral-900 to-black border border-white/5 p-6 rounded-2xl relative overflow-hidden flex flex-col justify-between">
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
@@ -5215,14 +5215,14 @@ const App: React.FC = () => {
             <p className="text-[11px] text-neutral-400 font-sans mb-4">
               A dynamic mix of skill, speed, and dedication coming together on every race day. WCCS and local grids feature:
             </p>
-            
+
             <ul className="space-y-3 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
               <li>Returning competitors</li>
               <li>First-time racers</li>
               <li>Championship contenders</li>
             </ul>
           </div>
-          
+
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-[10px] text-neutral-400 leading-normal font-sans italic">
               "Each number represents a rider, a machine – and a story unfolding this season."
@@ -5237,12 +5237,12 @@ const App: React.FC = () => {
             <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-4 flex items-center gap-2">
               <Users size={18} className="text-[#dc2626]" /> Racer Roster & Plates
             </h4>
-            
+
             <p className="text-[11px] text-neutral-300 font-sans leading-relaxed mb-6">
-              Racer profiles and numbers will be published as the season begins. 
+              Racer profiles and numbers will be published as the season begins.
               <span className="text-white font-bold block mt-1">Check back soon – or better yet, earn your place among them.</span>
             </p>
-            
+
             {/* Visual Grid Placeholders */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-2">
               {[
@@ -5251,8 +5251,8 @@ const App: React.FC = () => {
                 { n: '18', label: 'EXPERT', reserved: true },
                 { n: '42', label: 'NOVICE', reserved: true }
               ].map((slot, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className={`border rounded-xl p-3 flex flex-col items-center justify-center transition-all ${slot.reserved ? 'bg-black/20 border-white/5 opacity-50' : 'bg-gradient-to-br from-[#dc2626]/10 to-transparent border-[#dc2626]/30 animate-pulse hover:border-[#dc2626] cursor-pointer'}`}
                   onClick={() => !slot.reserved && navigateTo('start-racing')}
                 >
@@ -5269,7 +5269,7 @@ const App: React.FC = () => {
       {/* TECHNICAL PLATES REGULATIONS (Retained value-add) */}
       <div className="bg-neutral-900/50 border border-white/5 p-6 rounded-2xl">
         <h4 className="text-lg font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-6">Plate Standards & Placement</h4>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Expert Plate */}
           <div className="bg-black/40 p-5 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center gap-6">
@@ -5453,7 +5453,7 @@ const App: React.FC = () => {
           {currentView === 'new-racers' && renderNewRacersContent()}
           {currentView === 'documents' && renderFormsDocumentsContent()}
           {currentView === 'race-numbers' && renderRaceNumbersContent()}
-          
+
           {currentView === 'watch-live' && renderWatchLiveContent()}
           {currentView === 'start-racing' && renderStartRacingContent()}
           {currentView === 'how-it-works' && renderHowItWorksContent()}
