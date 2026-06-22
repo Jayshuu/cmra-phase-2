@@ -2825,6 +2825,8 @@ const App: React.FC = () => {
                   <li>Sportbike recommended (not required)</li>
                   <li>Must be roadworthy / tech-ready</li>
                   <li>Kickstands allowed</li>
+                  <li>Functional engine kill switch required</li>
+                  <li>Tires must be in good condition</li>
                 </ul>
               </div>
 
@@ -2832,8 +2834,6 @@ const App: React.FC = () => {
                 <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-wider block mb-1">Tape / Remove</span>
                 <ul className="space-y-1.5 text-[11px] text-neutral-300 font-sans list-disc pl-4 marker:text-[#dc2626]">
                   <li>Mirrors, signals, lights, reflectors</li>
-                  <li>Functional engine kill switch required</li>
-                  <li>Tires must be in good condition</li>
                 </ul>
               </div>
             </div>
