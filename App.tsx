@@ -3473,7 +3473,7 @@ const App: React.FC = () => {
               Real people. Pure racing. No surprises.
             </h3>
             <p className="text-neutral-400 text-xs md:text-sm font-sans">
-              Transparent pricing and competitive track day expectations for the CMRA grid.
+              The more you race, the more you save.
             </p>
           </div>
         </div>
