@@ -3530,7 +3530,7 @@ const App: React.FC = () => {
               <div>
                 <span className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest block mb-1">Novice Entries</span>
                 <h5 className="text-lg font-teko font-bold uppercase text-white leading-none">NOVICE CLASS RACES</h5>
-                <p className="text-[11px] text-neutral-400 font-sans mt-1">Designated track races with classroom briefings.</p>
+                <p className="text-[11px] text-neutral-400 font-sans mt-1">Designed for aspiring road racers.</p>
               </div>
               <span className="text-[#F59E0B] font-teko text-2xl font-bold">$75 <span className="text-[10px] font-sans text-neutral-400 font-normal">/ race</span></span>
             </div>
