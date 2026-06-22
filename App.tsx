@@ -1682,7 +1682,7 @@ const App: React.FC = () => {
                 Know Before You Go
               </p>
               <p className="text-white font-bold text-sm mb-2">
-                Real racing – without the barrier.
+                Real racing – without the barriers.
               </p>
               <p className="text-xs text-neutral-400 mb-4 leading-relaxed font-sans">
                 The CMRA is built to keep racing accessible, without compromising the experience.
