@@ -1313,7 +1313,7 @@ const App: React.FC = () => {
           
           <div className="bg-black/40 border border-white/5 p-5 rounded-xl border-l-4 border-l-[#dc2626] mb-6">
             <p className="font-sans text-sm md:text-base leading-relaxed italic text-white">
-              "The wide-open beauty of Alberta meets the raw intensity of high-speed competition. This is where first-time spectators become lifelong fans – where the sound, speed, and atmosphere hit differently in person. Welcome to CMRA race day."
+              The wide-open beauty of Alberta meets the raw intensity of high-speed competition. This is where first-time spectators become lifelong fans – where the sound, speed, and atmosphere hit differently in person. Welcome to CMRA race day.
             </p>
           </div>
         </div>
