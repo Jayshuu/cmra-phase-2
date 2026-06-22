@@ -37,7 +37,7 @@ const NAV_ITEMS = [
     value: 'events',
     subItems: [
       { label: 'Event Calendar (Pick Your Moment)', value: 'calendar' },
-      { label: 'Upcoming Events (Next Up)', value: 'upcoming-events' },
+      { label: 'Upcoming Race Events (Next Up)', value: 'upcoming-events' },
       { label: 'Event Details (Know Before You Roll In)', value: 'event-details' },
       { label: 'Registration (Claim Your Spot)', value: 'register-races' }
     ]
@@ -93,16 +93,16 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
     <div className="flex flex-col shrink-0 bg-[#050505] sticky top-0 z-[70]">
       {/* Red Line */}
       <div className="h-[3px] w-full bg-[#DC2626] shadow-[0_0_10px_rgba(220,38,38,0.5)] relative z-50"></div>
-      
+
       <header className="relative px-4 md:px-6 h-20 md:h-28 flex items-center justify-between max-w-[1920px] mx-auto w-full border-b border-white/10 bg-[#050505]">
         {/* Left Side: Logo Area (Absolute Positioned for Overflow/Enlargement) */}
         <div className="absolute left-4 md:left-6 top-1 md:top-2 select-none cursor-pointer group z-[80]" onClick={() => onNavigate('home')}>
           {/* Logo Image directly on dark background (Huge Overflowing Crest) */}
           <div className="w-24 h-24 md:w-36 md:h-36 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
-            <img 
-              src="/images/logo.png" 
-              alt="CMRA Logo" 
-              className="max-w-full max-h-full object-contain filter drop-shadow-[0_4px_12px_rgba(220,38,38,0.45)]" 
+            <img
+              src="/images/logo.png"
+              alt="CMRA Logo"
+              className="max-w-full max-h-full object-contain filter drop-shadow-[0_4px_12px_rgba(220,38,38,0.45)]"
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
           {NAV_ITEMS.map((item, index) => {
             const isRightAligned = index >= NAV_ITEMS.length - 3;
             return (
-              <div 
+              <div
                 key={item.label}
                 className="relative h-full flex items-center"
                 onMouseEnter={() => item.subItems && setOpenDropdown(item.label)}
@@ -129,13 +129,13 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
                     <span className="font-teko text-[1.1rem] font-medium tracking-wide group-hover:text-white transition-colors uppercase whitespace-nowrap">
                       {item.label}
                     </span>
-                    <ChevronDown 
-                      size={14} 
-                      className={`text-neutral-500 group-hover:text-white transition-transform duration-200 mt-0.5 ${openDropdown === item.label ? 'rotate-180 text-white' : ''}`} 
+                    <ChevronDown
+                      size={14}
+                      className={`text-neutral-500 group-hover:text-white transition-transform duration-200 mt-0.5 ${openDropdown === item.label ? 'rotate-180 text-white' : ''}`}
                     />
                   </button>
                 ) : (
-                  <button 
+                  <button
                     onClick={() => onNavigate(item.value!)}
                     className={`font-teko text-[1.1rem] font-medium tracking-wide text-neutral-300 hover:text-white transition-colors uppercase whitespace-nowrap ${item.label === 'Watch LIVE' ? 'text-[#dc2626] font-bold' : ''}`}
                   >
@@ -145,7 +145,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
 
                 {/* Dropdown Menu */}
                 {item.subItems && (
-                  <div 
+                  <div
                     className={`absolute top-full ${isRightAligned ? 'right-0' : 'left-0'} min-w-[200px] bg-[#0C0A09] border border-white/10 rounded-b-xl shadow-2xl py-2 flex flex-col transition-all duration-200 origin-top z-50 ${openDropdown === item.label ? 'opacity-100 scale-y-100 translate-y-0' : 'opacity-0 scale-y-95 -translate-y-2 pointer-events-none'}`}
                   >
                     {item.subItems.map((subItem) => (
@@ -184,7 +184,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="xl:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors ml-auto"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -200,14 +200,14 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
               <div key={item.label} className="border-b border-white/5 py-2 last:border-0">
                 {item.subItems ? (
                   <>
-                    <button 
+                    <button
                       onClick={() => setMobileOpenSubMenu(mobileOpenSubMenu === item.label ? null : item.label)}
                       className="w-full flex items-center justify-between p-4 rounded-xl font-teko text-2xl font-bold tracking-wide text-white hover:bg-white/5 transition-colors uppercase"
                     >
                       <span>{item.label}</span>
                       <ChevronDown size={20} className={`transition-transform duration-200 ${mobileOpenSubMenu === item.label ? 'rotate-180' : ''}`} />
                     </button>
-                    
+
                     {mobileOpenSubMenu === item.label && (
                       <div className="flex flex-col bg-white/5 rounded-lg mx-4 mb-2 overflow-hidden">
                         {item.subItems.map((subItem) => (
@@ -240,7 +240,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
                     )}
                   </>
                 ) : (
-                  <button 
+                  <button
                     onClick={() => handleMobileLinkClick(() => onNavigate(item.value!))}
                     className={`text-left w-full p-4 rounded-xl font-teko text-2xl font-bold tracking-wide text-white hover:bg-white/5 transition-colors uppercase ${item.label === 'Watch LIVE' ? 'text-[#dc2626]' : ''}`}
                   >

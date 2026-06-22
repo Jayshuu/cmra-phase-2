@@ -17,6 +17,7 @@ export interface RaceRound {
   date: string;
   location: string;
   status: 'OPEN' | 'COMING SOON' | 'COMPLETED';
+  regLink?: string;
 }
 
 export interface ResourceLink {

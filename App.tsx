@@ -4808,7 +4808,7 @@ const App: React.FC = () => {
 
       {/* CONFIRMED UPCOMING EVENTS (Interactive Round Cards) */}
       <div className="bg-neutral-900 border border-white/10 p-6 rounded-2xl">
-        <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-6">Confirmed Upcoming Schedule</h4>
+        <h4 className="text-xl font-teko font-bold uppercase text-white border-b border-white/5 pb-2 mb-6">Confirmed Upcoming Races</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {MOCK_ROUNDS.filter(r => r.status === 'OPEN' || r.status === 'COMING SOON').map(round => (
             <div key={round.id} className="bg-[#050505] border border-white/5 rounded-2xl p-6 flex flex-col justify-between hover:border-[#dc2626]/30 transition-colors">
@@ -4823,7 +4823,7 @@ const App: React.FC = () => {
                 </span>
                 {round.status === 'OPEN' ? (
                   <a
-                    href="https://www.motorsportreg.com"
+                    href={round.regLink || "https://www.motorsportreg.com"}
                     target="_blank"
                     rel="noreferrer"
                     className="text-xs font-bold uppercase text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn"

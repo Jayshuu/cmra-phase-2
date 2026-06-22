@@ -10,11 +10,10 @@ export const COLORS = {
 };
 
 export const MOCK_ROUNDS: RaceRound[] = [
-  { id: 1, name: 'ROUND 1: THE SEASON OPENER', date: 'MAY 24-25', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMPLETED' },
-  { id: 2, name: 'ROUND 2: THE SPEED FREAKS', date: 'JUNE 21-22', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'OPEN' },
-  { id: 3, name: 'ROUND 3: MIDSUMMER MADNESS', date: 'JULY 19-20', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
-  { id: 4, name: 'ROUND 4: THE HEATWAVE', date: 'AUGUST 23-24', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
-  { id: 5, name: 'ROUND 5: CHAMPIONSHIP SUNDAY', date: 'SEPTEMBER 20-21', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
+  { id: 1, name: 'CMRA ROUND 1: FIRST LIGHT', date: 'JUNE 27', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'OPEN', regLink: 'https://www.motorsportreg.com/events/2026-cmra-round-1-rocky-mountain-motorsports-calgary-motorcycle-roadracing-assoc-611597' },
+  { id: 2, name: 'CMRA ROUND 2: FULL SEND', date: 'JUNE 28', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'OPEN', regLink: 'https://www.motorsportreg.com/events/2026-cmra-round-2-rocky-mountain-motorsports-calgary-motorcycle-roadracing-assoc-917823' },
+  { id: 3, name: 'CMRA ROUND 3: LIMIT BREAK', date: 'AUGUST 29', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
+  { id: 4, name: 'CMRA ROUND 4: FINAL PUSH', date: 'AUGUST 30', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
 ];
 
 export const MOCK_RESOURCES: ResourceLink[] = [
