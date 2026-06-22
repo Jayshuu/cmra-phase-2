@@ -1423,24 +1423,24 @@ const App: React.FC = () => {
         {/* Know Before You Go */}
         <div className="bg-neutral-900/40 border border-white/5 p-6 rounded-2xl space-y-4">
           <h4 className="text-xl font-teko font-bold uppercase text-white flex items-center gap-2 border-b border-white/5 pb-2">
-            <Info size={18} className="text-[#dc2626]" /> Know Before You Go
+            <Info size={18} className="text-[#dc2626]" /> RMM CIRCUIT | Know Before You Go
           </h4>
           <ul className="space-y-3 font-sans text-xs text-neutral-300">
             <li className="flex items-start gap-2">
               <span className="text-[#dc2626] font-bold">•</span>
-              <span>Located just north of Calgary</span>
+              <span>Just off Highway 2 and under an hour from downtown Calgary</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#dc2626] font-bold">•</span>
-              <span>Free parking available</span>
+              <span>Parking is free</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#dc2626] font-bold">•</span>
-              <span>Bring layers – Alberta weather moves fast</span>
+              <span>Bring a hoodie, a jacket, or both—Alberta weather likes to keep things interesting. Closed-toe shoes are strongly recommended.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#dc2626] font-bold">•</span>
-              <span>Lawn chairs recommended for the best viewing experience</span>
+              <span>Pack your own food and drinks to be safe, as concessions and vendor availability can vary throughout the season.</span>
             </li>
           </ul>
         </div>
