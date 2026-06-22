@@ -513,7 +513,7 @@ const App: React.FC = () => {
           </h3>
 
           <div className="mt-4 border-t border-white/5 pt-4">
-            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Commitment</h4>
             <p className="text-base text-white font-sans font-bold mb-2">
               Advanced Rider Training (ART) is built for racers ready to push further.
             </p>
@@ -547,7 +547,7 @@ const App: React.FC = () => {
 
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-[10px] text-neutral-400 leading-normal font-sans italic font-bold">
-              Targeted skill building to safely drops your lap times.
+              Targeted skill building to confidently drop lap times.
             </p>
           </div>
         </div>
@@ -582,7 +582,7 @@ const App: React.FC = () => {
           <div className="absolute top-0 left-0 w-[4px] h-full bg-[#dc2626]"></div>
 
           <div>
-            <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Target Audience</span>
+            <span className="text-[#dc2626] font-mono font-bold text-xs uppercase block mb-1">Target Riders</span>
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">ELIGIBILITY</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-4">Who It’s For</p>
 
@@ -595,7 +595,7 @@ const App: React.FC = () => {
 
           <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-6">
             <p className="text-[10px] text-neutral-400 leading-normal font-sans italic font-bold">
-              Push your racing credentials and unlock advanced racecraft capabilities.
+              Find new limits by unlocking your true racecraft abilities.
             </p>
           </div>
         </div>
@@ -606,7 +606,7 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
+
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Find your next second.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
