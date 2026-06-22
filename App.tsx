@@ -4086,7 +4086,7 @@ const App: React.FC = () => {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <span className="bg-[#dc2626] text-white font-mono font-bold text-xs px-2 py-0.5 rounded">06</span>
-                  <h4 className="text-lg font-teko font-bold uppercase text-white tracking-wider">ADVANCED TRAINING (ART)</h4>
+                  <h4 className="text-lg font-teko font-bold uppercase text-white tracking-wider">ADVANCED RIDER TRAINING (ART)</h4>
                 </div>
                 <div className="text-[#dc2626] opacity-60 group-hover:opacity-100 transition-opacity"><GraduationCap size={18} /></div>
               </div>
