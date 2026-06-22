@@ -5301,7 +5301,7 @@ const App: React.FC = () => {
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Next name on the list? Yours.</h4>
-          <p className="text-neutral-400 text-xs mt-1">Claim your race license, secure your plate selection, and take the start grid.</p>
+          <p className="text-neutral-400 text-xs mt-1">Earn your race license, secure your number, and take the starting grid.</p>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <button
