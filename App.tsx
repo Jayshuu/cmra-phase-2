@@ -1974,7 +1974,7 @@ const App: React.FC = () => {
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
             <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">race school & license</span>
             <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-2">
-              Earn it. Learn it. Race it.
+              Learn it. Earn it. Race it.
             </h3>
             <p className="text-neutral-400 text-xs md:text-sm font-sans italic">
               This is where riders become racers.
@@ -1990,9 +1990,9 @@ const App: React.FC = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
-              { title: 'Official Race Number', desc: 'Your official race number' },
-              { title: 'Championship Points', desc: 'Eligibility for championship points' },
-              { title: 'Sanctioned Events', desc: 'Access to sanctioned race events' }
+              { title: 'YOUR RACE NUMBER', desc: 'Your official CMRA race number' },
+              { title: 'CHAMPIONSHIP ACCESS', desc: 'Eligibility for CMRA championship points' },
+              { title: 'SANCTIONED RACING', desc: 'Access to sanctioned CMRA race events' }
             ].map((item, idx) => (
               <div key={idx} className="bg-white/5 border border-white/5 p-4 rounded-xl text-center flex flex-col items-center">
                 <div className="bg-[#dc2626]/10 p-2 rounded-lg text-[#dc2626] mb-3">
