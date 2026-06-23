@@ -1149,7 +1149,7 @@ const App: React.FC = () => {
 
             <div className="bg-black/30 p-3 rounded-xl border border-white/5 mt-4">
               <p className="text-[10px] text-neutral-400 leading-normal font-sans italic">
-                Grids are configured on MotorsportReg. Book early to secure your grid position.
+                Book early on MotorsportReg.com and secure your spot on the grid.
               </p>
             </div>
           </div>
@@ -1164,7 +1164,7 @@ const App: React.FC = () => {
           {MOCK_ROUNDS.map((round) => (
             <div key={round.id} className="bg-[#050505] border border-white/5 rounded-xl p-5 flex items-center justify-between gap-6 group hover:border-[#dc2626]/30 transition-all">
               <div className="flex items-center gap-4">
-                <div className={`w-16 h-16 rounded-lg flex flex-col items-center justify-center border shrink-0 ${round.status === 'COMPLETED' ? 'bg-neutral-800 border-neutral-700 text-neutral-500' : 'bg-[#dc2626] text-white border-red-500'}`}>
+                <div className={`w-16 h-16 rounded-lg flex flex-col items-center justify-center border shrink-0 ${round.status === 'COMPLETED' ? 'bg-neutral-800 border-neutral-700 text-neutral-500' : round.isWatchParty ? 'bg-[#F59E0B] text-white border-amber-500' : 'bg-[#dc2626] text-white border-red-500'}`}>
                   <span className="text-[8px] font-bold uppercase tracking-wider leading-none mb-0.5">{round.date.split(' ')[0]}</span>
                   <span className="text-2xl font-teko font-bold leading-none">{round.date.split(' ')[1].split('-')[0]}</span>
                 </div>
@@ -1173,6 +1173,8 @@ const App: React.FC = () => {
                   <div className="flex gap-2">
                     {round.status === 'OPEN' ? (
                       <span className="text-[8px] bg-green-950 text-green-400 border border-green-800 px-1.5 py-0.5 rounded uppercase font-bold tracking-wider">Reg Open</span>
+                    ) : round.isWatchParty ? (
+                      <span className="text-[8px] bg-amber-950 text-[#F59E0B] border border-amber-800 px-1.5 py-0.5 rounded uppercase font-bold tracking-wider">Watch Party</span>
                     ) : (
                       <span className="text-[8px] bg-neutral-800 text-neutral-400 border border-neutral-700 px-1.5 py-0.5 rounded uppercase font-bold tracking-wider">{round.status}</span>
                     )}
@@ -1181,23 +1183,33 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {round.status === 'OPEN' ? (
-                <a
-                  href={round.regLink || "https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider shrink-0 inline-block text-center"
-                >
-                  Register
-                </a>
-              ) : (
+              <div className="flex items-center gap-2 shrink-0">
                 <button
                   onClick={() => navigateTo('event-details')}
-                  className="text-neutral-500 font-bold text-[10px] uppercase px-3 py-2 border border-white/5 rounded hover:text-white hover:border-white/10 transition-all tracking-wider shrink-0"
+                  className="text-neutral-300 hover:text-white hover:border-white/20 hover:bg-white/5 font-bold text-[10px] uppercase px-3 py-2 border border-white/10 rounded transition-all tracking-wider"
                 >
                   Details
                 </button>
-              )}
+                {!round.isWatchParty && (
+                  round.status === 'OPEN' ? (
+                    <a
+                      href={round.regLink || "https://www.motorsportreg.com/orgs/calgary-motorcycle-roadracing-assoc"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider inline-block text-center"
+                    >
+                      Register
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="bg-neutral-800 text-neutral-500 border border-neutral-700/50 font-bold text-[10px] uppercase px-4 py-2 rounded tracking-wider cursor-not-allowed"
+                    >
+                      {round.status === 'COMING SOON' ? 'Coming Soon' : 'Closed'}
+                    </button>
+                  )
+                )}
+              </div>
             </div>
           ))}
         </div>

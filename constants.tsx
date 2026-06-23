@@ -12,8 +12,10 @@ export const COLORS = {
 export const MOCK_ROUNDS: RaceRound[] = [
   { id: 1, name: 'CMRA ROUND 1: FIRST LIGHT', date: 'JUNE 27', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'OPEN', regLink: 'https://www.motorsportreg.com/events/2026-cmra-round-1-rocky-mountain-motorsports-calgary-motorcycle-roadracing-assoc-611597' },
   { id: 2, name: 'CMRA ROUND 2: FULL SEND', date: 'JUNE 28', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'OPEN', regLink: 'https://www.motorsportreg.com/events/2026-cmra-round-2-rocky-mountain-motorsports-calgary-motorcycle-roadracing-assoc-917823' },
-  { id: 3, name: 'CMRA ROUND 3: LIMIT BREAK', date: 'AUGUST 29', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
-  { id: 4, name: 'CMRA ROUND 4: FINAL PUSH', date: 'AUGUST 30', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
+  { id: 3, name: 'MGP WATCH PARTY: GRAND PRIX OF GREAT BRITAIN', date: 'AUGUST 9', location: 'LENNOX IRISH PUB', status: 'COMING SOON', isWatchParty: true },
+  { id: 4, name: 'CMRA ROUND 3: LIMIT BREAK', date: 'AUGUST 29', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
+  { id: 5, name: 'CMRA ROUND 4: FINAL PUSH', date: 'AUGUST 30', location: 'ROCKY MOUNTAIN MOTORSPORTS', status: 'COMING SOON' },
+  { id: 6, name: 'MGP WATCH PARTY FINALE: GRAND PRIX OF VALENCIA', date: 'NOVEMBER 29', location: 'LENNOX IRISH PUB', status: 'COMING SOON', isWatchParty: true },
 ];
 
 export const MOCK_RESOURCES: ResourceLink[] = [

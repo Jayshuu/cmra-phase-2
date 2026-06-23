@@ -18,6 +18,7 @@ export interface RaceRound {
   location: string;
   status: 'OPEN' | 'COMING SOON' | 'COMPLETED';
   regLink?: string;
+  isWatchParty?: boolean;
 }
 
 export interface ResourceLink {
