@@ -1059,7 +1059,7 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">season calendar</span>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">event calendar</span>
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             The season is taking shape.
           </h3>
@@ -1120,7 +1120,7 @@ const App: React.FC = () => {
               This isn’t a static schedule.
             </p>
             <p className="text-[11px] text-neutral-400 font-sans mb-3 leading-normal">
-              New dates can drop. Existing rounds can evolve. Riders who stay ready win the early advantage:
+              New dates can drop. Existing rounds can evolve. Riders who stay ready win the early advantage.
             </p>
 
             <ul className="space-y-2 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#F59E0B]">
