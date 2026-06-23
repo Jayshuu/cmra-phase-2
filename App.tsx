@@ -5068,7 +5068,7 @@ const App: React.FC = () => {
               'Phase 2: Race Director review & witness statement collection',
               'Phase 3: Executive Committee hearing & final ruling'
             ],
-            link: '/documents/Microsoft Word - Incident Resolution Process Aug 18 2008.doc'
+            link: 'https://roadracing.org/wp-content/uploads/2022/04/cmra_incident-resolution-process.pdf'
           }
         ]
       },
@@ -5085,7 +5085,7 @@ const App: React.FC = () => {
               'Safety Wire: Oil drain plug, filler cap, filter, brake caliper bolts, axle nuts.',
               'Bodywork & Stand: Remove sidestands; belly pan must hold 3 liters of fluid.'
             ],
-            link: '/documents/CMRA TECHSHEET 2023 R1.pdf'
+            link: 'https://roadracing.org/wp-content/uploads/2024/07/CMRA-TECHSHEET-2024.pdf.pdf'
           },
           {
             title: '(1) Safety Gear',
