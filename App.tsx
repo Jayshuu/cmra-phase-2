@@ -5525,12 +5525,17 @@ const App: React.FC = () => {
       {/* Footer */}
       <footer className="h-14 px-4 md:px-8 border-t border-white/5 flex items-center justify-between shrink-0 bg-black/80 backdrop-blur-md z-50">
         <p className="text-[9px] font-bold text-neutral-600 uppercase tracking-[0.4em]">© 2026 CMRA</p>
-        <div className="flex items-center gap-2 select-none opacity-50">
+        <a
+          href="https://www.electricavenue.marketing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 opacity-50 hover:opacity-100 transition-opacity cursor-pointer"
+        >
           <div className="flex items-center gap-3 text-[9px] font-bold text-neutral-500 uppercase tracking-[0.4em]">
             <span className="hidden sm:inline">POWERED BY ELECTRIC AVENUE</span><span className="sm:hidden">ELEC AVE</span>
           </div>
           <Zap size={12} className="text-neutral-600" />
-        </div>
+        </a>
       </footer>
     </div>
   );
