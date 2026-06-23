@@ -1218,7 +1218,7 @@ const App: React.FC = () => {
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Stay sharp. Stay ready.</h4>
-          <p className="text-neutral-400 text-xs mt-1">Ready to find out what you are made of? Choose your round or register when grids go live.</p>
+          <p className="text-neutral-400 text-xs mt-1">Every rider knows the feeling – the one that starts the moment you leave the track and doesn't stop until you're back on it.</p>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <button
