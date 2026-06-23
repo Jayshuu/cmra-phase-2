@@ -611,7 +611,7 @@ const App: React.FC = () => {
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <a
-            href="https://www.motorsportreg.com"
+            href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
             target="_blank"
             rel="noreferrer"
             className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group/btn"
@@ -1185,12 +1185,14 @@ const App: React.FC = () => {
               </div>
 
               {round.status === 'OPEN' ? (
-                <button
-                  onClick={() => navigateTo('register-races')}
-                  className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider shrink-0"
+                <a
+                  href={round.regLink || "https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider shrink-0 inline-block text-center"
                 >
                   Register
-                </button>
+                </a>
               ) : (
                 <button
                   onClick={() => navigateTo('event-details')}
@@ -2372,7 +2374,7 @@ const App: React.FC = () => {
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <a
-            href="https://www.motorsportreg.com"
+            href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group text-left"
@@ -3194,7 +3196,7 @@ const App: React.FC = () => {
 
           <div className="mt-auto pt-6 border-t border-white/5 space-y-3">
             <a
-              href="https://www.motorsportreg.com"
+              href="https://www.motorsportreg.com/events/cmra-2026-membership-race-licence-rocky-mountain-motorsports-calgary-542341"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3.5 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn text-center"
@@ -3395,7 +3397,7 @@ const App: React.FC = () => {
           </div>
           <div className="border-t border-white/5 pt-4 mt-auto">
             <a
-              href="https://www.motorsportreg.com"
+              href="https://www.motorsportreg.com/events/cmra-2026-membership-race-licence-rocky-mountain-motorsports-calgary-542341"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase py-4 rounded-xl transition-all tracking-widest text-center block"
@@ -3440,7 +3442,7 @@ const App: React.FC = () => {
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <a
-            href="https://www.motorsportreg.com"
+            href="https://www.motorsportreg.com/events/cmra-2026-membership-race-licence-rocky-mountain-motorsports-calgary-542341"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group/btn"
@@ -4848,7 +4850,7 @@ const App: React.FC = () => {
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <a
-            href="https://www.motorsportreg.com"
+            href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group text-left"
