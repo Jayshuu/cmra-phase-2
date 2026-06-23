@@ -249,7 +249,7 @@ const App: React.FC = () => {
             What’s happening – right now.
           </h3>
           <div className="mt-4 border-t border-white/5 pt-4">
-            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">GET UP TO SPEED</h4>
             <p className="text-base text-white font-sans font-bold mb-2">This is your source for everything CMRA.</p>
             <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl mb-3">
               From race announcements and schedule updates to community appearances and behind-the-scenes moments, it’s all here.
