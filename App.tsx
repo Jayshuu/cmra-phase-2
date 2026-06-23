@@ -3161,8 +3161,30 @@ const App: React.FC = () => {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#dc2626]/5 rounded-full blur-3xl pointer-events-none"></div>
           <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2.5 py-1 rounded-md w-max mb-4 block">membership & registration</span>
           <h3 className="text-4xl md:text-6xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-            Make it official. Take your place on the grid.
+            MAKE IT OFFICIAL. JOIN THE GRID.
           </h3>
+          <p className="text-[#F59E0B] font-teko font-bold text-lg md:text-xl uppercase tracking-wide italic mb-4 leading-none">
+            There’s a difference between riding – and belonging.
+          </p>
+          <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl mb-6">
+            With the Calgary Motorcycle Roadracing Association, membership isn’t just a requirement – it’s your connection to the races, the riders, and the season ahead.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="https://www.motorsportreg.com/events/cmra-2026-membership-race-licence-rocky-mountain-motorsports-calgary-542341"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group/btn"
+            >
+              👉 Become A Member
+            </a>
+            <button
+              onClick={() => navigateTo('forms-documents')}
+              className="bg-[#1A1A1A] hover:bg-white/10 border border-white/10 text-white font-bold text-xs uppercase px-6 py-3.5 rounded-xl transition-all tracking-widest flex items-center gap-1.5 group/btn text-left"
+            >
+              👉 View Forms & Documents
+            </button>
+          </div>
         </div>
       </div>
 
@@ -3174,42 +3196,51 @@ const App: React.FC = () => {
           <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-red-600 to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
 
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-red-600/10 flex items-center justify-center text-[#dc2626]">
-                <Trophy size={20} />
+            <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-2">
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-lg bg-red-600/10 flex items-center justify-center text-[#dc2626]">
+                  <Trophy size={20} />
+                </div>
+                <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider">BECOME A CMRA MEMBER</h4>
               </div>
-              <h4 className="text-2xl font-teko font-bold uppercase text-white tracking-wider">CMRA Membership</h4>
+              <span className="text-[#dc2626] font-mono font-bold text-xs uppercase">Block 01</span>
             </div>
 
-            <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6">
-              Your CMRA Membership lets you race in the CMRA for Championship points – and connects you with the racing community. Members get:
+            <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">YOUR SEASON STARTS HERE</p>
+
+            <p className="text-sm text-neutral-300 font-sans leading-relaxed mb-6 font-bold">
+              Membership is your entry into everything CMRA.
             </p>
 
-            <ul className="space-y-3.5 mb-8">
+            <ul className="space-y-3.5 mb-6">
               <li className="flex items-start gap-2.5 text-xs text-neutral-300 font-sans">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
-                <span>Priority registration for CMRA schools</span>
+                <span>Required to compete in events</span>
               </li>
               <li className="flex items-start gap-2.5 text-xs text-neutral-300 font-sans">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
-                <span>First updates on upcoming events</span>
+                <span>Unlocks championship eligibility</span>
               </li>
               <li className="flex items-start gap-2.5 text-xs text-neutral-300 font-sans">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-1.5 shrink-0"></span>
-                <span>Voting privileges</span>
+                <span>Connects you to the racing community</span>
               </li>
             </ul>
+
+            <div className="bg-black/35 p-3.5 rounded-xl border border-white/5 my-4 backdrop-blur-sm">
+              <p className="text-xs text-neutral-400 leading-normal font-sans italic font-bold">
+                Memberships are annual, aligning with the racing season – so once you're in, you're part of it.
+              </p>
+            </div>
           </div>
 
           <div className="mt-auto pt-6 border-t border-white/5 space-y-3">
-            <a
-              href="https://www.motorsportreg.com/events/cmra-2026-membership-race-licence-rocky-mountain-motorsports-calgary-542341"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-3.5 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn text-center"
+            <button
+              onClick={() => navigateTo('become-member')}
+              className="w-full bg-[#dc2626] hover:bg-red-500 text-white font-bold text-xs uppercase py-4 px-4 rounded-xl transition-all tracking-wider shadow-md shadow-red-950/40 flex items-center justify-center gap-1.5 group/btn text-center"
             >
-              Become A Member Via MotorsportReg <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-            </a>
+              👉 Become A CMRA Member <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+            </button>
 
             <button
               onClick={() => navigateTo('advanced-training')}
