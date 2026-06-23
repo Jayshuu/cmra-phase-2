@@ -5051,7 +5051,7 @@ const App: React.FC = () => {
           {
             title: 'CMRA Corporate Bylaws',
             desc: 'The governing bylaws outlining the legal, corporate structure, executive roles, and operational mandate of the Calgary Motorcycle Roadracing Association.',
-            link: '/documents/2007-cmra-bylaws.pdf'
+            link: 'https://roadracing.org/wp-content/uploads/2022/04/2007-cmra-bylaws.pdf'
           }
         ]
       },
