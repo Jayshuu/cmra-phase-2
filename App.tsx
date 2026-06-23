@@ -3355,16 +3355,10 @@ const App: React.FC = () => {
             Join the riders who line up.
           </h3>
           <div className="mt-4 border-t border-white/5 pt-4">
-            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
             <p className="text-base text-white font-sans font-bold mb-2">Becoming a member of the Calgary Motorcycle Roadracing Association is your first official step into competition.</p>
             <p className="text-neutral-300 font-sans text-xs md:text-sm leading-relaxed mb-4">
-              It connects you to:
+              It connects you to the full race calendar, championship standings – and a community built around skill, safety, and progression.
             </p>
-            <ul className="space-y-2 font-sans text-xs text-neutral-300 pl-4 list-disc marker:text-[#dc2626]">
-              <li>The full race calendar</li>
-              <li>Championship standings</li>
-              <li>A community built around skill, safety, and progression</li>
-            </ul>
           </div>
         </div>
       </div>
