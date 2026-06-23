@@ -836,13 +836,12 @@ const App: React.FC = () => {
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Get In Touch</span>
+        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Contact</span>
         <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
           Ask the question. Take the next step.
         </h3>
 
         <div className="mt-4 border-t border-white/5 pt-4">
-          <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
           <p className="text-base text-white font-sans font-bold mb-2">Every racer starts with a question.</p>
           <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
             Whether it’s about getting licensed, preparing your bike, or choosing your first event – the Calgary Motorcycle Roadracing Association is here to help.
@@ -927,9 +926,12 @@ const App: React.FC = () => {
             <div className="space-y-1">
               <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-400">Topic</label>
               <select className="w-full bg-black border border-white/20 rounded-xl p-3 text-sm text-white focus:border-[#dc2626] focus:outline-none focus:ring-1 focus:ring-[#dc2626] transition-all">
-                <option>General Question</option>
-                <option>Licensing</option>
+                <option>Memberships & Benefits</option>
+                <option>Race School & Licensing</option>
+                <option>Racing & Events</option>
+                <option>Rules & Safety</option>
                 <option>Volunteering</option>
+                <option>Other</option>
               </select>
             </div>
             <div className="space-y-1 flex-1">
