@@ -367,9 +367,9 @@ const App: React.FC = () => {
       {/* HERO (Top Frame) */}
       <div className="bg-neutral-900 border border-white/10 p-6 md:p-8 rounded-2xl shrink-0 relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Our Story</span>
+        <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">The CMRA</span>
         <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
-          The CMRA: Southern Alberta’s Home for Motorcycle Racing
+          Southern Alberta’s Home for Motorcycle Racing
         </h3>
 
         <div className="mt-4 border-t border-white/5 pt-4">
