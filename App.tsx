@@ -4539,7 +4539,7 @@ const App: React.FC = () => {
               </div>
               <div className="flex justify-between border-b border-white/5 pb-2">
                 <span>Total Turns:</span>
-                <span className="font-bold text-white">16 (Right/Left mix)</span>
+                <span className="font-bold text-white">19 (with chicane)</span>
               </div>
               <div className="flex justify-between border-b border-white/5 pb-2">
                 <span>Max Grade:</span>
@@ -4551,7 +4551,7 @@ const App: React.FC = () => {
               </div>
             </div>
             <p className="text-[10px] text-neutral-500 font-bold uppercase tracking-widest mt-4">
-              Track Grade: FIA Grade 2 Compliant Geometry
+              Track Grade: FIA Grade 2
             </p>
           </div>
 
@@ -4628,12 +4628,14 @@ const App: React.FC = () => {
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">See it. Ride it. Race it.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
-          <button
-            onClick={() => navigateTo('events')}
+          <a
+            href="https://rockymotorsports.com/"
+            target="_blank"
+            rel="noreferrer"
             className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group/btn"
           >
             👉 View Events At Rocky Mountain Motorsports Circuit <ArrowRight size={14} className="group-hover/btn:translate-x-0.5 transition-transform" />
-          </button>
+          </a>
         </div>
       </div>
     </div>
