@@ -5068,7 +5068,7 @@ const App: React.FC = () => {
               'Phase 2: Race Director review & witness statement collection',
               'Phase 3: Executive Committee hearing & final ruling'
             ],
-            link: '/documents/incident-resolution-process.pdf'
+            link: '/documents/Microsoft Word - Incident Resolution Process Aug 18 2008.doc'
           }
         ]
       },
@@ -5084,7 +5084,8 @@ const App: React.FC = () => {
               'Fluids: Water-cooled engines must use water or Water Wetter only (no glycol).',
               'Safety Wire: Oil drain plug, filler cap, filter, brake caliper bolts, axle nuts.',
               'Bodywork & Stand: Remove sidestands; belly pan must hold 3 liters of fluid.'
-            ]
+            ],
+            link: '/documents/CMRA TECHSHEET 2023 R1.pdf'
           },
           {
             title: '(1) Safety Gear',
@@ -5094,7 +5095,7 @@ const App: React.FC = () => {
               'Suit: One-piece leather or two-piece zip-together leather suit with full circumference zipper.',
               'Armor: CE-approved back protector, shoulder, elbow, and knee protectors.'
             ],
-            link: '/documents/safety-gear-guide.pdf'
+            link: '/documents/CMRA SAFETY GEAR 2023 R1.pdf'
           }
         ]
       },
@@ -5201,7 +5202,7 @@ const App: React.FC = () => {
                               rel="noreferrer"
                               className="w-full bg-white/5 hover:bg-[#dc2626] hover:text-white transition-all text-[#dc2626] border border-white/10 text-center py-2.5 rounded font-bold uppercase text-[10px] tracking-widest flex items-center justify-center gap-1.5"
                             >
-                              Download PDF <ExternalLink size={12} />
+                              {item.link.toLowerCase().endsWith('.doc') || item.link.toLowerCase().endsWith('.docx') ? 'Download Word Doc' : 'Download PDF'} <ExternalLink size={12} />
                             </a>
                           </div>
                         )}
