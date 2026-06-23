@@ -4483,13 +4483,13 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <div className="absolute top-0 right-0 w-48 h-48 bg-[#dc2626]/5 rounded-full blur-2xl pointer-events-none"></div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Our Home Track</span>
+          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">Rocky Mountain Motorsports Circuit</span>
           <h3 className="text-4xl md:text-5xl font-teko font-bold uppercase italic text-white leading-none mb-3">
             Alberta’s finest. Built for riders.
           </h3>
 
           <div className="mt-4 border-t border-white/5 pt-4">
-            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">THE STANDARD FOR SPEED AND SAFETY</h4>
             <p className="text-base text-white font-sans font-bold mb-2">
               All CMRA events take place at Rocky Mountain Motorsports Circuit – a modern, purpose-built facility designed by world-renowned German track designers, Tilke GmbH & Co.
             </p>
