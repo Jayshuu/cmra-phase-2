@@ -5116,8 +5116,8 @@ const App: React.FC = () => {
           },
           {
             title: 'CMRA Volunteer Form',
-            desc: 'Submit your details to sign up as a corner marshal, grid marshal, technical assistant, or general paddock volunteer.',
-            link: '/documents/volunteer-signup-form.pdf'
+            desc: 'Submit your details and leave your mark on the paddock.',
+            link: 'https://roadracing.org/wp-content/uploads/2022/04/cmra_racefee-refund-form.pdf'
           }
         ]
       }
