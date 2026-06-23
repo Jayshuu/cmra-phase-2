@@ -4491,7 +4491,7 @@ const App: React.FC = () => {
           <div className="mt-4 border-t border-white/5 pt-4">
             <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
             <p className="text-base text-white font-sans font-bold mb-2">
-              All CMRA events take place at Rocky Mountain Motorsports Circuit – a modern, purpose-built facility designed to deliver a world-class racing experience.
+              All CMRA events take place at Rocky Mountain Motorsports Circuit – a modern, purpose-built facility designed by world-renowned German track designers, Tilke GmbH & Co.
             </p>
             <div className="flex items-center gap-2 mt-3 bg-black/40 px-4 py-2.5 rounded-xl border border-white/5 w-max backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-[#dc2626] animate-pulse"></span>
@@ -4519,10 +4519,10 @@ const App: React.FC = () => {
             </h4>
 
             <ul className="space-y-3 text-xs text-neutral-300 font-sans pl-4 list-disc marker:text-[#dc2626]">
-              <li>Recently built with modern design standards</li>
-              <li>Technical layout that rewards precision and skill</li>
-              <li>High-quality surface and safety infrastructure</li>
-              <li>Designed to challenge riders at every level</li>
+              <li>Recently built using the highest standards for surface, safety infrastructure, and track design</li>
+              <li>Electronic marshal stations and GPS transponders to inform and locate riders in real-time</li>
+              <li>Technical layout with fast and flowing elevation changes that reward precision and skill</li>
+              <li>High-speed straights, late-braking zones, and off-camber turns to challenge any rider</li>
             </ul>
           </div>
 
