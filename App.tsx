@@ -5101,21 +5101,21 @@ const App: React.FC = () => {
       },
       {
         id: 'forms',
-        title: 'RACE DAY FORMS (4TH LEVEL 1 SECTION)',
+        title: 'RACE DAY FORMS',
         icon: ClipboardList,
         items: [
           {
             title: 'Incident Report Form',
-            desc: 'Official form for reporting on-track incidents or rules violations. Must be submitted to the Race Director within 30 minutes of the race completion.',
-            link: '/documents/incident-report-form.pdf'
+            desc: 'Official form for reporting on-track incidents or rules violations.',
+            link: 'https://roadracing.org/wp-content/uploads/2022/04/cmra_incident-report-form.pdf'
           },
           {
-            title: '(2) Race Fee Refund Form',
-            desc: 'Form to request refunds or event credits for DNS (Did Not Start) cases, mechanical failures, or official event cancellations.',
-            link: '/documents/race-fee-refund.pdf'
+            title: 'Race Fee Refund Form',
+            desc: 'Need a refund? Complete and submit this form by 8:30am on Race Day.',
+            link: 'https://roadracing.org/wp-content/uploads/2022/04/cmra_racefee-refund-form.pdf'
           },
           {
-            title: '(2) CMRA Volunteer Form',
+            title: 'CMRA Volunteer Form',
             desc: 'Submit your details to sign up as a corner marshal, grid marshal, technical assistant, or general paddock volunteer.',
             link: '/documents/volunteer-signup-form.pdf'
           }
@@ -5180,7 +5180,7 @@ const App: React.FC = () => {
                             <span>{item.title}</span>
                             <span className="text-[10px] bg-red-950/20 text-[#dc2626] px-2 py-0.5 rounded font-sans uppercase">Active</span>
                           </h4>
-                          <p className="text-xs text-neutral-300 leading-relaxed mb-4 italic">"{item.desc}"</p>
+                          <p className="text-xs text-neutral-300 leading-relaxed mb-4 italic">{item.desc}</p>
 
                           {item.breakdown && (
                             <div className="mb-4">
