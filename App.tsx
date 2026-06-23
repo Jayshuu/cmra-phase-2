@@ -1190,24 +1190,22 @@ const App: React.FC = () => {
                 >
                   Details
                 </button>
-                {!round.isWatchParty && (
-                  round.status === 'OPEN' ? (
-                    <a
-                      href={round.regLink || "https://www.motorsportreg.com/orgs/calgary-motorcycle-roadracing-assoc"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider inline-block text-center"
-                    >
-                      Register
-                    </a>
-                  ) : (
-                    <button
-                      disabled
-                      className="bg-neutral-800 text-neutral-500 border border-neutral-700/50 font-bold text-[10px] uppercase px-4 py-2 rounded tracking-wider cursor-not-allowed"
-                    >
-                      {round.status === 'COMING SOON' ? 'Coming Soon' : 'Closed'}
-                    </button>
-                  )
+                {round.status === 'OPEN' ? (
+                  <a
+                    href={round.regLink || "https://www.motorsportreg.com/orgs/calgary-motorcycle-roadracing-assoc"}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider inline-block text-center"
+                  >
+                    Register
+                  </a>
+                ) : (
+                  <button
+                    disabled
+                    className="bg-neutral-800 text-neutral-500 border border-neutral-700/50 font-bold text-[10px] uppercase px-4 py-2 rounded tracking-wider cursor-not-allowed"
+                  >
+                    {round.isWatchParty ? 'No Reg' : round.status === 'COMING SOON' ? 'Coming Soon' : 'Closed'}
+                  </button>
                 )}
               </div>
             </div>
@@ -4825,22 +4823,37 @@ const App: React.FC = () => {
                 <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1">{round.name}</h4>
                 <span className="text-neutral-500 text-xs uppercase block mb-4">{round.location}</span>
               </div>
-              <div className="flex justify-between items-center border-t border-white/5 pt-4 mt-4">
-                <span className={`text-[9px] font-bold uppercase px-2 py-0.5 rounded ${round.status === 'OPEN' ? 'bg-green-950 text-green-400 border border-green-800' : 'bg-neutral-800 text-neutral-400 border border-neutral-700'}`}>
-                  {round.status}
-                </span>
-                {round.status === 'OPEN' ? (
-                  <a
-                    href={round.regLink || "https://www.motorsportreg.com"}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs font-bold uppercase text-[#dc2626] hover:text-white transition-colors flex items-center gap-1 group/btn"
+              <div className="flex items-center justify-between border-t border-white/5 pt-4 mt-4 gap-2">
+                <div className="flex items-center gap-2">
+                  <span className={`text-[9px] font-bold uppercase px-2 py-0.5 rounded ${round.status === 'OPEN' ? 'bg-green-950 text-green-400 border border-green-800' : round.isWatchParty ? 'bg-amber-950 text-[#F59E0B] border border-amber-800' : 'bg-neutral-800 text-neutral-400 border border-neutral-700'}`}>
+                    {round.isWatchParty ? 'Watch Party' : round.status}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => navigateTo('event-details')}
+                    className="text-neutral-300 hover:text-white hover:border-white/20 hover:bg-white/5 font-bold text-[10px] uppercase px-3 py-2 border border-white/10 rounded transition-all tracking-wider"
                   >
-                    REGISTER <ExternalLink size={12} className="group-hover/btn:translate-x-0.5 transition-transform" />
-                  </a>
-                ) : (
-                  <span className="text-xs font-bold text-neutral-600 uppercase cursor-not-allowed">COMING SOON</span>
-                )}
+                    Details
+                  </button>
+                  {round.status === 'OPEN' ? (
+                    <a
+                      href={round.regLink || "https://www.motorsportreg.com/orgs/calgary-motorcycle-roadracing-assoc"}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-white text-black hover:bg-[#dc2626] hover:text-white font-bold text-[10px] uppercase px-4 py-2 rounded transition-all tracking-wider inline-block text-center flex items-center gap-1 group/btn"
+                    >
+                      Register <ExternalLink size={10} className="group-hover/btn:translate-x-0.5 transition-transform" />
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="bg-neutral-800 text-neutral-500 border border-neutral-700/50 font-bold text-[10px] uppercase px-4 py-2 rounded tracking-wider cursor-not-allowed"
+                    >
+                      {round.isWatchParty ? 'No Reg' : 'Register'}
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           ))}
