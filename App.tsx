@@ -5095,7 +5095,7 @@ const App: React.FC = () => {
               'Suit: One-piece leather or two-piece zip-together leather suit with full circumference zipper.',
               'Armor: CE-approved back protector, shoulder, elbow, and knee protectors.'
             ],
-            link: '/documents/CMRA SAFETY GEAR 2023 R1.pdf'
+            link: 'https://roadracing.org/wp-content/uploads/2024/07/CMRA-TECHSHEET-2024.pdf.pdf'
           }
         ]
       },
