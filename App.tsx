@@ -342,7 +342,6 @@ const App: React.FC = () => {
         <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
           <div>
-            <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
             <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Don’t miss what’s next.</h4>
           </div>
           <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
@@ -813,7 +812,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Now you know who we are. The next move is yours.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
@@ -951,7 +949,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Don’t wait for the perfect moment – reach out.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
@@ -3437,7 +3434,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Make it official. Take your place.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
@@ -4594,7 +4590,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">See it. Ride it. Race it.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
@@ -4678,7 +4673,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Support the brands that support racing.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
@@ -4845,12 +4839,11 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Don’t wait for race weekend. Own it now.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
           <a
-            href="https://www.motorsportreg.com/calendar/?q=Calgary+Motorcycle+Road+Racing&radius=300"
+            href="https://www.motorsportreg.com/orgs/calgary-motorcycle-roadracing-assoc"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#dc2626] to-[#F59E0B] hover:opacity-90 text-white font-bold text-xs uppercase px-8 py-4 rounded-xl transition-all tracking-widest shadow-md shadow-red-950/40 flex items-center gap-1.5 group text-left"
