@@ -5051,7 +5051,7 @@ const App: React.FC = () => {
           {
             title: 'CMRA Corporate Bylaws',
             desc: 'The governing bylaws outlining the legal, corporate structure, executive roles, and operational mandate of the Calgary Motorcycle Roadracing Association.',
-            link: '/documents/cmra-bylaws.pdf'
+            link: '/documents/2007-cmra-bylaws.pdf'
           }
         ]
       },
@@ -5074,7 +5074,7 @@ const App: React.FC = () => {
       },
       {
         id: 'technical',
-        title: 'TECHNICAL & GEAR CHECKLISTS',
+        title: 'TECHNICAL & SAFETY REQUIREMENTS',
         icon: Wrench,
         items: [
           {
@@ -5138,7 +5138,10 @@ const App: React.FC = () => {
           <div className="relative z-10">
             <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-4 block">regulations & safety</span>
             <h3 className="text-4xl font-teko font-bold uppercase italic text-white leading-none">Rules & Safety</h3>
-            <p className="text-neutral-300 font-sans text-xs md:text-sm mt-2 max-w-2xl">Official regulations, safety standards, and administrative forms.</p>
+            <p className="text-neutral-300 font-sans text-xs md:text-sm mt-2 max-w-2xl leading-relaxed">
+              Everything you need to race with confidence.<br />
+              <span className="block mt-1 font-semibold text-white">When in doubt, the documents found here take precedence over website content.</span>
+            </p>
           </div>
         </div>
 

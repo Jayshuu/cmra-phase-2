@@ -55,8 +55,7 @@ const NAV_ITEMS = [
     value: 'rules-safety',
     subItems: [
       { label: '2026 CMRA Competition Rulebook', value: 'rules-safety', section: 'rulebooks' },
-      { label: 'Technical Requirements Checklist', value: 'rules-safety', section: 'technical' },
-      { label: 'Safety Gear', value: 'rules-safety', section: 'technical' }
+      { label: 'Technical & Safety Requirements', value: 'rules-safety', section: 'technical' }
     ]
   },
   {
