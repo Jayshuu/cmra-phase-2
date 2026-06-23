@@ -14,40 +14,40 @@ const NAV_ITEMS = [
     label: 'Start Racing',
     value: 'start-racing',
     subItems: [
-      { label: 'How It Works (The Path To The Grid)', value: 'how-it-works' },
+      { label: 'How It Works', value: 'how-it-works' },
       { label: 'Race School & License', value: 'race-school' },
-      { label: 'Membership & Registration (Commit To The Season)', value: 'membership' },
-      { label: 'Costs & Expectations (Know Before You Go)', value: 'costs' }
+      { label: 'Membership & Registration', value: 'membership' },
+      { label: 'Costs & Expectations', value: 'costs' }
     ]
   },
   {
     label: 'Racing',
     value: 'racing',
     subItems: [
-      { label: 'Classes & Categories (Find Your Line)', value: 'classes' },
-      { label: 'Western Canadian Championship Series (Race For More)', value: 'wccs' },
-      { label: 'Bike & Gear Requirements (Built For The Track)', value: 'bike-gear' },
-      { label: 'Results (Where It All Lands)', value: 'results' },
-      { label: 'Racers & Numbers (Know The Grid)', value: 'race-numbers' },
-      { label: 'Advanced Rider Training (Level Up)', value: 'advanced-training' }
+      { label: 'Classes & Categories', value: 'classes' },
+      { label: 'Western Canadian Championship Series', value: 'wccs' },
+      { label: 'Bike & Gear Requirements', value: 'bike-gear' },
+      { label: 'Results', value: 'results' },
+      { label: 'Racers & Numbers', value: 'race-numbers' },
+      { label: 'Advanced Rider Training', value: 'advanced-training' }
     ]
   },
   {
     label: 'Events',
     value: 'events',
     subItems: [
-      { label: 'Event Calendar (Pick Your Moment)', value: 'calendar' },
-      { label: 'Upcoming Race Events (Next Up)', value: 'upcoming-events' },
-      { label: 'Event Details (Know Before You Roll In)', value: 'event-details' },
-      { label: 'Registration (Claim Your Spot)', value: 'register-races' }
+      { label: 'Event Calendar', value: 'calendar' },
+      { label: 'Upcoming Race Events', value: 'upcoming-events' },
+      { label: 'Event Details', value: 'event-details' },
+      { label: 'Registration', value: 'register-races' }
     ]
   },
   {
     label: 'Membership',
     value: 'membership',
     subItems: [
-      { label: 'Become a CMRA Member (Your Season Starts Here)', value: 'become-member' },
-      { label: 'Forms & Documents (Everything You Need – In One Place)', value: 'forms-documents' }
+      { label: 'Become a CMRA Member', value: 'become-member' },
+      { label: 'Forms & Documents', value: 'forms-documents' }
     ]
   },
   {
@@ -62,17 +62,17 @@ const NAV_ITEMS = [
     label: 'Community',
     value: 'community',
     subItems: [
-      { label: 'News & Updates (Stay In The Loop)', value: 'news' },
-      { label: 'Sponsors & Partners (Powered By Passion)', value: 'sponsors' }
+      { label: 'News & Updates', value: 'news' },
+      { label: 'Sponsors & Partners', value: 'sponsors' }
     ]
   },
   {
     label: 'About',
     value: 'about',
     subItems: [
-      { label: 'The CMRA (Our Story)', value: 'our-story' },
-      { label: 'Contact (Get In Touch)', value: 'contact' },
-      { label: 'Rocky Mountain Motorsports Circuit (Our Home Track)', value: 'rmm-circuit' }
+      { label: 'The CMRA', value: 'our-story' },
+      { label: 'Contact', value: 'contact' },
+      { label: 'Rocky Mountain Motorsports Circuit', value: 'rmm-circuit' }
     ]
   }
 ];
