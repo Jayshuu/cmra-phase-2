@@ -646,7 +646,7 @@ const App: React.FC = () => {
             Since 1987, the Calgary Motorcycle Roadracing Association has been at the center of motorcycle roadracing in Southern Alberta.
           </p>
           <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed mb-4 max-w-3xl">
-            What started as a place to race has become something more:
+            What started as a place to race has become something more.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mb-6">
@@ -782,7 +782,7 @@ const App: React.FC = () => {
             <h4 className="text-2xl font-teko font-bold text-white uppercase mb-1 leading-tight">ROCKY MOUNTAIN MOTORSPORTS CIRCUIT</h4>
             <p className="text-[#F59E0B] font-teko font-bold text-lg uppercase tracking-wide mb-3">Our Home Track</p>
             <p className="text-xs text-neutral-300 font-sans leading-relaxed mb-4 font-bold">
-              All CMRA events take place at Rocky Mountain Motorsports Circuit – a modern, purpose-built circuit designed for performance.
+              All CMRA events take place at Rocky Mountain Motorsports Circuit – a modern, purpose-built track designed for performance.
             </p>
             <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6 italic">
               Fast. Technical. Unforgiving in the best way. A true rider’s track.
