@@ -4162,7 +4162,7 @@ const App: React.FC = () => {
             Everything you need – right here.
           </h3>
           <div className="mt-4 border-t border-white/5 pt-4">
-            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">Overview</h4>
+            <h4 className="text-lg font-teko font-bold uppercase text-[#dc2626] mb-1">WHAT YOU’LL FIND</h4>
             <p className="text-base text-white font-sans font-bold mb-2">Racing runs on precision – and that starts before you ever hit the track.</p>
             <p className="text-neutral-300 font-sans text-sm md:text-base leading-relaxed max-w-3xl">
               This is your hub for all official CMRA documents, including rules, requirements, and forms to keep you compliant, prepared, and race-ready.
@@ -4371,7 +4371,6 @@ const App: React.FC = () => {
       <div className="bg-gradient-to-r from-neutral-900 to-black border border-white/10 p-6 rounded-2xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 shrink-0 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#dc2626]/5 rounded-full blur-xl pointer-events-none"></div>
         <div>
-          <span className="bg-[#dc2626] text-white font-bold uppercase tracking-widest text-[10px] px-2 py-1 rounded-sm w-max mb-2 block">FINAL CTA</span>
           <h4 className="text-3xl font-teko font-bold uppercase italic text-white leading-none">Don’t get stuck in the details – get moving.</h4>
         </div>
         <div className="flex flex-wrap gap-4 shrink-0 relative z-10">
